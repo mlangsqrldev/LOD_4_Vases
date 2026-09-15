@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 29
+Beschreibung: A: APOLLO PLAYING KITHARA BETWEEN HERMES AND DIONYSOS WITH KANTHAROS AND GRAPEVINE B: DRAPED YOUTHS WITH SPEARS ON HORSEBACK, DOGS
+Datierung: ca. 525–475 v. Chr.
+Gattung: Gefäß
+Gefäßform: Halsamphora
+Herkunftsort: 
+Inventar-Nr.: Northampton, Castle Ashby: 7 London, market, Christie's Texas, McCoy Publication Record: Christie, Manson and Woods, sale catalogue: NEW YORK, 11.12.2014, NO.94 (COLOUR OF A AND B) Corpus Vasorum Antiquorum: NORTHAMPTON, CASTLE ASHBY, 7, PLS.(666,668) 11.3-4, 13.1-2 View Whole CVA Plates PHOTOGRAPH(S) IN THE BEAZLEY ARCHIVE: 4 (A, B, UH) LIMC ID: 35832 LIMC Web: HTTP://ARK.DASCH.SWISS/ARK:/72163/080E-759F8769B1EA5-F
+Künstler/Werkstatt: 
+Material: Ton
+Name/Bezeichnung: Apollon auf antiker Halsamphora
+Produktionsgebiet: Attisch
+Standort: New York (N.Y.), market, Christie's Previous Collections
+Ware: Attisch Schwarzfigurig
+Hauptmotiv: Apollon
+SKOS-URI: https://hector.bcdh.uni-bonn.de/apollo

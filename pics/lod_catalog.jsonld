@@ -1,0 +1,618 @@
+{
+  "@context": {
+    "@vocab": "http://schema.org/",
+    "crm": "http://www.cidoc-crm.org/cidoc-crm/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "hector": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/",
+    "prefLabel": "skos:prefLabel",
+    "exactMatch": {
+      "@id": "skos:exactMatch",
+      "@type": "@id"
+    },
+    "shapeConcept": {
+      "@id": "crm:P2_has_type",
+      "@type": "@id"
+    },
+    "wareConcept": {
+      "@id": "crm:P32_used_general_technique",
+      "@type": "@id"
+    },
+    "confidenceShape": "http://data.lodvases.bcdh.uni-bonn.de/vocab/confidenceShape",
+    "confidenceWare": "http://data.lodvases.bcdh.uni-bonn.de/vocab/confidenceWare"
+  },
+  "@graph": [
+    {
+      "@id": "http://data.lodvases.bcdh.uni-bonn.de/object/0470d55f-92f3-4d6a-8180-4d2d891a9277",
+      "@type": [
+        "VisualArtwork",
+        "crm:E22_Human-Made_Object"
+      ],
+      "name": "Attisch rotfigurige Lekythos aus Grab T 206-8 in Metapont",
+      "description": "Eros",
+      "artform": "Lekythos",
+      "material": "Ton",
+      "creator": "Berliner Maler",
+      "dateCreated": "Um 240 v. Chr.",
+      "locationCreated": "Attisch",
+      "identifier": "0470d55f-92f3-4d6a-8180-4d2d891a9277",
+      "image": "pics\\0470d55f-92f3-4d6a-8180-4d2d891a9277.jpg",
+      "creditText": "J. C. Carter, The Chora of Metaponto. The Necropoleis 1 (Austin 1998) 194, Abb. 6.15",
+      "shapeConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_5b62f4af",
+        "@type": "skos:Concept",
+        "prefLabel": "Lekythos"
+      },
+      "wareConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_69d3cf4c",
+        "@type": "skos:Concept",
+        "prefLabel": "Attisch Rotfigurig"
+      },
+      "confidenceShape": 0.7996,
+      "confidenceWare": 0.5025
+    },
+    {
+      "@id": "http://data.lodvases.bcdh.uni-bonn.de/object/0d1a3acf-40ee-4e88-9075-fc0e0593956d",
+      "@type": [
+        "VisualArtwork",
+        "crm:E22_Human-Made_Object"
+      ],
+      "name": "Psykter",
+      "description": "Delphine mit Reitern, die Kriegsausrüstung tragen",
+      "artform": "Psykter",
+      "material": "Ton",
+      "creator": "Oltos",
+      "dateCreated": "525 v. Chr. - 500 v. Chr.",
+      "locationCreated": "Attika",
+      "contentLocation": "New York, Sammlung Norbert Schimmel (ehemals)",
+      "identifier": "ARV²1622.7",
+      "image": "pics\\0d1a3acf-40ee-4e88-9075-fc0e0593956d.jpg",
+      "creditText": "H. Hoffmann, Norbert Schimmel Collection (Mainz 1964) Abb. 25",
+      "shapeConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_c73fec47",
+        "@type": "skos:Concept",
+        "prefLabel": "Psykter"
+      },
+      "wareConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_2ad94740",
+        "@type": "skos:Concept",
+        "prefLabel": "Attische Keramik"
+      },
+      "confidenceShape": 0.4998,
+      "confidenceWare": 0.5511
+    },
+    {
+      "@id": "http://data.lodvases.bcdh.uni-bonn.de/object/10ec9fff-4813-4a6c-8a39-64b1a78e7660",
+      "@type": [
+        "VisualArtwork",
+        "crm:E22_Human-Made_Object"
+      ],
+      "name": "Athlet, bekränzt und mit Bändern geschmückt",
+      "description": "Innenbild, Athlet, bekränzt und mit Bändern geschmückt",
+      "artform": "Trinkschale",
+      "material": "Ton",
+      "creator": "Oltos",
+      "dateCreated": "520 v. Chr. - 510 v. Chr.",
+      "locationCreated": "Attisch",
+      "identifier": "ARV² 61, 73",
+      "image": "pics\\10ec9fff-4813-4a6c-8a39-64b1a78e7660.jpg",
+      "creditText": "N. Kaltsas, Agon. Ausstellungskatalog Athen (Athen 2004) 928, Abb. S. 335",
+      "shapeConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_b1d6ebaf",
+        "@type": "skos:Concept",
+        "prefLabel": "Trinkschale"
+      },
+      "wareConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_2ad94740",
+        "@type": "skos:Concept",
+        "prefLabel": "Attische Keramik"
+      },
+      "confidenceShape": 0.3953,
+      "confidenceWare": 0.7928
+    },
+    {
+      "@id": "http://data.lodvases.bcdh.uni-bonn.de/object/202aa198-1575-43d3-a65e-f2c1354d0a0c",
+      "@type": [
+        "VisualArtwork",
+        "crm:E22_Human-Made_Object"
+      ],
+      "name": "Herakles und Acheloos",
+      "description": "Herakles kämpft gegen Acheloos. Durch Inschrift identifiziert.",
+      "artform": "Stamnos",
+      "material": "Ton",
+      "creator": "Oltos",
+      "dateCreated": "Um 520 v. Chr.",
+      "locationCreated": "Attisch",
+      "contentLocation": "London, British Museum",
+      "identifier": "E 437",
+      "image": "pics\\202aa198-1575-43d3-a65e-f2c1354d0a0c.jpg",
+      "creditText": "M. J. Padgett, The Centaur`s Smile. The Human Animal in Early Greek Art. Ausstellungskatalog Princeton University Art Museum (Princeton, New Jersey 2003) 877, Abb. S. 93",
+      "shapeConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_f17f817a",
+        "@type": "skos:Concept",
+        "prefLabel": "Stamnos"
+      },
+      "wareConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_2ad94740",
+        "@type": "skos:Concept",
+        "prefLabel": "Attische Keramik"
+      },
+      "confidenceShape": 0.5327,
+      "confidenceWare": 0.6806
+    },
+    {
+      "@id": "http://data.lodvases.bcdh.uni-bonn.de/object/21e1a103-a9c3-4f87-bdc1-8d17aba27b44",
+      "@type": [
+        "VisualArtwork",
+        "crm:E22_Human-Made_Object"
+      ],
+      "name": "Kylix des Oltos: Eine Mänade erwehrt sich zweier zudringlicher Satyrn",
+      "description": "Eine Mänade erwehrt sich dem Drängen zweier erregter Satyrn, einer von diesen trägt ein Trinkhorn, Menade, Menaden, Mänaden, Satyr, Satyrn",
+      "artform": "Trinkschale",
+      "material": "Ton",
+      "creator": "Oltos (Maler); Kachrylion (Töpfer)",
+      "dateCreated": "Um 500 v. Chr.",
+      "locationCreated": "Attisch",
+      "contentLocation": "Kopenhagen, Nationalmuseum",
+      "identifier": "13407",
+      "image": "pics\\21e1a103-a9c3-4f87-bdc1-8d17aba27b44.jpg",
+      "creditText": "CVA Mainz 9 31, Abb. 31",
+      "shapeConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_b1d6ebaf",
+        "@type": "skos:Concept",
+        "prefLabel": "Trinkschale"
+      },
+      "wareConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_2ad94740",
+        "@type": "skos:Concept",
+        "prefLabel": "Attische Keramik"
+      },
+      "confidenceShape": 0.2834,
+      "confidenceWare": 0.511
+    },
+    {
+      "@id": "http://data.lodvases.bcdh.uni-bonn.de/object/38d61f1d-516f-4b46-9a9d-2de7aa785843",
+      "@type": [
+        "VisualArtwork",
+        "crm:E22_Human-Made_Object"
+      ],
+      "name": "Glockenkrater des Malers der Berliner Tänzerin: Herakles und der nemeische Löwe",
+      "description": "Seite A, Taten des Herakles: Tötung des nemeischen Löwen",
+      "artform": "Krater",
+      "material": "Ton",
+      "creator": "Maler der Berliner Tänzerin",
+      "dateCreated": "440 v. Chr. - 420 v. Chr.",
+      "locationCreated": "Apulisch",
+      "contentLocation": "Neapel, Museo Archeologico Nazionale",
+      "identifier": "SANC 81571",
+      "image": "pics\\38d61f1d-516f-4b46-9a9d-2de7aa785843.jpg",
+      "creditText": "S. de Caro, Ercole. L'eroe, il mito (Milano 2001) 31, Abb. -",
+      "shapeConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_4ec3b0ea",
+        "@type": "skos:Concept",
+        "prefLabel": "Krater"
+      },
+      "wareConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_b5d694d6",
+        "@type": "skos:Concept",
+        "prefLabel": "Unteritalisch Rotfigurig"
+      },
+      "confidenceShape": 0.5629,
+      "confidenceWare": 0.5098
+    },
+    {
+      "@id": "http://data.lodvases.bcdh.uni-bonn.de/object/4216f1b0-ff90-4e8d-b78b-147c8bc345e8",
+      "@type": [
+        "VisualArtwork",
+        "crm:E22_Human-Made_Object"
+      ],
+      "name": "Priamos erbittet Leiche des Hektors von Achill",
+      "description": "Außenansicht, Achill auf einer Kline, unter ihm die Leiche des Hektor, Priamos",
+      "artform": "Trinkschale",
+      "material": "Ton",
+      "creator": "Oltos",
+      "dateCreated": "520 v. Chr. - 480 v. Chr.",
+      "locationCreated": "Attisch",
+      "contentLocation": "München, Staatliche Antikensammlungen",
+      "identifier": "2618",
+      "image": "pics\\4216f1b0-ff90-4e8d-b78b-147c8bc345e8.jpg",
+      "creditText": "F. Knauß - R. Wünsche, Lockender Lorbeer. Sport und Spiel in der Antike. Ausstellungskatalog München (München 2004) 199, Abb. 21. 13",
+      "shapeConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_b1d6ebaf",
+        "@type": "skos:Concept",
+        "prefLabel": "Trinkschale"
+      },
+      "wareConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_2ad94740",
+        "@type": "skos:Concept",
+        "prefLabel": "Attische Keramik"
+      },
+      "confidenceShape": 0.5089,
+      "confidenceWare": 0.523
+    },
+    {
+      "@id": "http://data.lodvases.bcdh.uni-bonn.de/object/4aca1481-6148-450f-bae2-df23e44610bd",
+      "@type": [
+        "VisualArtwork",
+        "crm:E22_Human-Made_Object"
+      ],
+      "name": "Schale des Oltos: Theseus und Antiope",
+      "description": "Theseus entführt Antiope, Kachrylion signiert als Töpfer, Amazone, Amazonomachie",
+      "artform": "Trinkschale",
+      "material": "Ton",
+      "creator": "Kachrylion",
+      "dateCreated": "520 v. Chr. - 500 v. Chr.",
+      "locationCreated": "Attisch",
+      "contentLocation": "London, British Museum",
+      "identifier": "E 41|41",
+      "image": "pics\\4aca1481-6148-450f-bae2-df23e44610bd.jpg",
+      "creditText": "J. Neils, The loves of Theseus: An early cup by Oltos, AJA 85, 1981, Taf. 40, Abb. 1",
+      "shapeConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_b1d6ebaf",
+        "@type": "skos:Concept",
+        "prefLabel": "Trinkschale"
+      },
+      "wareConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_2ad94740",
+        "@type": "skos:Concept",
+        "prefLabel": "Attische Keramik"
+      },
+      "confidenceShape": 0.7108,
+      "confidenceWare": 0.5938
+    },
+    {
+      "@id": "http://data.lodvases.bcdh.uni-bonn.de/object/5be01285-897a-474d-9865-c95c30dabc74",
+      "@type": [
+        "VisualArtwork",
+        "crm:E22_Human-Made_Object"
+      ],
+      "name": "Psykter des Oltos-Malers: Krieger reiten auf Delphinen über das Meer",
+      "description": "Sechs Krieger in Rüstung reiten auf Delphinen über das Meer, Ehemals Kings Point, Sammlung Norbert Schimmel 57, Kühlgefäß, Delphin, Delphinreiter",
+      "artform": "Psykter",
+      "material": "Ton",
+      "creator": "Oltos",
+      "dateCreated": "520 v. Chr. - 510 v. Chr.",
+      "locationCreated": "Attisch",
+      "contentLocation": "New York, The Metropolitan Museum of Art",
+      "identifier": "1989.281.69",
+      "image": "pics\\5be01285-897a-474d-9865-c95c30dabc74.jpg",
+      "creditText": "E. Simon, Die griechischen Vasen 2 (München 1981) Taf. 95",
+      "shapeConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_c73fec47",
+        "@type": "skos:Concept",
+        "prefLabel": "Psykter"
+      },
+      "wareConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_2ad94740",
+        "@type": "skos:Concept",
+        "prefLabel": "Attische Keramik"
+      },
+      "confidenceShape": 0.6485,
+      "confidenceWare": 0.4617
+    },
+    {
+      "@id": "http://data.lodvases.bcdh.uni-bonn.de/object/5c16d54e-0b73-4742-841c-f9055cd92624",
+      "@type": [
+        "VisualArtwork",
+        "crm:E22_Human-Made_Object"
+      ],
+      "name": "Stamnos des Oltos und des Töpfers Pamphaios: Herakles greift das Horn des fischleibigen Acheloos",
+      "description": "Herakles ringt mit Acheloos, Ringkampf, Acheloos mit fischähnlichem Körper, fischleibig, Beischriften",
+      "artform": "Stamnos",
+      "material": "Ton",
+      "creator": "Pamphaios",
+      "dateCreated": "Um 520 v. Chr.",
+      "locationCreated": "Attisch",
+      "contentLocation": "London, British Museum",
+      "identifier": "E 437",
+      "image": "pics\\5c16d54e-0b73-4742-841c-f9055cd92624.jpg",
+      "creditText": "J. M. Padgett, The Centaur's Smile. The Human Animal in Early Greek Art. Ausstellungskatalog Princeton University Art Museum (Princeton 2003) 93, Abb. 18",
+      "shapeConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_f17f817a",
+        "@type": "skos:Concept",
+        "prefLabel": "Stamnos"
+      },
+      "wareConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_2ad94740",
+        "@type": "skos:Concept",
+        "prefLabel": "Attische Keramik"
+      },
+      "confidenceShape": 0.4603,
+      "confidenceWare": 0.5753
+    },
+    {
+      "@id": "http://data.lodvases.bcdh.uni-bonn.de/object/5d7930a6-e64d-4648-a8f0-b19bfb24d44b",
+      "@type": [
+        "VisualArtwork",
+        "crm:E22_Human-Made_Object"
+      ],
+      "name": "Attisch-rotfigurige Bauchamphora des Berliner Malers",
+      "description": "Frontalansicht, Herakles mit Keule, Löwenfell und Kantharos",
+      "artform": "Transportamphora",
+      "material": "Ton",
+      "dateCreated": "Um 480 v. Chr.",
+      "locationCreated": "Attisch",
+      "contentLocation": "Basel, Antikenmuseum Basel und Sammlung Ludwig",
+      "identifier": "BS 456",
+      "image": "pics\\5d7930a6-e64d-4648-a8f0-b19bfb24d44b.jpg",
+      "creditText": "P. Blome, Antikenmuseum Basel und Sammlung Ludwig (Genf 1999) 42, Abb. 48",
+      "shapeConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_65909227",
+        "@type": "skos:Concept",
+        "prefLabel": "Transportamphora"
+      },
+      "wareConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_69d3cf4c",
+        "@type": "skos:Concept",
+        "prefLabel": "Attisch Rotfigurig"
+      },
+      "confidenceShape": 0.405,
+      "confidenceWare": 0.5947
+    },
+    {
+      "@id": "http://data.lodvases.bcdh.uni-bonn.de/object/9bd2d4b2-e608-492d-a73e-54dfa4e4937c",
+      "@type": [
+        "VisualArtwork",
+        "crm:E22_Human-Made_Object"
+      ],
+      "name": "Fliehende Silene",
+      "description": "Seite B, Drei (von sechs) fliehende Silene: Alle rutschen auf ihren Knien nach rechts, wenden sich dabei mit dem Oberkörper nach links, stützen sich mit dem linken Arm auf und haben den rechten abwehrend erhoben, Kleophrades-Maler laut Richter, Oltos laut Hartwig, Euthymides laut Beazley",
+      "artform": "Psykter",
+      "material": "Ton",
+      "creator": "Euthymides",
+      "dateCreated": "500 v. Chr. - 490 v. Chr.",
+      "locationCreated": "Attisch",
+      "contentLocation": "Compiègne, Musée Antoine Vivenel",
+      "identifier": "L 1068|1068",
+      "image": "pics\\9bd2d4b2-e608-492d-a73e-54dfa4e4937c.jpg",
+      "creditText": "A. Galoin, Vases Grécs. Collections des musées de Compiègne et de Laon (Paris 2001) 101, Abb. 32",
+      "shapeConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_c73fec47",
+        "@type": "skos:Concept",
+        "prefLabel": "Psykter"
+      },
+      "wareConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_2ad94740",
+        "@type": "skos:Concept",
+        "prefLabel": "Attische Keramik"
+      },
+      "confidenceShape": 0.6534,
+      "confidenceWare": 0.6715
+    },
+    {
+      "@id": "http://data.lodvases.bcdh.uni-bonn.de/object/a1e1406e-dbb0-4e6f-857b-6a939a99b721",
+      "@type": [
+        "VisualArtwork",
+        "crm:E22_Human-Made_Object"
+      ],
+      "name": "Halsamphora des Berliner-Malers: Nereide (Seite B)",
+      "description": "Nereus (Seite A), Nereide (Seite B)",
+      "artform": "Transportamphora",
+      "material": "Ton",
+      "creator": "Berliner Maler",
+      "dateCreated": "Um 490 v. Chr.",
+      "locationCreated": "Attisch",
+      "contentLocation": "Cambridge, Harvard University Art Museums, Arthur M. Sackler Museum",
+      "identifier": "1927.150",
+      "image": "pics\\a1e1406e-dbb0-4e6f-857b-6a939a99b721.jpg",
+      "creditText": "J. M. Padgett, The Centaur's Smile. The Human Animal in Early Greek Art. Ausstellungskatalog Princeton University Art Museum (Princeton 2003) 348, Abb. Links",
+      "shapeConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_65909227",
+        "@type": "skos:Concept",
+        "prefLabel": "Transportamphora"
+      },
+      "wareConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_2ad94740",
+        "@type": "skos:Concept",
+        "prefLabel": "Attische Keramik"
+      },
+      "confidenceShape": 0.4271,
+      "confidenceWare": 0.4903
+    },
+    {
+      "@id": "http://data.lodvases.bcdh.uni-bonn.de/object/a686f669-5edb-4dae-95e3-cdd449d2ebe9",
+      "@type": [
+        "VisualArtwork",
+        "crm:E22_Human-Made_Object"
+      ],
+      "name": "Zwei Amphoren des Oltos: Kentaur Chiron und Achill; Satyr und Mänade",
+      "artform": "Transportamphora",
+      "material": "Ton",
+      "creator": "Pamphaios",
+      "dateCreated": "520 v. Chr. - 515 v. Chr.",
+      "locationCreated": "Attisch",
+      "contentLocation": "Paris, Musée du Louvre",
+      "identifier": "(links) G 2; (rechts) G 3",
+      "image": "pics\\a686f669-5edb-4dae-95e3-cdd449d2ebe9.jpg",
+      "creditText": "M. Denoyelle, Chefs-d'œuvre de la céramique grecque dans les collections du Louvre (Paris 1994) 103, Abb. Gesamt",
+      "shapeConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_65909227",
+        "@type": "skos:Concept",
+        "prefLabel": "Transportamphora"
+      },
+      "wareConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_2ad94740",
+        "@type": "skos:Concept",
+        "prefLabel": "Attische Keramik"
+      },
+      "confidenceShape": 0.3029,
+      "confidenceWare": 0.5994
+    },
+    {
+      "@id": "http://data.lodvases.bcdh.uni-bonn.de/object/a7f7eff0-68e0-4eec-873c-cf4c46927627",
+      "@type": [
+        "VisualArtwork",
+        "crm:E22_Human-Made_Object"
+      ],
+      "name": "Dinos des Berliner-Malers",
+      "description": "Ansicht, Abfahrt des Zeus vom Olymp in Anwesenheit der übrigen Götter: Viergespann / Quadriga, Hermes (Kerykeion, Flügelschuhe), Apollon (Kithara), Reh, Poseidon (Dreizack, Delphin)., Abbildung stammt aus dem Katalog.",
+      "artform": "Dinos",
+      "material": "Ton",
+      "dateCreated": "Um 480 v. Chr.",
+      "locationCreated": "Attisch",
+      "contentLocation": "Schweiz, Basel, Antikenmuseum und Sammlung Ludwig",
+      "identifier": "Lu 39",
+      "image": "pics\\a7f7eff0-68e0-4eec-873c-cf4c46927627.jpg",
+      "creditText": "A. Wieczorek - J. Latacz - T. Greub - P. Blome, Homer. Der Mythos von Troia in Dichtung und Kunst. Ausstellungskatalog Basel - Mannheim (München 2008) 338, Abb. 70 oben",
+      "shapeConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_2b10bc00",
+        "@type": "skos:Concept",
+        "prefLabel": "Dinos"
+      },
+      "wareConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_2ad94740",
+        "@type": "skos:Concept",
+        "prefLabel": "Attische Keramik"
+      },
+      "confidenceShape": 0.7857,
+      "confidenceWare": 0.7185
+    },
+    {
+      "@id": "http://data.lodvases.bcdh.uni-bonn.de/object/af6ee239-0f7b-4093-8f6a-a8cc48128861",
+      "@type": [
+        "VisualArtwork",
+        "crm:E22_Human-Made_Object"
+      ],
+      "name": "Psykter",
+      "description": "Sechs Hopliten, auf Delphinen reitend",
+      "artform": "Psykter",
+      "material": "Ton",
+      "creator": "Oltos",
+      "dateCreated": "520 v. Chr. - 510 v. Chr.",
+      "locationCreated": "Attisch",
+      "contentLocation": "New York, Metropolitan Museum of Art",
+      "identifier": "1989.281.69",
+      "image": "pics\\af6ee239-0f7b-4093-8f6a-a8cc48128861.jpg",
+      "creditText": "M. A. Tiberios, Elliniki Techni. Archea Angia (Athen 1996) 120, Abb. 89",
+      "shapeConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_c73fec47",
+        "@type": "skos:Concept",
+        "prefLabel": "Psykter"
+      },
+      "wareConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_2ad94740",
+        "@type": "skos:Concept",
+        "prefLabel": "Attische Keramik"
+      },
+      "confidenceShape": 0.5876,
+      "confidenceWare": 0.5991
+    },
+    {
+      "@id": "http://data.lodvases.bcdh.uni-bonn.de/object/c444f0e4-61ae-4e19-93e1-779305f0773b",
+      "@type": [
+        "VisualArtwork",
+        "crm:E22_Human-Made_Object"
+      ],
+      "name": "Herakles und Dionysos mit Weingefäßen und Satyrn",
+      "description": "Seite A, Herakles und Dionysos: Herakles mit Löwenfell, Keule und Bogen, Dionysos mit zwei Zweigen in der linken und einem Kantharos in der rechten Hand. Zwischen beiden steht ein weiterer Kantharos. Auf der selben Ebene, vor einer Art Podest, links und rechts der beiden verschiedene Kratere, auf dem Podest, den Rest des Gefäßes umlaufend, fliehende Silene, Kleophrades-Maler laut Richter, Oltos laut Hartwig, Euthymides laut Beazley",
+      "artform": "Psykter",
+      "material": "Ton",
+      "creator": "Euthymides",
+      "dateCreated": "Um 500 v. Chr.",
+      "locationCreated": "Attisch",
+      "contentLocation": "Compiègne, Musée Antoine Vivenel",
+      "identifier": "V 1068|1068",
+      "image": "pics\\c444f0e4-61ae-4e19-93e1-779305f0773b.jpg",
+      "creditText": "F. Lissarrague, Vases grecs. Les Athéniens et leurs images (Paris 1999) 178, Abb. 136",
+      "shapeConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_c73fec47",
+        "@type": "skos:Concept",
+        "prefLabel": "Psykter"
+      },
+      "wareConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_2ad94740",
+        "@type": "skos:Concept",
+        "prefLabel": "Attische Keramik"
+      },
+      "confidenceShape": 0.662,
+      "confidenceWare": 0.6209
+    },
+    {
+      "@id": "http://data.lodvases.bcdh.uni-bonn.de/object/d7feea02-13c8-49bb-aeb1-fd4539bfd89a",
+      "@type": [
+        "VisualArtwork",
+        "crm:E22_Human-Made_Object"
+      ],
+      "name": "Trinkschale",
+      "description": "Hebe, Hermes und Athena",
+      "artform": "Trinkschale",
+      "material": "Keramik",
+      "creator": "Euxitheos; Oltos",
+      "locationCreated": "Attisch",
+      "contentLocation": "Tarquinia, Museo Archeologico Nazionale",
+      "identifier": "RC 6848",
+      "image": "pics\\d7feea02-13c8-49bb-aeb1-fd4539bfd89a.jpg",
+      "creditText": "M. A. Tiverios, Elleniki Techni. Archaia Angeia (Athen 1996) 117, Taf. 86",
+      "shapeConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_b1d6ebaf",
+        "@type": "skos:Concept",
+        "prefLabel": "Trinkschale"
+      },
+      "wareConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_2ad94740",
+        "@type": "skos:Concept",
+        "prefLabel": "Attische Keramik"
+      },
+      "confidenceShape": 0.7495,
+      "confidenceWare": 0.6737
+    },
+    {
+      "@id": "http://data.lodvases.bcdh.uni-bonn.de/object/e96dc2f1-831f-4de3-89de-19cafa3bf55b",
+      "@type": [
+        "VisualArtwork",
+        "crm:E22_Human-Made_Object"
+      ],
+      "name": "Schale, Typ B",
+      "description": "Tondo: Jüngling mit Ball, Außen: Krieger mit Pferd und Geranomachie, In Antike mit sechs Metallklammern repariert",
+      "artform": "Trinkschale",
+      "material": "Ton",
+      "creator": "Zugeschrieben dem Oltos",
+      "dateCreated": "510 v. Chr. - 500 v. Chr.",
+      "locationCreated": "Attisch",
+      "identifier": "e96dc2f1-831f-4de3-89de-19cafa3bf55b",
+      "image": "pics\\e96dc2f1-831f-4de3-89de-19cafa3bf55b.jpg",
+      "creditText": "Cahn International AG, TEFAF Maastricht 15-24 March 2013. Auktionskatalog Maastricht; London 15-24 März 2013; 27.6-3.7.2013 (Basel 2013) 8, Abb. Oben",
+      "shapeConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_b1d6ebaf",
+        "@type": "skos:Concept",
+        "prefLabel": "Trinkschale"
+      },
+      "wareConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_2ad94740",
+        "@type": "skos:Concept",
+        "prefLabel": "Attische Keramik"
+      },
+      "confidenceShape": 0.9592,
+      "confidenceWare": 0.5841
+    },
+    {
+      "@id": "http://data.lodvases.bcdh.uni-bonn.de/object/ecbe2506-e966-4066-be9f-b4513844226d",
+      "@type": [
+        "VisualArtwork",
+        "crm:E22_Human-Made_Object"
+      ],
+      "name": "Aphrodite und Ares",
+      "description": "Aphrodite und Ares, Brommer-Archiv, Kasten GS 15",
+      "artform": "Trinkschale",
+      "material": "Ton",
+      "creator": "Oltos",
+      "locationCreated": "Attisch",
+      "contentLocation": "Tarquinia, Museo Archeologico Nazionale",
+      "identifier": "RC 6848",
+      "image": "pics\\ecbe2506-e966-4066-be9f-b4513844226d.jpg",
+      "creditText": "M. Hirmer - P. E. Arias, Tausend Jahre Griechische Vasenkunst (München 1960) 444, Taf. 103, 1, Neg. 491, 11",
+      "shapeConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_b1d6ebaf",
+        "@type": "skos:Concept",
+        "prefLabel": "Trinkschale"
+      },
+      "wareConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_2ad94740",
+        "@type": "skos:Concept",
+        "prefLabel": "Attische Keramik"
+      },
+      "confidenceShape": 0.5163,
+      "confidenceWare": 0.6105
+    }
+  ]
+}

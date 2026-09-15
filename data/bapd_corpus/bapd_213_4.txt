@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 213
+Beschreibung: A: BIRTH OF ATHENA, ZEUS, HERA, EILEITHYIA, POSEIDON, HEPHAISTOS, GODDESS B: INTRODUCTION OF HERAKLES ON OLYMPOS (ZEUS, HERA ? HERMES, ATHENA, HERAKLES, POSEIDON, YOUTH WITH SPEAR, DEVICE, GORGONEION)
+Datierung: ca. 575–525 v. Chr.
+Gattung: Gefäß
+Gefäßform: Bauchamphora [Kerameikos: https://kerameikos.org/id/belly_amphora]
+Herkunftsort: 
+Inventar-Nr.: BS496
+Künstler/Werkstatt: GROUP E by UNKNOWN PHRYNOS P by MOMMSEN [Kerameikos: https://kerameikos.org/id/phrynos_painter]
+Material: Ton
+Name/Bezeichnung: Herakles auf antiker Bauchamphora (GROUP E)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Basel, Antikenmuseum und Sammlung Ludwig
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Herakles
+SKOS-URI: https://hector.bcdh.uni-bonn.de/heracles

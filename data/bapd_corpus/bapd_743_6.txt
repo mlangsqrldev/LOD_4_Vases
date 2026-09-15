@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 743
+Beschreibung: A,B: APOLLO PLAYING KITHARA BETWEEN ARTEMIS (?) AND LETO (?), PALM TREE
+Datierung: ca. 550–500 v. Chr.
+Gattung: Gefäß
+Gefäßform: Halsamphora [Kerameikos: https://kerameikos.org/id/neck_amphora]
+Herkunftsort: 
+Inventar-Nr.: 1473
+Künstler/Werkstatt: Compare LONDON B 174, GROUP OF by KUNZE-GÖTTE
+Material: Ton
+Name/Bezeichnung: Apollon auf antiker Halsamphora (Compare LONDON B 174, GROUP OF)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Munich, Antikensammlungen
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Apollon
+SKOS-URI: https://hector.bcdh.uni-bonn.de/apollo

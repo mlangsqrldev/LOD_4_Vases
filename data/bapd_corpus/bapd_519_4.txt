@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 519
+Beschreibung: Body: POSEIDON ON HIPPOCAMP
+Datierung: ca. 525–475 v. Chr.
+Gattung: Gefäß
+Gefäßform: Lekythos [Kerameikos: https://kerameikos.org/id/lekythos]
+Herkunftsort: ITALY, SICILY, GELA
+Inventar-Nr.: V247
+Künstler/Werkstatt: ATHENA P by HASPELS [Kerameikos: https://kerameikos.org/id/athena_painter]
+Material: Ton
+Name/Bezeichnung: Apollon auf antiker Lekythos (ATHENA P)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Oxford, Ashmolean Museum
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Apollon
+SKOS-URI: https://hector.bcdh.uni-bonn.de/apollo

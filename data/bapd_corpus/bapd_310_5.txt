@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 310
+Beschreibung: A: HERAKLES AND APOLLO (IN NEBRIS), THE STRUGGLE FOR THE TRIPOD, LYKOMEDES IN CHARIOT, ARTEMIS, IOLAOS IN CHARIOT, ATHENA (ALL NAMED) B: HERMES, WOMAN, DIONYSOS, ZEUS (?), WOMAN, MAN Rim, inside: DOLPHINS AND SHIPS Rim: ANIMALS
+Datierung: ca. 525–475 v. Chr.
+Gattung: Gefäß
+Gefäßform: Krater [Kerameikos: https://kerameikos.org/id/krater]
+Herkunftsort: 
+Inventar-Nr.: 07.286.78
+Künstler/Werkstatt: LYKOMEDES P* by BOTHMER
+Material: Ton
+Name/Bezeichnung: Apollon auf antiker Krater (LYKOMEDES P*)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: New York (N.Y.), Metropolitan Museum
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Apollon
+SKOS-URI: https://hector.bcdh.uni-bonn.de/apollo

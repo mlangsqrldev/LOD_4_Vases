@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 517
+Beschreibung: Body: HEADS OF HERAKLES AND ATHENA AND HEBE, NIKAI WITH WREATHS (NONSENSE INSCRIPTIONS)
+Datierung: ca. 525–475 v. Chr.
+Gattung: Gefäß
+Gefäßform: Lekythos [Kerameikos: https://kerameikos.org/id/lekythos]
+Herkunftsort: 
+Inventar-Nr.: 84
+Künstler/Werkstatt: GELA P by HASPELS [Kerameikos: https://kerameikos.org/id/gela_painter]
+Material: Ton
+Name/Bezeichnung: Herakles auf antiker Lekythos (GELA P)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Vienna, Kunsthistorisches Museum
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Herakles
+SKOS-URI: https://hector.bcdh.uni-bonn.de/heracles

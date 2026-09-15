@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 473
+Beschreibung: A: DIONYSOS WITH KANTHAROS BETWEEN SATYR AND MAENADS B: HERAKLES AND APOLLO, THE STRUGGLE FOR THE TRIPOD, DEER, GODDESS (ARTEMIS ?)
+Datierung: ca. 525–475 v. Chr.
+Gattung: Gefäß
+Gefäßform: Stamnos [Kerameikos: https://kerameikos.org/id/stamnos]
+Herkunftsort: 
+Inventar-Nr.: 251
+Künstler/Werkstatt: 
+Material: Ton
+Name/Bezeichnung: Apollon auf antiker Stamnos
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Paris, Cabinet des Medailles
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Apollon
+SKOS-URI: https://hector.bcdh.uni-bonn.de/apollo

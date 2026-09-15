@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 72
+Beschreibung: Body: HERAKLES AND TRITON Predella: PANTHERS, DEER Shoulder: YOUTHS LEADING HORSES
+Datierung: ca. 550–500 v. Chr.
+Gattung: Gefäß
+Gefäßform: Hydria [Kerameikos: https://kerameikos.org/id/hydria]
+Herkunftsort: ITALY, ETRURIA, VULCI
+Inventar-Nr.: 99.522
+Künstler/Werkstatt: TALEIDES P by UNKNOWN
+Material: Ton
+Name/Bezeichnung: Herakles auf antiker Hydria (TALEIDES P)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Boston (MA), Museum of Fine Arts
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Herakles
+SKOS-URI: https://hector.bcdh.uni-bonn.de/heracles

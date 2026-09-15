@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 102
+Beschreibung: Body: WARRIOR, DEPARTING, MOUNTING CHARIOT, WOMAN, OLD MAN, WARRIOR, OLD MAN SEATED Predella: LIONS, BOARS Shoulder: ACHILLES AND TROILOS (IN THRACIAN CLOAK), ATHENA, POLYXENE, FOUNTAINHOUSE WITH LION HEAD SPOUT, SHIELD AND SPEARS, SHIELD DEVICE, TRIPOD
+Datierung: ca. 550–500 v. Chr.
+Gattung: Gefäß
+Gefäßform: Hydria [Kerameikos: https://kerameikos.org/id/hydria]
+Herkunftsort: 
+Inventar-Nr.: T49
+Künstler/Werkstatt: Manner of ANTIMENES P by PAUL, E. [Kerameikos: https://kerameikos.org/id/antimenes_painter]
+Material: Ton
+Name/Bezeichnung: Athena auf antiker Hydria (Manner of ANTIMENES P)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Leipzig, Antikenmuseum der Universität Leipzig
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Athena
+SKOS-URI: https://hector.bcdh.uni-bonn.de/athena

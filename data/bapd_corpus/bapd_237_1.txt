@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 237
+Beschreibung: A: GODDESS (ARTEMIS ?) MOUNTING CHARIOT, APOLLO PLAYING KITHARA, DEER B: DIONYSOS WITH KANTHAROS AND ARIADNE (?) WITH SATYRS
+Datierung: ca. 550–500 v. Chr.
+Gattung: Gefäß
+Gefäßform: Krater [Kerameikos: https://kerameikos.org/id/krater]
+Herkunftsort: 
+Inventar-Nr.: 
+Künstler/Werkstatt: RYCROFT P by UNKNOWN
+Material: Ton
+Name/Bezeichnung: Apollon auf antiker Krater (RYCROFT P)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: London, market, Christie's
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Apollon
+SKOS-URI: https://hector.bcdh.uni-bonn.de/apollo

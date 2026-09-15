@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 318
+Beschreibung: A: WARRIOR (TYDEUS ?) DEPARTING WITH PHIALE, WOMEN, ONE WITH PHIALE, ONE WITH OINOCHOE, DRAPED MAN SEATED ON STOOL WITH LEOPARD SKIN, SHIELD WITH APRON, DEVICE, BULL (DEIPYLE ? ADRASTOS ? ARGEIA OR AMPHITHEA ?) B: MENELAOS AND HELEN, OR TYDEUS AND ISMENE, ATHENA,  DRAPED YOUTH, BUILDING WITH DORIC COLUMNS
+Datierung: ca. 500–450 v. Chr.
+Gattung: Gefäß
+Gefäßform: Skyphos [Kerameikos: https://kerameikos.org/id/skyphos]
+Herkunftsort: 
+Inventar-Nr.: 1970.9
+Künstler/Werkstatt: TRIPTOLEMOS P by UNKNOWN
+Material: Ton
+Name/Bezeichnung: Athena auf antiker Skyphos (TRIPTOLEMOS P)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Berlin, Antikensammlung
+Ware: Attisch Rotfigurig [Kerameikos: https://kerameikos.org/id/red_figure]
+Hauptmotiv: Athena
+SKOS-URI: https://hector.bcdh.uni-bonn.de/athena

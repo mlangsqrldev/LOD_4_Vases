@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 265
+Beschreibung: Body: ATHENA, HOLDING ERICHTHONIOS (?), TREE, ALTAR
+Datierung: ca. 475–425 v. Chr.
+Gattung: Gefäß
+Gefäßform: Lekythos [Kerameikos: https://kerameikos.org/id/lekythos]
+Herkunftsort: 
+Inventar-Nr.: CA681
+Künstler/Werkstatt: 
+Material: Ton
+Name/Bezeichnung: Athena auf antiker Lekythos
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Paris, Musée du Louvre
+Ware: Attisch Rotfigurig [Kerameikos: https://kerameikos.org/id/red_figure]
+Hauptmotiv: Athena
+SKOS-URI: https://hector.bcdh.uni-bonn.de/athena

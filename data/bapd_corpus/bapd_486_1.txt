@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 486
+Beschreibung: BELLEROPHON AND CHIMAERA, PEGASOS, YOUTHS IN PERSIAN CAPS AND COSTUMES, ONE WITH SPEAR AND PELTA, ONE WITH  ROCK, APOLLO (?)
+Datierung: ca. 425–375 v. Chr.
+Gattung: Gefäß
+Gefäßform: Krater [Kerameikos: https://kerameikos.org/id/krater]
+Herkunftsort: GREECE, CORINTH
+Inventar-Nr.: C31.82
+Künstler/Werkstatt: 
+Material: Ton
+Name/Bezeichnung: Apollon auf antiker Krater
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Corinth, Archaeological Museum
+Ware: Attisch Rotfigurig [Kerameikos: https://kerameikos.org/id/red_figure]
+Hauptmotiv: Apollon
+SKOS-URI: https://hector.bcdh.uni-bonn.de/apollo

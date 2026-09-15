@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 1000
+Beschreibung: Body: APOLLO PLAYING LYRE BETWEEN LETO AND ARTEMIS (ALL SEATED ON STOOLS)
+Datierung: ca. 500–450 v. Chr.
+Gattung: Gefäß
+Gefäßform: Lekythos [Kerameikos: https://kerameikos.org/id/lekythos]
+Herkunftsort: GREECE
+Inventar-Nr.: ROII31
+Künstler/Werkstatt: Manner of HAIMON P by VOS ATHENS 581, CLASS OF by VOS
+Material: Ton
+Name/Bezeichnung: Apollon auf antiker Lekythos (Manner of HAIMON P)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Leiden, Rijksmuseum van Oudheden
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Apollon
+SKOS-URI: https://hector.bcdh.uni-bonn.de/apollo

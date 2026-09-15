@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 282
+Beschreibung: A: ANODOS, HEADS OF DIONYSOS AND SEMELE (?) BETWEEN SATYRS AND MAENADS WITH KROTALA B: WOMAN (MAENAD) LEADING MAENAD ON MULE, SATYR WITH WINESKIN Under handle: EYE
+Datierung: ca. 550–500 v. Chr.
+Gattung: Gefäß
+Gefäßform: Krater [Kerameikos: https://kerameikos.org/id/krater]
+Herkunftsort: ITALY, ETRURIA
+Inventar-Nr.: F311
+Künstler/Werkstatt: 
+Material: Ton
+Name/Bezeichnung: Dionysos auf antiker Krater
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Paris, Musée du Louvre
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Dionysos
+SKOS-URI: https://hector.bcdh.uni-bonn.de/dionysus

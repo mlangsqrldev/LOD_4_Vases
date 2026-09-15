@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 311
+Beschreibung: Body: HERAKLES AND APOLLO, THE STRUGGLE FOR THE TRIPOD, DEER
+Datierung: ca. 525–475 v. Chr.
+Gattung: Gefäß
+Gefäßform: Lekythos [Kerameikos: https://kerameikos.org/id/lekythos]
+Herkunftsort: 
+Inventar-Nr.: 67.11.22
+Künstler/Werkstatt: 
+Material: Ton
+Name/Bezeichnung: Apollon auf antiker Lekythos
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: New York (N.Y.), Metropolitan Museum
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Apollon
+SKOS-URI: https://hector.bcdh.uni-bonn.de/apollo

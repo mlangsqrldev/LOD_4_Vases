@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 491
+Beschreibung: Body: EGG ON ALTAR BETWEEN DRAPED MAN SEATED WITH SCEPTRE AND WOMAN WITH PHIALE (ZEUS AND LEDA ?), WOMEN, ONE WITH OINOCHOE, ONE WITH LYRE, ONE WITH SACRIFICIAL BASKET AND OINOCHOE AT ALTAR AND COLUMN, DRAPED YOUTH WITH SCEPTRE (APOLLO AND MUSES ?)
+Datierung: ca. 450–400 v. Chr.
+Gattung: Gefäß
+Gefäßform: Pyxis [Kerameikos: https://kerameikos.org/id/pyxis]
+Herkunftsort: 
+Inventar-Nr.: 
+Künstler/Werkstatt: 
+Material: Ton
+Name/Bezeichnung: Apollon auf antiker Pyxis
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: London, market, Christie's
+Ware: Attisch Rotfigurig [Kerameikos: https://kerameikos.org/id/red_figure]
+Hauptmotiv: Apollon
+SKOS-URI: https://hector.bcdh.uni-bonn.de/apollo

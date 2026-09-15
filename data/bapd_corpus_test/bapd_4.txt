@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 4
+Beschreibung: A: TRIPTOLEMOS SEATED ON CART WITH SHEAVES OF CORN, PERSEPHONE (?), DEMETER, APOLLO PLAYING KITHARA B: WARRIOR AND CHARIOTEER IN CHARIOT (TURNING), BOTH WITH BOEOTIAN SHIELDS
+Datierung: ca. 550–500 v. Chr.
+Gattung: Gefäß
+Gefäßform: Halsamphora
+Herkunftsort: 
+Inventar-Nr.: 50.732
+Künstler/Werkstatt: Near MEDEA GROUP by UNKNOWN
+Material: Ton
+Name/Bezeichnung: Apollon auf antiker Halsamphora (Near MEDEA GROUP)
+Produktionsgebiet: Attisch
+Standort: Budapest, Hungarian Museum of Fine Arts
+Ware: Attisch Schwarzfigurig
+Hauptmotiv: Apollon
+SKOS-URI: https://hector.bcdh.uni-bonn.de/apollo

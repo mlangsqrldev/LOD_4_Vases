@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 626
+Beschreibung: Body: APOLLO PLAYING KITHARA BETWEEN ARTEMIS (?) AND LETO (?), HERMES, DIONYSOS Shoulder: WARRIORS FIGHTING BETWEEN ONLOOKERS
+Datierung: ca. 550–500 v. Chr.
+Gattung: Gefäß
+Gefäßform: Hydria [Kerameikos: https://kerameikos.org/id/hydria]
+Herkunftsort: ITALY, ETRURIA, VULCI
+Inventar-Nr.: PC2
+Künstler/Werkstatt: 
+Material: Ton
+Name/Bezeichnung: Apollon auf antiker Hydria
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Leiden, Rijksmuseum van Oudheden
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Apollon
+SKOS-URI: https://hector.bcdh.uni-bonn.de/apollo

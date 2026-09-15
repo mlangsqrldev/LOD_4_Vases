@@ -1,0 +1,289 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix hector: <http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/> .
+@prefix obj: <http://data.lodvases.bcdh.uni-bonn.de/object/> .
+@prefix schema1: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+obj:0470d55f-92f3-4d6a-8180-4d2d891a9277 a schema1:VisualArtwork,
+        crm:E22_Human_Made_Object ;
+    dcterms:creator "Berliner Maler" ;
+    dcterms:date "Um 240 v. Chr." ;
+    dcterms:description "Eros" ;
+    dcterms:title "Attisch rotfigurige Lekythos aus Grab T 206-8 in Metapont" ;
+    schema1:locationCreated "Attisch" ;
+    schema1:material "Ton" ;
+    schema1:name "Attisch rotfigurige Lekythos aus Grab T 206-8 in Metapont" ;
+    crm:P2_has_type hector:concept_5b62f4af ;
+    crm:P32_used_general_technique hector:concept_69d3cf4c .
+
+obj:0d1a3acf-40ee-4e88-9075-fc0e0593956d a schema1:VisualArtwork,
+        crm:E22_Human_Made_Object ;
+    dcterms:creator "Oltos" ;
+    dcterms:date "525 v. Chr. - 500 v. Chr." ;
+    dcterms:description "Delphine mit Reitern, die Kriegsausrüstung tragen" ;
+    dcterms:title "Psykter" ;
+    schema1:contentLocation "New York, Sammlung Norbert Schimmel (ehemals)" ;
+    schema1:locationCreated "Attika" ;
+    schema1:material "Ton" ;
+    schema1:name "Psykter" ;
+    crm:P2_has_type hector:concept_c73fec47 ;
+    crm:P32_used_general_technique hector:concept_2ad94740 .
+
+obj:10ec9fff-4813-4a6c-8a39-64b1a78e7660 a schema1:VisualArtwork,
+        crm:E22_Human_Made_Object ;
+    dcterms:creator "Oltos" ;
+    dcterms:date "520 v. Chr. - 510 v. Chr." ;
+    dcterms:description "Innenbild, Athlet, bekränzt und mit Bändern geschmückt" ;
+    dcterms:title "Athlet, bekränzt und mit Bändern geschmückt" ;
+    schema1:locationCreated "Attisch" ;
+    schema1:material "Ton" ;
+    schema1:name "Athlet, bekränzt und mit Bändern geschmückt" ;
+    crm:P2_has_type hector:concept_b1d6ebaf ;
+    crm:P32_used_general_technique hector:concept_2ad94740 .
+
+obj:202aa198-1575-43d3-a65e-f2c1354d0a0c a schema1:VisualArtwork,
+        crm:E22_Human_Made_Object ;
+    dcterms:creator "Oltos" ;
+    dcterms:date "Um 520 v. Chr." ;
+    dcterms:description "Herakles kämpft gegen Acheloos. Durch Inschrift identifiziert." ;
+    dcterms:title "Herakles und Acheloos" ;
+    schema1:contentLocation "London, British Museum" ;
+    schema1:locationCreated "Attisch" ;
+    schema1:material "Ton" ;
+    schema1:name "Herakles und Acheloos" ;
+    crm:P2_has_type hector:concept_f17f817a ;
+    crm:P32_used_general_technique hector:concept_2ad94740 .
+
+obj:21e1a103-a9c3-4f87-bdc1-8d17aba27b44 a schema1:VisualArtwork,
+        crm:E22_Human_Made_Object ;
+    dcterms:creator "Oltos (Maler); Kachrylion (Töpfer)" ;
+    dcterms:date "Um 500 v. Chr." ;
+    dcterms:description "Eine Mänade erwehrt sich dem Drängen zweier erregter Satyrn, einer von diesen trägt ein Trinkhorn, Menade, Menaden, Mänaden, Satyr, Satyrn" ;
+    dcterms:title "Kylix des Oltos: Eine Mänade erwehrt sich zweier zudringlicher Satyrn" ;
+    schema1:contentLocation "Kopenhagen, Nationalmuseum" ;
+    schema1:locationCreated "Attisch" ;
+    schema1:material "Ton" ;
+    schema1:name "Kylix des Oltos: Eine Mänade erwehrt sich zweier zudringlicher Satyrn" ;
+    crm:P2_has_type hector:concept_b1d6ebaf ;
+    crm:P32_used_general_technique hector:concept_2ad94740 .
+
+obj:38d61f1d-516f-4b46-9a9d-2de7aa785843 a schema1:VisualArtwork,
+        crm:E22_Human_Made_Object ;
+    dcterms:creator "Maler der Berliner Tänzerin" ;
+    dcterms:date "440 v. Chr. - 420 v. Chr." ;
+    dcterms:description "Seite A, Taten des Herakles: Tötung des nemeischen Löwen" ;
+    dcterms:title "Glockenkrater des Malers der Berliner Tänzerin: Herakles und der nemeische Löwe" ;
+    schema1:contentLocation "Neapel, Museo Archeologico Nazionale" ;
+    schema1:locationCreated "Apulisch" ;
+    schema1:material "Ton" ;
+    schema1:name "Glockenkrater des Malers der Berliner Tänzerin: Herakles und der nemeische Löwe" ;
+    crm:P2_has_type hector:concept_4ec3b0ea ;
+    crm:P32_used_general_technique hector:concept_b5d694d6 .
+
+obj:4216f1b0-ff90-4e8d-b78b-147c8bc345e8 a schema1:VisualArtwork,
+        crm:E22_Human_Made_Object ;
+    dcterms:creator "Oltos" ;
+    dcterms:date "520 v. Chr. - 480 v. Chr." ;
+    dcterms:description "Außenansicht, Achill auf einer Kline, unter ihm die Leiche des Hektor, Priamos" ;
+    dcterms:title "Priamos erbittet Leiche des Hektors von Achill" ;
+    schema1:contentLocation "München, Staatliche Antikensammlungen" ;
+    schema1:locationCreated "Attisch" ;
+    schema1:material "Ton" ;
+    schema1:name "Priamos erbittet Leiche des Hektors von Achill" ;
+    crm:P2_has_type hector:concept_b1d6ebaf ;
+    crm:P32_used_general_technique hector:concept_2ad94740 .
+
+obj:4aca1481-6148-450f-bae2-df23e44610bd a schema1:VisualArtwork,
+        crm:E22_Human_Made_Object ;
+    dcterms:creator "Kachrylion" ;
+    dcterms:date "520 v. Chr. - 500 v. Chr." ;
+    dcterms:description "Theseus entführt Antiope, Kachrylion signiert als Töpfer, Amazone, Amazonomachie" ;
+    dcterms:title "Schale des Oltos: Theseus und Antiope" ;
+    schema1:contentLocation "London, British Museum" ;
+    schema1:locationCreated "Attisch" ;
+    schema1:material "Ton" ;
+    schema1:name "Schale des Oltos: Theseus und Antiope" ;
+    crm:P2_has_type hector:concept_b1d6ebaf ;
+    crm:P32_used_general_technique hector:concept_2ad94740 .
+
+obj:5be01285-897a-474d-9865-c95c30dabc74 a schema1:VisualArtwork,
+        crm:E22_Human_Made_Object ;
+    dcterms:creator "Oltos" ;
+    dcterms:date "520 v. Chr. - 510 v. Chr." ;
+    dcterms:description "Sechs Krieger in Rüstung reiten auf Delphinen über das Meer, Ehemals Kings Point, Sammlung Norbert Schimmel 57, Kühlgefäß, Delphin, Delphinreiter" ;
+    dcterms:title "Psykter des Oltos-Malers: Krieger reiten auf Delphinen über das Meer" ;
+    schema1:contentLocation "New York, The Metropolitan Museum of Art" ;
+    schema1:locationCreated "Attisch" ;
+    schema1:material "Ton" ;
+    schema1:name "Psykter des Oltos-Malers: Krieger reiten auf Delphinen über das Meer" ;
+    crm:P2_has_type hector:concept_c73fec47 ;
+    crm:P32_used_general_technique hector:concept_2ad94740 .
+
+obj:5c16d54e-0b73-4742-841c-f9055cd92624 a schema1:VisualArtwork,
+        crm:E22_Human_Made_Object ;
+    dcterms:creator "Pamphaios" ;
+    dcterms:date "Um 520 v. Chr." ;
+    dcterms:description "Herakles ringt mit Acheloos, Ringkampf, Acheloos mit fischähnlichem Körper, fischleibig, Beischriften" ;
+    dcterms:title "Stamnos des Oltos und des Töpfers Pamphaios: Herakles greift das Horn des fischleibigen Acheloos" ;
+    schema1:contentLocation "London, British Museum" ;
+    schema1:locationCreated "Attisch" ;
+    schema1:material "Ton" ;
+    schema1:name "Stamnos des Oltos und des Töpfers Pamphaios: Herakles greift das Horn des fischleibigen Acheloos" ;
+    crm:P2_has_type hector:concept_f17f817a ;
+    crm:P32_used_general_technique hector:concept_2ad94740 .
+
+obj:5d7930a6-e64d-4648-a8f0-b19bfb24d44b a schema1:VisualArtwork,
+        crm:E22_Human_Made_Object ;
+    dcterms:date "Um 480 v. Chr." ;
+    dcterms:description "Frontalansicht, Herakles mit Keule, Löwenfell und Kantharos" ;
+    dcterms:title "Attisch-rotfigurige Bauchamphora des Berliner Malers" ;
+    schema1:contentLocation "Basel, Antikenmuseum Basel und Sammlung Ludwig" ;
+    schema1:locationCreated "Attisch" ;
+    schema1:material "Ton" ;
+    schema1:name "Attisch-rotfigurige Bauchamphora des Berliner Malers" ;
+    crm:P2_has_type hector:concept_65909227 ;
+    crm:P32_used_general_technique hector:concept_69d3cf4c .
+
+obj:9bd2d4b2-e608-492d-a73e-54dfa4e4937c a schema1:VisualArtwork,
+        crm:E22_Human_Made_Object ;
+    dcterms:creator "Euthymides" ;
+    dcterms:date "500 v. Chr. - 490 v. Chr." ;
+    dcterms:description "Seite B, Drei (von sechs) fliehende Silene: Alle rutschen auf ihren Knien nach rechts, wenden sich dabei mit dem Oberkörper nach links, stützen sich mit dem linken Arm auf und haben den rechten abwehrend erhoben, Kleophrades-Maler laut Richter, Oltos laut Hartwig, Euthymides laut Beazley" ;
+    dcterms:title "Fliehende Silene" ;
+    schema1:contentLocation "Compiègne, Musée Antoine Vivenel" ;
+    schema1:locationCreated "Attisch" ;
+    schema1:material "Ton" ;
+    schema1:name "Fliehende Silene" ;
+    crm:P2_has_type hector:concept_c73fec47 ;
+    crm:P32_used_general_technique hector:concept_2ad94740 .
+
+obj:a1e1406e-dbb0-4e6f-857b-6a939a99b721 a schema1:VisualArtwork,
+        crm:E22_Human_Made_Object ;
+    dcterms:creator "Berliner Maler" ;
+    dcterms:date "Um 490 v. Chr." ;
+    dcterms:description "Nereus (Seite A), Nereide (Seite B)" ;
+    dcterms:title "Halsamphora des Berliner-Malers: Nereide (Seite B)" ;
+    schema1:contentLocation "Cambridge, Harvard University Art Museums, Arthur M. Sackler Museum" ;
+    schema1:locationCreated "Attisch" ;
+    schema1:material "Ton" ;
+    schema1:name "Halsamphora des Berliner-Malers: Nereide (Seite B)" ;
+    crm:P2_has_type hector:concept_65909227 ;
+    crm:P32_used_general_technique hector:concept_2ad94740 .
+
+obj:a686f669-5edb-4dae-95e3-cdd449d2ebe9 a schema1:VisualArtwork,
+        crm:E22_Human_Made_Object ;
+    dcterms:creator "Pamphaios" ;
+    dcterms:date "520 v. Chr. - 515 v. Chr." ;
+    dcterms:title "Zwei Amphoren des Oltos: Kentaur Chiron und Achill; Satyr und Mänade" ;
+    schema1:contentLocation "Paris, Musée du Louvre" ;
+    schema1:locationCreated "Attisch" ;
+    schema1:material "Ton" ;
+    schema1:name "Zwei Amphoren des Oltos: Kentaur Chiron und Achill; Satyr und Mänade" ;
+    crm:P2_has_type hector:concept_65909227 ;
+    crm:P32_used_general_technique hector:concept_2ad94740 .
+
+obj:a7f7eff0-68e0-4eec-873c-cf4c46927627 a schema1:VisualArtwork,
+        crm:E22_Human_Made_Object ;
+    dcterms:date "Um 480 v. Chr." ;
+    dcterms:description "Ansicht, Abfahrt des Zeus vom Olymp in Anwesenheit der übrigen Götter: Viergespann / Quadriga, Hermes (Kerykeion, Flügelschuhe), Apollon (Kithara), Reh, Poseidon (Dreizack, Delphin)., Abbildung stammt aus dem Katalog." ;
+    dcterms:title "Dinos des Berliner-Malers" ;
+    schema1:contentLocation "Schweiz, Basel, Antikenmuseum und Sammlung Ludwig" ;
+    schema1:locationCreated "Attisch" ;
+    schema1:material "Ton" ;
+    schema1:name "Dinos des Berliner-Malers" ;
+    crm:P2_has_type hector:concept_2b10bc00 ;
+    crm:P32_used_general_technique hector:concept_2ad94740 .
+
+obj:af6ee239-0f7b-4093-8f6a-a8cc48128861 a schema1:VisualArtwork,
+        crm:E22_Human_Made_Object ;
+    dcterms:creator "Oltos" ;
+    dcterms:date "520 v. Chr. - 510 v. Chr." ;
+    dcterms:description "Sechs Hopliten, auf Delphinen reitend" ;
+    dcterms:title "Psykter" ;
+    schema1:contentLocation "New York, Metropolitan Museum of Art" ;
+    schema1:locationCreated "Attisch" ;
+    schema1:material "Ton" ;
+    schema1:name "Psykter" ;
+    crm:P2_has_type hector:concept_c73fec47 ;
+    crm:P32_used_general_technique hector:concept_2ad94740 .
+
+obj:c444f0e4-61ae-4e19-93e1-779305f0773b a schema1:VisualArtwork,
+        crm:E22_Human_Made_Object ;
+    dcterms:creator "Euthymides" ;
+    dcterms:date "Um 500 v. Chr." ;
+    dcterms:description "Seite A, Herakles und Dionysos: Herakles mit Löwenfell, Keule und Bogen, Dionysos mit zwei Zweigen in der linken und einem Kantharos in der rechten Hand. Zwischen beiden steht ein weiterer Kantharos. Auf der selben Ebene, vor einer Art Podest, links und rechts der beiden verschiedene Kratere, auf dem Podest, den Rest des Gefäßes umlaufend, fliehende Silene, Kleophrades-Maler laut Richter, Oltos laut Hartwig, Euthymides laut Beazley" ;
+    dcterms:title "Herakles und Dionysos mit Weingefäßen und Satyrn" ;
+    schema1:contentLocation "Compiègne, Musée Antoine Vivenel" ;
+    schema1:locationCreated "Attisch" ;
+    schema1:material "Ton" ;
+    schema1:name "Herakles und Dionysos mit Weingefäßen und Satyrn" ;
+    crm:P2_has_type hector:concept_c73fec47 ;
+    crm:P32_used_general_technique hector:concept_2ad94740 .
+
+obj:d7feea02-13c8-49bb-aeb1-fd4539bfd89a a schema1:VisualArtwork,
+        crm:E22_Human_Made_Object ;
+    dcterms:creator "Euxitheos; Oltos" ;
+    dcterms:description "Hebe, Hermes und Athena" ;
+    dcterms:title "Trinkschale" ;
+    schema1:contentLocation "Tarquinia, Museo Archeologico Nazionale" ;
+    schema1:locationCreated "Attisch" ;
+    schema1:material "Keramik" ;
+    schema1:name "Trinkschale" ;
+    crm:P2_has_type hector:concept_b1d6ebaf ;
+    crm:P32_used_general_technique hector:concept_2ad94740 .
+
+obj:e96dc2f1-831f-4de3-89de-19cafa3bf55b a schema1:VisualArtwork,
+        crm:E22_Human_Made_Object ;
+    dcterms:creator "Zugeschrieben dem Oltos" ;
+    dcterms:date "510 v. Chr. - 500 v. Chr." ;
+    dcterms:description "Tondo: Jüngling mit Ball, Außen: Krieger mit Pferd und Geranomachie, In Antike mit sechs Metallklammern repariert" ;
+    dcterms:title "Schale, Typ B" ;
+    schema1:locationCreated "Attisch" ;
+    schema1:material "Ton" ;
+    schema1:name "Schale, Typ B" ;
+    crm:P2_has_type hector:concept_b1d6ebaf ;
+    crm:P32_used_general_technique hector:concept_2ad94740 .
+
+obj:ecbe2506-e966-4066-be9f-b4513844226d a schema1:VisualArtwork,
+        crm:E22_Human_Made_Object ;
+    dcterms:creator "Oltos" ;
+    dcterms:description "Aphrodite und Ares, Brommer-Archiv, Kasten GS 15" ;
+    dcterms:title "Aphrodite und Ares" ;
+    schema1:contentLocation "Tarquinia, Museo Archeologico Nazionale" ;
+    schema1:locationCreated "Attisch" ;
+    schema1:material "Ton" ;
+    schema1:name "Aphrodite und Ares" ;
+    crm:P2_has_type hector:concept_b1d6ebaf ;
+    crm:P32_used_general_technique hector:concept_2ad94740 .
+
+hector:concept_2b10bc00 a skos:Concept ;
+    skos:prefLabel "Dinos"@de .
+
+hector:concept_4ec3b0ea a skos:Concept ;
+    skos:prefLabel "Krater"@de .
+
+hector:concept_5b62f4af a skos:Concept ;
+    skos:prefLabel "Lekythos"@de .
+
+hector:concept_b5d694d6 a skos:Concept ;
+    skos:prefLabel "Unteritalisch Rotfigurig"@de .
+
+hector:concept_69d3cf4c a skos:Concept ;
+    skos:prefLabel "Attisch Rotfigurig"@de .
+
+hector:concept_f17f817a a skos:Concept ;
+    skos:prefLabel "Stamnos"@de .
+
+hector:concept_65909227 a skos:Concept ;
+    skos:prefLabel "Transportamphora"@de .
+
+hector:concept_c73fec47 a skos:Concept ;
+    skos:prefLabel "Psykter"@de .
+
+hector:concept_b1d6ebaf a skos:Concept ;
+    skos:prefLabel "Trinkschale"@de .
+
+hector:concept_2ad94740 a skos:Concept ;
+    skos:prefLabel "Attische Keramik"@de .
+

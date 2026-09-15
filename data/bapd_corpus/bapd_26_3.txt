@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 26
+Beschreibung: A: ASSEMBLY OF GODS, GODDESS, DIONYSOS WITH DRINKING HORN, ATHENA, GOD, ALL SEATED ON STOOLS, GRAPEVINE B: ARCHERS AND WARRIORS
+Datierung: ca. 525–475 v. Chr.
+Gattung: Gefäß
+Gefäßform: Halsamphora [Kerameikos: https://kerameikos.org/id/neck_amphora]
+Herkunftsort: 
+Inventar-Nr.: 
+Künstler/Werkstatt: 
+Material: Ton
+Name/Bezeichnung: Dionysos auf antiker Halsamphora
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: New York (N.Y.), Callimanopoulos
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Dionysos
+SKOS-URI: https://hector.bcdh.uni-bonn.de/dionysus

@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 238
+Beschreibung: A: HERAKLES (BEARDLESS) AND THE BULL, CLOTH, BOW AND QUIVER SUSPENDED B: MAENAD DANCING BETWEEN SATYRS
+Datierung: ca. 575–525 v. Chr.
+Gattung: Gefäß
+Gefäßform: Halsamphora [Kerameikos: https://kerameikos.org/id/neck_amphora]
+Herkunftsort: 
+Inventar-Nr.: 
+Künstler/Werkstatt: 
+Material: Ton
+Name/Bezeichnung: Herakles auf antiker Halsamphora
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: London, market, Sotheby's
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Herakles
+SKOS-URI: https://hector.bcdh.uni-bonn.de/heracles

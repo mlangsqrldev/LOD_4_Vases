@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 138
+Beschreibung: A: MAN AT WELL (PITHOS), WOMAN WITH HYDRIAI, SATYR MASTURBATING, MAENAD B: HERAKLES AND THE BULL, IVY
+Datierung: ca. 525–475 v. Chr.
+Gattung: Gefäß
+Gefäßform: Pelike [Kerameikos: https://kerameikos.org/id/pelike]
+Herkunftsort: ITALY, ORVIETO
+Inventar-Nr.: 3228
+Künstler/Werkstatt: 
+Material: Ton
+Name/Bezeichnung: Herakles auf antiker Pelike
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Berlin, Antikensammlung
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Herakles
+SKOS-URI: https://hector.bcdh.uni-bonn.de/heracles

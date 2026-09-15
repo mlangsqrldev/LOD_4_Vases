@@ -1,0 +1,8 @@
+path: C:/Users/langm/sciebo/BCDH_Projektbox/1_BCDH Intern/Scripts/LODVases/data/yolo_deities
+train: images/train
+val: images/val
+names:
+  0: Athena
+  1: Dionysos
+  2: Herakles
+  3: Apollon

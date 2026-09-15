@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 6
+Beschreibung: A: PROMETHEUS AND THE OKEANIDS B: DIONYSOS WITH KANTHAROS AND VINE, SATYR PLAYING PIPES
+Datierung: ca. 525–475 v. Chr.
+Gattung: Gefäß
+Gefäßform: Halsamphora [Kerameikos: https://kerameikos.org/id/neck_amphora]
+Herkunftsort: 
+Inventar-Nr.: 1540
+Künstler/Werkstatt: Compare COMPIEGNE 988, GROUP OF by MOMMSEN Manner of KLEOPHRADES P by KUNZE-GÖTTE [Kerameikos: https://kerameikos.org/id/kleophrades_painter]
+Material: Ton
+Name/Bezeichnung: Dionysos auf antiker Halsamphora (Compare COMPIEGNE 988, GROUP OF)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Munich, Antikensammlungen
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Dionysos
+SKOS-URI: https://hector.bcdh.uni-bonn.de/dionysus

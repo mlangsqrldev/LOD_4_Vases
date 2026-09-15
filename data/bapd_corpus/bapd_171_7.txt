@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 171
+Beschreibung: Body: JUDGEMENT OF PARIS (HERMES, APHRODITE, ATHENA, HERA, PARIS IN PATTERNED SUIT SEATED ON ROCK, EROS, PAN, WOMEN)
+Datierung: ca. 400–300 v. Chr.
+Gattung: Gefäß
+Gefäßform: Hydria [Kerameikos: https://kerameikos.org/id/hydria]
+Herkunftsort: EGYPT, ALEXANDRIA
+Inventar-Nr.: 6011
+Künstler/Werkstatt: KERCH by UNKNOWN
+Material: Ton
+Name/Bezeichnung: Athena auf antiker Hydria (KERCH)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Munich, Antikensammlungen
+Ware: Attisch Rotfigurig [Kerameikos: https://kerameikos.org/id/red_figure]
+Hauptmotiv: Athena
+SKOS-URI: https://hector.bcdh.uni-bonn.de/athena

@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 37
+Beschreibung: A: HERAKLES AND THE LION BETWEEN IOLAOS HOLDING CLUB AND ATHENA B: FIGHT, WARRIORS, ONE WITH BOEOTIAN SHIELD, BETWEEN WOMEN
+Datierung: ca. 550–500 v. Chr.
+Gattung: Gefäß
+Gefäßform: Bauchamphora [Kerameikos: https://kerameikos.org/id/belly_amphora]
+Herkunftsort: 
+Inventar-Nr.: 130
+Künstler/Werkstatt: 
+Material: Ton
+Name/Bezeichnung: Herakles auf antiker Bauchamphora
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Kyoto, Hashimoto Collection
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Herakles
+SKOS-URI: https://hector.bcdh.uni-bonn.de/heracles

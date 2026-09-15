@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 1518
+Beschreibung: Body: HERAKLES AND APOLLO, THE STRUGGLE FOR THE TRIPOD, ATHENA, LETO
+Datierung: ca. 500–450 v. Chr.
+Gattung: Gefäß
+Gefäßform: Lekythos [Kerameikos: https://kerameikos.org/id/lekythos]
+Herkunftsort: 
+Inventar-Nr.: 2495
+Künstler/Werkstatt: HAIMON P by ISLER
+Material: Ton
+Name/Bezeichnung: Apollon auf antiker Lekythos (HAIMON P)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Zurich, University
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Apollon
+SKOS-URI: https://hector.bcdh.uni-bonn.de/apollo

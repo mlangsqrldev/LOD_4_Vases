@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 6
+Beschreibung: A: PROMETHEUS AND THE OKEANIDS B: DIONYSOS WITH KANTHAROS AND VINE, SATYR PLAYING PIPES
+Datierung: ca. 525–475 v. Chr.
+Gattung: Gefäß
+Gefäßform: Halsamphora
+Herkunftsort: 
+Inventar-Nr.: 1540 Previous Collections: Rome, Candelori Collection Munich, Antikensammlungen: J989 Publication Record: BEAZLEY NOTEBOOK: 76, 76.1 Corpus Vasorum Antiquorum: MUNICH, MUSEUM ANTIKER KLEINKUNST 8, 87-90, BEILAGE F10, PLS.(1846,1847,1848) 428.2, 429.1-2, 430.5 View Whole CVA Plates Korshak, Y., Frontal Faces in Attic Vase Painting of the Archaic Period (Chicago, 1977): 139, FIG.86 (A) Kunze-Goette, E., Der Kleophrades- Maler unter Malern schwarzfiguriger Amphoren, Eine Werkstattstudie (Mainz, 1992): PL.56.1 (B) Lexicon Iconographicum Mythologiae Classicae: III, PL.9, ATLAS 22 (A) Oakley, J.H. and Palagia, O. (eds.), Athenian Potters and Painters, Volume II (Oxford, 2010): 202, FIGS.1-4, COLOUR PLATES 12A-B, 12 (A, B, COLOUR, PARTS) Opuscula Atheniensia, Acta Instituti Atheniensis Regni Sueciae: 18 (1990), 42, FIG.5 (A) PHOTOGRAPH(S) IN THE BEAZLEY ARCHIVE: 1 (A) Schefold, K., Gods and Heroes in Late Archaic Greek Art. English translation by A. Griffiths (Cambridge, 1992): FIG.57 (A) Schefold, K., Götter und Heldensagen der Griechen in der spätarchaischen Kunst (Munich, 1978): 53, FIG.57 (A) Vierneisel, K., and Kaeser, B. (eds.), Kunst der Schale, Kultur des Trinkens (Munich, 1990): 381, FIG.67.16 (A) LIMC ID: 8614 LIMC Web: HTTP://ARK.DASCH.SWISS/ARK:/72163/080E-741DA6939D13A-E
+Künstler/Werkstatt: Compare COMPIEGNE 988, GROUP OF by MOMMSEN Manner of KLEOPHRADES P by KUNZE-GÖTTE
+Material: Ton
+Name/Bezeichnung: Dionysos auf antiker Halsamphora (Compare COMPIEGNE 988, GROUP OF)
+Produktionsgebiet: Attisch
+Standort: Munich, Antikensammlungen
+Ware: Attisch Schwarzfigurig
+Hauptmotiv: Dionysos
+SKOS-URI: https://hector.bcdh.uni-bonn.de/dionysus

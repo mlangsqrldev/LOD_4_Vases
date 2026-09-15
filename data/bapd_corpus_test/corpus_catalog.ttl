@@ -1,0 +1,77 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix hector: <http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/> .
+@prefix obj: <http://data.lodvases.bcdh.uni-bonn.de/object/> .
+@prefix schema1: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+obj:bapd_29 a schema1:VisualArtwork,
+        crm:E22_Human_Made_Object ;
+    dcterms:date "ca. 525–475 v. Chr." ;
+    dcterms:description "A: APOLLO PLAYING KITHARA BETWEEN HERMES AND DIONYSOS WITH KANTHAROS AND GRAPEVINE B: DRAPED YOUTHS WITH SPEARS ON HORSEBACK, DOGS" ;
+    dcterms:title "Apollon auf antiker Halsamphora" ;
+    schema1:contentLocation "New York (N.Y.), market, Christie's Previous Collections" ;
+    schema1:locationCreated "Attisch" ;
+    schema1:material "Ton" ;
+    schema1:name "Apollon auf antiker Halsamphora" ;
+    crm:P2_has_type hector:concept_65909227 ;
+    crm:P32_used_general_technique hector:concept_fd4cbaed .
+
+obj:bapd_4 a schema1:VisualArtwork,
+        crm:E22_Human_Made_Object ;
+    dcterms:creator "Near MEDEA GROUP by UNKNOWN" ;
+    dcterms:date "ca. 550–500 v. Chr." ;
+    dcterms:description "A: TRIPTOLEMOS SEATED ON CART WITH SHEAVES OF CORN, PERSEPHONE (?), DEMETER, APOLLO PLAYING KITHARA B: WARRIOR AND CHARIOTEER IN CHARIOT (TURNING), BOTH WITH BOEOTIAN SHIELDS" ;
+    dcterms:title "Apollon auf antiker Halsamphora (Near MEDEA GROUP)" ;
+    schema1:contentLocation "Budapest, Hungarian Museum of Fine Arts" ;
+    schema1:locationCreated "Attisch" ;
+    schema1:material "Ton" ;
+    schema1:name "Apollon auf antiker Halsamphora (Near MEDEA GROUP)" ;
+    crm:P2_has_type hector:concept_65909227 ;
+    crm:P32_used_general_technique hector:concept_fd4cbaed .
+
+obj:bapd_6 a schema1:VisualArtwork,
+        crm:E22_Human_Made_Object ;
+    dcterms:creator "Compare COMPIEGNE 988, GROUP OF by MOMMSEN Manner of KLEOPHRADES P by KUNZE-GÖTTE" ;
+    dcterms:date "ca. 525–475 v. Chr." ;
+    dcterms:description "A: PROMETHEUS AND THE OKEANIDS B: DIONYSOS WITH KANTHAROS AND VINE, SATYR PLAYING PIPES" ;
+    dcterms:title "Dionysos auf antiker Halsamphora (Compare COMPIEGNE 988, GROUP OF)" ;
+    schema1:contentLocation "Munich, Antikensammlungen" ;
+    schema1:locationCreated "Attisch" ;
+    schema1:material "Ton" ;
+    schema1:name "Dionysos auf antiker Halsamphora (Compare COMPIEGNE 988, GROUP OF)" ;
+    crm:P2_has_type hector:concept_65909227 ;
+    crm:P32_used_general_technique hector:concept_fd4cbaed .
+
+obj:bapd_8 a schema1:VisualArtwork,
+        crm:E22_Human_Made_Object ;
+    dcterms:creator "DIOSPHOS P by BEAZLEY" ;
+    dcterms:date "ca. 550–500 v. Chr." ;
+    dcterms:description "A: HERAKLES AND THE HYDRA B: ATHENA AND IOLAOS, CRAB" ;
+    dcterms:title "Herakles auf antiker Halsamphora (DIOSPHOS P)" ;
+    schema1:contentLocation "Paris, Musée du Louvre" ;
+    schema1:locationCreated "Attisch" ;
+    schema1:material "Ton" ;
+    schema1:name "Herakles auf antiker Halsamphora (DIOSPHOS P)" ;
+    crm:P2_has_type hector:concept_65909227 ;
+    crm:P32_used_general_technique hector:concept_fd4cbaed .
+
+obj:bapd_9 a schema1:VisualArtwork,
+        crm:E22_Human_Made_Object ;
+    dcterms:creator "LEAGROS GROUP by MOMMSEN" ;
+    dcterms:date "ca. 525–475 v. Chr." ;
+    dcterms:description "A: HERAKLES AND THE HYDRA (IOLAOS, CRAB) B: ATHENA, MOUNTING CHARIOT, HERMES" ;
+    dcterms:title "Herakles auf antiker Halsamphora (LEAGROS GROUP)" ;
+    schema1:contentLocation "Berlin, Antikensammlung" ;
+    schema1:locationCreated "Attisch" ;
+    schema1:material "Ton" ;
+    schema1:name "Herakles auf antiker Halsamphora (LEAGROS GROUP)" ;
+    crm:P2_has_type hector:concept_65909227 ;
+    crm:P32_used_general_technique hector:concept_fd4cbaed .
+
+hector:concept_65909227 a skos:Concept ;
+    skos:prefLabel "Transportamphora"@de .
+
+hector:concept_fd4cbaed a skos:Concept ;
+    skos:prefLabel "Attisch schwarzfigurig"@de .
+

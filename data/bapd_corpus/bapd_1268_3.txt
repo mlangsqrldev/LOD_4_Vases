@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 1268
+Beschreibung: A: WEDDED PAIR IN CHARIOT, APOLLO PLAYING KITHARA, ARTEMIS ? WITH TORCH B: DIONYSOS WITH KANTHAROS BETWEEN SATYR PLAYING PIPES AND SATYR WITH WINESKIN AND OINOCHOE
+Datierung: ca. 550–500 v. Chr.
+Gattung: Gefäß
+Gefäßform: Halsamphora [Kerameikos: https://kerameikos.org/id/neck_amphora]
+Herkunftsort: ITALY, ETRURIA, VULCI
+Inventar-Nr.: J692
+Künstler/Werkstatt: TARQUINIA RC 6847, P OF by KUNZE-GÖTTE
+Material: Ton
+Name/Bezeichnung: Apollon auf antiker Halsamphora (TARQUINIA RC 6847, P OF)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Munich, Antikensammlungen
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Apollon
+SKOS-URI: https://hector.bcdh.uni-bonn.de/apollo

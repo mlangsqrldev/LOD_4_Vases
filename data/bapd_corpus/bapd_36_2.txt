@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 36
+Beschreibung: A: GIGANTOMACHY, ATHENA, HERAKLES WITH BOEOTIAN SHIELD, AND GIANTS, ONE FALLEN (OR HERAKLES AND KYKNOS ?), DEVICE, HEAD OF BULL B: DIONYSOS WITH IVY AND DRINKING HORN BETWEEN SATYR WITH KITHARA AND MAENAD WITH THYRSOS AND ANIMAL SKIN
+Datierung: ca. 550–500 v. Chr.
+Gattung: Gefäß
+Gefäßform: Bauchamphora [Kerameikos: https://kerameikos.org/id/belly_amphora]
+Herkunftsort: 
+Inventar-Nr.: 128
+Künstler/Werkstatt: DIOSPHOS P by MIZUTA
+Material: Ton
+Name/Bezeichnung: Herakles auf antiker Bauchamphora (DIOSPHOS P)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Kyoto, Hashimoto Collection
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Herakles
+SKOS-URI: https://hector.bcdh.uni-bonn.de/heracles

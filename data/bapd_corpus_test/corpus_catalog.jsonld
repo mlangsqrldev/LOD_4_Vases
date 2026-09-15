@@ -1,0 +1,170 @@
+{
+  "@context": {
+    "@vocab": "http://schema.org/",
+    "crm": "http://www.cidoc-crm.org/cidoc-crm/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "oa": "http://www.w3.org/ns/oa#",
+    "hector": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/",
+    "prefLabel": "skos:prefLabel",
+    "exactMatch": {
+      "@id": "skos:exactMatch",
+      "@type": "@id"
+    },
+    "shapeConcept": {
+      "@id": "crm:P2_has_type",
+      "@type": "@id"
+    },
+    "wareConcept": {
+      "@id": "crm:P32_used_general_technique",
+      "@type": "@id"
+    },
+    "represents": {
+      "@id": "crm:P138_represents",
+      "@type": "@id"
+    },
+    "confidenceShape": "http://data.lodvases.bcdh.uni-bonn.de/vocab/confidenceShape",
+    "confidenceWare": "http://data.lodvases.bcdh.uni-bonn.de/vocab/confidenceWare"
+  },
+  "@graph": [
+    {
+      "@id": "http://data.lodvases.bcdh.uni-bonn.de/object/bapd_29",
+      "@type": [
+        "VisualArtwork",
+        "crm:E22_Human-Made_Object"
+      ],
+      "name": "Apollon auf antiker Halsamphora",
+      "description": "A: APOLLO PLAYING KITHARA BETWEEN HERMES AND DIONYSOS WITH KANTHAROS AND GRAPEVINE B: DRAPED YOUTHS WITH SPEARS ON HORSEBACK, DOGS",
+      "artform": "Transportamphora",
+      "material": "Ton",
+      "dateCreated": "ca. 525–475 v. Chr.",
+      "locationCreated": "Attisch",
+      "contentLocation": "New York (N.Y.), market, Christie's Previous Collections",
+      "identifier": "Northampton, Castle Ashby: 7 London, market, Christie's Texas, McCoy Publication Record: Christie, Manson and Woods, sale catalogue: NEW YORK, 11.12.2014, NO.94 (COLOUR OF A AND B) Corpus Vasorum Antiquorum: NORTHAMPTON, CASTLE ASHBY, 7, PLS.(666,668) 11.3-4, 13.1-2 View Whole CVA Plates PHOTOGRAPH(S) IN THE BEAZLEY ARCHIVE: 4 (A, B, UH) LIMC ID: 35832 LIMC Web: HTTP://ARK.DASCH.SWISS/ARK:/72163/080E-759F8769B1EA5-F",
+      "image": "data/bapd_corpus_test\\bapd_29.jpg",
+      "creditText": "Beazley Archive Pottery Database (BAPD) / CARC Oxford",
+      "shapeConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_65909227",
+        "@type": "skos:Concept",
+        "prefLabel": "Transportamphora"
+      },
+      "wareConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_fd4cbaed",
+        "@type": "skos:Concept",
+        "prefLabel": "Attisch schwarzfigurig"
+      }
+    },
+    {
+      "@id": "http://data.lodvases.bcdh.uni-bonn.de/object/bapd_4",
+      "@type": [
+        "VisualArtwork",
+        "crm:E22_Human-Made_Object"
+      ],
+      "name": "Apollon auf antiker Halsamphora (Near MEDEA GROUP)",
+      "description": "A: TRIPTOLEMOS SEATED ON CART WITH SHEAVES OF CORN, PERSEPHONE (?), DEMETER, APOLLO PLAYING KITHARA B: WARRIOR AND CHARIOTEER IN CHARIOT (TURNING), BOTH WITH BOEOTIAN SHIELDS",
+      "artform": "Transportamphora",
+      "material": "Ton",
+      "creator": "Near MEDEA GROUP by UNKNOWN",
+      "dateCreated": "ca. 550–500 v. Chr.",
+      "locationCreated": "Attisch",
+      "contentLocation": "Budapest, Hungarian Museum of Fine Arts",
+      "identifier": "50.732",
+      "image": "data/bapd_corpus_test\\bapd_4.jpg",
+      "creditText": "Beazley Archive Pottery Database (BAPD) / CARC Oxford",
+      "shapeConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_65909227",
+        "@type": "skos:Concept",
+        "prefLabel": "Transportamphora"
+      },
+      "wareConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_fd4cbaed",
+        "@type": "skos:Concept",
+        "prefLabel": "Attisch schwarzfigurig"
+      }
+    },
+    {
+      "@id": "http://data.lodvases.bcdh.uni-bonn.de/object/bapd_6",
+      "@type": [
+        "VisualArtwork",
+        "crm:E22_Human-Made_Object"
+      ],
+      "name": "Dionysos auf antiker Halsamphora (Compare COMPIEGNE 988, GROUP OF)",
+      "description": "A: PROMETHEUS AND THE OKEANIDS B: DIONYSOS WITH KANTHAROS AND VINE, SATYR PLAYING PIPES",
+      "artform": "Transportamphora",
+      "material": "Ton",
+      "creator": "Compare COMPIEGNE 988, GROUP OF by MOMMSEN Manner of KLEOPHRADES P by KUNZE-GÖTTE",
+      "dateCreated": "ca. 525–475 v. Chr.",
+      "locationCreated": "Attisch",
+      "contentLocation": "Munich, Antikensammlungen",
+      "identifier": "1540 Previous Collections: Rome, Candelori Collection Munich, Antikensammlungen: J989 Publication Record: BEAZLEY NOTEBOOK: 76, 76.1 Corpus Vasorum Antiquorum: MUNICH, MUSEUM ANTIKER KLEINKUNST 8, 87-90, BEILAGE F10, PLS.(1846,1847,1848) 428.2, 429.1-2, 430.5 View Whole CVA Plates Korshak, Y., Frontal Faces in Attic Vase Painting of the Archaic Period (Chicago, 1977): 139, FIG.86 (A) Kunze-Goette, E., Der Kleophrades- Maler unter Malern schwarzfiguriger Amphoren, Eine Werkstattstudie (Mainz, 1992): PL.56.1 (B) Lexicon Iconographicum Mythologiae Classicae: III, PL.9, ATLAS 22 (A) Oakley, J.H. and Palagia, O. (eds.), Athenian Potters and Painters, Volume II (Oxford, 2010): 202, FIGS.1-4, COLOUR PLATES 12A-B, 12 (A, B, COLOUR, PARTS) Opuscula Atheniensia, Acta Instituti Atheniensis Regni Sueciae: 18 (1990), 42, FIG.5 (A) PHOTOGRAPH(S) IN THE BEAZLEY ARCHIVE: 1 (A) Schefold, K., Gods and Heroes in Late Archaic Greek Art. English translation by A. Griffiths (Cambridge, 1992): FIG.57 (A) Schefold, K., Götter und Heldensagen der Griechen in der spätarchaischen Kunst (Munich, 1978): 53, FIG.57 (A) Vierneisel, K., and Kaeser, B. (eds.), Kunst der Schale, Kultur des Trinkens (Munich, 1990): 381, FIG.67.16 (A) LIMC ID: 8614 LIMC Web: HTTP://ARK.DASCH.SWISS/ARK:/72163/080E-741DA6939D13A-E",
+      "image": "data/bapd_corpus_test\\bapd_6.jpg",
+      "creditText": "Beazley Archive Pottery Database (BAPD) / CARC Oxford",
+      "shapeConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_65909227",
+        "@type": "skos:Concept",
+        "prefLabel": "Transportamphora"
+      },
+      "wareConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_fd4cbaed",
+        "@type": "skos:Concept",
+        "prefLabel": "Attisch schwarzfigurig"
+      }
+    },
+    {
+      "@id": "http://data.lodvases.bcdh.uni-bonn.de/object/bapd_8",
+      "@type": [
+        "VisualArtwork",
+        "crm:E22_Human-Made_Object"
+      ],
+      "name": "Herakles auf antiker Halsamphora (DIOSPHOS P)",
+      "description": "A: HERAKLES AND THE HYDRA B: ATHENA AND IOLAOS, CRAB",
+      "artform": "Transportamphora",
+      "material": "Ton",
+      "creator": "DIOSPHOS P by BEAZLEY",
+      "dateCreated": "ca. 550–500 v. Chr.",
+      "locationCreated": "Attisch",
+      "contentLocation": "Paris, Musée du Louvre",
+      "identifier": "F386 Previous Collections: Malmaison, Empress Josephine Publication Record: American Journal of Archaeology: 20 (1916), 445, FIG.8 Archäologischer Anzeiger: 1971, 172, FIGS.17-18 (A,B) Chiesa, G.S. (ed.), Vasi immagini collezionismo, La collezione di vasi Intesa Sanpaolo e i nuovi indirizzi di ricerca sulla ceramica greca e magnogreca, Milano, 7-8 novembre 2007 (Milan, 2008): 121, FIG.2 (DRAWING) Haspels, C.H.E., Attic Black-figured Lekythoi (Paris, 1936): 238.131 Lexicon Iconographicum Mythologiae Classicae: V, PL.54, HERAKLES 2003 (A) AVI Web: HTTPS://WWW.AVI.UNIBAS.CH/DB/SEARCHFORM.HTML?ID=6612 AVI Record Number: 6376 LIMC ID: 20779 LIMC Web: HTTP://ARK.DASCH.SWISS/ARK:/72163/080E-74CA112ED9DC6-9 CAVI Collection: PARIS, LOUVRE F 386. CAVI Lemma: BF NECK AMPHORA. UNATTRIBUTED. DATE UNCLEAR. CAVI Subject: A: HERACLES AND THE HYDRA. B: ATHENA ... CAVI Inscriptions: A AND B: NONSENSE INSCRIPTIONS. CAVI Number: 6376 AVI Bibliography: LUCE (1916), 445, FIG. 8. — SCHAUENBURG (1971A), 171, FIGS. 17-18 (BIBL.: P.",
+      "image": "data/bapd_corpus_test\\bapd_8.jpg",
+      "creditText": "Beazley Archive Pottery Database (BAPD) / CARC Oxford",
+      "shapeConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_65909227",
+        "@type": "skos:Concept",
+        "prefLabel": "Transportamphora"
+      },
+      "wareConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_fd4cbaed",
+        "@type": "skos:Concept",
+        "prefLabel": "Attisch schwarzfigurig"
+      }
+    },
+    {
+      "@id": "http://data.lodvases.bcdh.uni-bonn.de/object/bapd_9",
+      "@type": [
+        "VisualArtwork",
+        "crm:E22_Human-Made_Object"
+      ],
+      "name": "Herakles auf antiker Halsamphora (LEAGROS GROUP)",
+      "description": "A: HERAKLES AND THE HYDRA (IOLAOS, CRAB) B: ATHENA, MOUNTING CHARIOT, HERMES",
+      "artform": "Transportamphora",
+      "material": "Ton",
+      "creator": "LEAGROS GROUP by MOMMSEN",
+      "dateCreated": "ca. 525–475 v. Chr.",
+      "locationCreated": "Attisch",
+      "contentLocation": "Berlin, Antikensammlung",
+      "identifier": "F1854 Previous Collections: Berlin, Schloss Charlottenburg: F1854 Publication Record: Archäologischer Anzeiger: 1971, 173, FIG.19 (A) Archäologischer Anzeiger: 1978, 520-21, FIG.34 (DRAWING OF B) Corpus Vasorum Antiquorum: BERLIN, ANTIKENMUSEUM 5, 49-50, BEILAGE E5, PLS.(2179,2182,2184,2201) 34.3, 37.1-2, 39.5, 56.5 View Whole CVA Plates Monumenti inediti pubblicati dall'Instituto di Corrispondenza Archeologica (Rome, 1829-91): 3, PL.46.1 (DRAWING OF A) Pleiades URI: HTTPS://PLEIADES.STOA.ORG/PLACES/413122 Coordinates: 42.8333,12.8333 Pleiades Coordinates: 42.6332157066,11.6431119707",
+      "image": "data/bapd_corpus_test\\bapd_9.jpg",
+      "creditText": "Beazley Archive Pottery Database (BAPD) / CARC Oxford",
+      "shapeConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_65909227",
+        "@type": "skos:Concept",
+        "prefLabel": "Transportamphora"
+      },
+      "wareConcept": {
+        "@id": "http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_fd4cbaed",
+        "@type": "skos:Concept",
+        "prefLabel": "Attisch schwarzfigurig"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 366
+Beschreibung: Body: FIGHT, WARRIORS, ONE FALLING
+Datierung: ca. 525–475 v. Chr.
+Gattung: Gefäß
+Gefäßform: Lekythos [Kerameikos: https://kerameikos.org/id/lekythos]
+Herkunftsort: 
+Inventar-Nr.: 
+Künstler/Werkstatt: ATHENA P by BOARDMAN [Kerameikos: https://kerameikos.org/id/athena_painter]
+Material: Ton
+Name/Bezeichnung: Athena auf antiker Lekythos (ATHENA P)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: New York (N.Y.), Callimanopoulos
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Athena
+SKOS-URI: https://hector.bcdh.uni-bonn.de/athena

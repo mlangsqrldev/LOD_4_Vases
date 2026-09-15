@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 270
+Beschreibung: Body: BIRTH OF ERICHTHONIOS, KEKROPS, HEPHAISTOS, ATHENA, GE
+Datierung: ca. 525–475 v. Chr.
+Gattung: Gefäß
+Gefäßform: Lekythos [Kerameikos: https://kerameikos.org/id/lekythos]
+Herkunftsort: ITALY, SICILY, SELINUS (?)
+Inventar-Nr.: 769
+Künstler/Werkstatt: AMPURIAS P* by BOTHMER
+Material: Ton
+Name/Bezeichnung: Herakles auf antiker Lekythos (AMPURIAS P*)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Palermo, Mormino Collection
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Herakles
+SKOS-URI: https://hector.bcdh.uni-bonn.de/heracles

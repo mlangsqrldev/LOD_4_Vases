@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 261
+Beschreibung: Body: NYMPH ELEUSIS OR ALOPE WITH TORCHES AND HIPPOTHOON, HORSE
+Datierung: ca. 400–300 v. Chr.
+Gattung: Gefäß
+Gefäßform: Chous, fragment [Kerameikos: https://kerameikos.org/id/chous]
+Herkunftsort: 
+Inventar-Nr.: E180
+Künstler/Werkstatt: KERCH by UNKNOWN
+Material: Ton
+Name/Bezeichnung: Herakles auf antiker Chous, fragment (KERCH)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Tübingen, Eberhard-Karls-Universität, Archäologisches Institut
+Ware: Attisch Rotfigurig [Kerameikos: https://kerameikos.org/id/red_figure]
+Hauptmotiv: Herakles
+SKOS-URI: https://hector.bcdh.uni-bonn.de/heracles

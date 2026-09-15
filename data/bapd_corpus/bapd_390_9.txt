@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 390
+Beschreibung: Body: HERAKLES AND THE LION, ATHENA Shoulder: CHARIOTS
+Datierung: ca. 550–500 v. Chr.
+Gattung: Gefäß
+Gefäßform: Hydria [Kerameikos: https://kerameikos.org/id/hydria]
+Herkunftsort: 
+Inventar-Nr.: 
+Künstler/Werkstatt: 
+Material: Ton
+Name/Bezeichnung: Herakles auf antiker Hydria
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Charlecote, Fairfax-Lucy
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Herakles
+SKOS-URI: https://hector.bcdh.uni-bonn.de/heracles

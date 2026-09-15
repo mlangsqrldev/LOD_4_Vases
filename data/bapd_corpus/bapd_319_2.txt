@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 319
+Beschreibung: A1: PROCESSION OF GODS, HERMES, GODDESS, (DIONYSOS, APHRODITE, ARTEMIS, DEMETER, ALL NAMED), EROS OR HIMEROS A2: ISMENE, PERIKLYMENOS (?)
+Datierung: ca. 600–550 v. Chr.
+Gattung: Gefäß
+Gefäßform: Skyphos [Kerameikos: https://kerameikos.org/id/skyphos]
+Herkunftsort: GREECE, ATHENS, ACROPOLIS
+Inventar-Nr.: 1.603
+Künstler/Werkstatt: 
+Material: Ton
+Name/Bezeichnung: Dionysos auf antiker Skyphos
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Athens, National Museum, Acropolis Collection
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Dionysos
+SKOS-URI: https://hector.bcdh.uni-bonn.de/dionysus

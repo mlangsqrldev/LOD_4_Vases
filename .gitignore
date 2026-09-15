@@ -1,0 +1,35 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caching & IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Large pre-trained base model weights (automatically downloaded by Ultralytics/PyTorch)
+sam_b.pt
+mobile_sam.pt
+FastSAM-s.pt
+yolov8n.pt
+
+# Training runs & logs
+runs/
+wandb/
+.pytest_cache/
+
+# Scratch & temporary files
+scratch/
+temp/
+*.tmp

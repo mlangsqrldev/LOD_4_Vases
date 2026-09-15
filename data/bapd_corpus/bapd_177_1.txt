@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 177
+Beschreibung: A1: THESEUS AND THE MINOTAUR BETWEEN DRAPED MEN, PALMETTE, NONSENSE INSCRIPTIONS A2: FIGHT, WARRIORS, ONE IN NEBRIS, HORSEMEN, HORSE FALLING, HARE, BETWEEN LIONS, NONSENSE INSCRIPTIONS B1: ATHLETES, RUNNING AND BOXING, TRAINER, NONSENSE INSCRIPTIONS B2: DIONYSOS, SEATED WITH DRINKING HORN, HERMES, WOMEN, DRAPED MAN OR MEN, BETWEEN LIONS, NONSENSE INSCRIPTIONS
+Datierung: ca. 600–550 v. Chr.
+Gattung: Gefäß
+Gefäßform: Kylix [Kerameikos: https://kerameikos.org/id/kylix]
+Herkunftsort: GREECE, RHODES
+Inventar-Nr.: 3755
+Künstler/Werkstatt: Related to C P by BEAZLEY
+Material: Ton
+Name/Bezeichnung: Dionysos auf antiker Kylix (Related to C P)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Berlin, Antikensammlung
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Dionysos
+SKOS-URI: https://hector.bcdh.uni-bonn.de/dionysus

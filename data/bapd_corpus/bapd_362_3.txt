@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 362
+Beschreibung: Body: RETURN OF HEPHAISTOS, DIONYSOS RECLINING WITH WOMAN (ARIADNE ?), HEPHAISTOS LED BY SATYR
+Datierung: ca. 450–400 v. Chr.
+Gattung: Gefäß
+Gefäßform: Oinochoe [Kerameikos: https://kerameikos.org/id/oinochoe]
+Herkunftsort: GREECE, ATHENS
+Inventar-Nr.: 16258
+Künstler/Werkstatt: 
+Material: Ton
+Name/Bezeichnung: Dionysos auf antiker Oinochoe
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Athens, National Archaeological Museum
+Ware: Attisch Rotfigurig [Kerameikos: https://kerameikos.org/id/red_figure]
+Hauptmotiv: Dionysos
+SKOS-URI: https://hector.bcdh.uni-bonn.de/dionysus

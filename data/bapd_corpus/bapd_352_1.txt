@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 352
+Beschreibung: A: SYMPOSIUM, HERAKLES WITH CUP AND DIONYSOS WITH KANTHAROS AND VINE RECLINING, QUIVER AND BOW SUSPENDED B: THESEUS AND PROKRUSTES (?), THESEUS AND SKIRON I: KOMOS, YOUTH WITH STAFF AND POINTED AMPHORA
+Datierung: ca. 525–475 v. Chr.
+Gattung: Gefäß
+Gefäßform: Kylix [Kerameikos: https://kerameikos.org/id/kylix]
+Herkunftsort: 
+Inventar-Nr.: 93.11.11
+Künstler/Werkstatt: SKYTHES by UNKNOWN
+Material: Ton
+Name/Bezeichnung: Herakles auf antiker Kylix (SKYTHES)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Beverly Hills (CA), market, Summa Galleries
+Ware: Attisch Rotfigurig [Kerameikos: https://kerameikos.org/id/red_figure]
+Hauptmotiv: Herakles
+SKOS-URI: https://hector.bcdh.uni-bonn.de/heracles

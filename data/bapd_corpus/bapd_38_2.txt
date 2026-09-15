@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 38
+Beschreibung: A: GIGANTOMACHY (?) HERAKLES AND ATHENA IN CHARIOT TURNING, WARRIOR, NONSENSE INSCRIPTIONS B: HERAKLES PLAYING KITHARA AT ALTAR, IOLAOS, WOMAN, ATHENA, SHIELD DEVICE, SNAKE, NONSENSE INSCRIPTIONS Under foot: GRAFFITO: MAN, SWASTIKA
+Datierung: ca. 550–500 v. Chr.
+Gattung: Gefäß
+Gefäßform: Halsamphora [Kerameikos: https://kerameikos.org/id/neck_amphora]
+Herkunftsort: ITALY, ETRURIA, TARQUINIA
+Inventar-Nr.: 679
+Künstler/Werkstatt: Compare LEAGROS GROUP by NATI [Kerameikos: https://kerameikos.org/id/leagros_group]
+Material: Ton
+Name/Bezeichnung: Herakles auf antiker Halsamphora (Compare LEAGROS GROUP)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Tarquinia, Museo Nazionale Tarquiniese
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Herakles
+SKOS-URI: https://hector.bcdh.uni-bonn.de/heracles

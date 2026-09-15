@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 75
+Beschreibung: Body: HARNESSING CHARIOT, DRAPED YOUTH WITH STICK, DRAPED MEN, YOUTH, OLD MAN Shoulder: DIONYSOS WITH DRINKING HORN AND IVY, SATYRS AND MAENADS DANCING
+Datierung: ca. 550–500 v. Chr.
+Gattung: Gefäß
+Gefäßform: Hydria [Kerameikos: https://kerameikos.org/id/hydria]
+Herkunftsort: 
+Inventar-Nr.: 03.880
+Künstler/Werkstatt: RYCROFT P by MOORE
+Material: Ton
+Name/Bezeichnung: Dionysos auf antiker Hydria (RYCROFT P)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Boston (MA), Museum of Fine Arts
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Dionysos
+SKOS-URI: https://hector.bcdh.uni-bonn.de/dionysus

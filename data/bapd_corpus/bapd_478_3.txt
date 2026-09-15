@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 478
+Beschreibung: Body: GIGANTOMACHY, ATHENA IN CHARIOT, HERMES IN NEBRIS, HERA (?), DIONYSOS, ARES (?) IN CHARIOT, POSEIDON, GODDESSES AND GIANTS Neck: HORSEMEN
+Datierung: ca. 550–500 v. Chr.
+Gattung: Gefäß
+Gefäßform: Psykter [Kerameikos: https://kerameikos.org/id/psykter]
+Herkunftsort: 
+Inventar-Nr.: 70.53
+Künstler/Werkstatt: ANTIMENES P by DIETRICH N P by HOFFMANN NIKOSTHENES by SIGNATURE [Kerameikos: https://kerameikos.org/id/nikosthenes]
+Material: Ton
+Name/Bezeichnung: Apollon auf antiker Psykter (ANTIMENES P)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Houston (TX), de Menil Collection
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Apollon
+SKOS-URI: https://hector.bcdh.uni-bonn.de/apollo

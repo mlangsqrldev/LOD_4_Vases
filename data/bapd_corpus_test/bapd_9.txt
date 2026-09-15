@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 9
+Beschreibung: A: HERAKLES AND THE HYDRA (IOLAOS, CRAB) B: ATHENA, MOUNTING CHARIOT, HERMES
+Datierung: ca. 525–475 v. Chr.
+Gattung: Gefäß
+Gefäßform: Halsamphora
+Herkunftsort: ITALY, ETRURIA
+Inventar-Nr.: F1854 Previous Collections: Berlin, Schloss Charlottenburg: F1854 Publication Record: Archäologischer Anzeiger: 1971, 173, FIG.19 (A) Archäologischer Anzeiger: 1978, 520-21, FIG.34 (DRAWING OF B) Corpus Vasorum Antiquorum: BERLIN, ANTIKENMUSEUM 5, 49-50, BEILAGE E5, PLS.(2179,2182,2184,2201) 34.3, 37.1-2, 39.5, 56.5 View Whole CVA Plates Monumenti inediti pubblicati dall'Instituto di Corrispondenza Archeologica (Rome, 1829-91): 3, PL.46.1 (DRAWING OF A) Pleiades URI: HTTPS://PLEIADES.STOA.ORG/PLACES/413122 Coordinates: 42.8333,12.8333 Pleiades Coordinates: 42.6332157066,11.6431119707
+Künstler/Werkstatt: LEAGROS GROUP by MOMMSEN
+Material: Ton
+Name/Bezeichnung: Herakles auf antiker Halsamphora (LEAGROS GROUP)
+Produktionsgebiet: Attisch
+Standort: Berlin, Antikensammlung
+Ware: Attisch Schwarzfigurig
+Hauptmotiv: Herakles
+SKOS-URI: https://hector.bcdh.uni-bonn.de/heracles

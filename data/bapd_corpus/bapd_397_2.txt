@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 397
+Beschreibung: AB1: CHARIOT BETWEEN DORIC COLUMNS (POSTS ?) AB2: INSCRIPTION BETWEEN SPHINXES I, zone around: NEREIDS DANCING I: HERAKLES AND TRITON
+Datierung: ca. 575–525 v. Chr.
+Gattung: Gefäß
+Gefäßform: Kylix [Kerameikos: https://kerameikos.org/id/kylix]
+Herkunftsort: ITALY, ETRURIA, TARQUINIA
+Inventar-Nr.: RC4194
+Künstler/Werkstatt: XENOKLES GROUP by BEAZLEY
+Material: Ton
+Name/Bezeichnung: Herakles auf antiker Kylix (XENOKLES GROUP)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Tarquinia, Museo Nazionale Tarquiniese
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Herakles
+SKOS-URI: https://hector.bcdh.uni-bonn.de/heracles

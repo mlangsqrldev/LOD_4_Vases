@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 753
+Beschreibung: A: WEDDED PAIR IN CHARIOT, APOLLO PLAYING KITHARA, WOMAN WITH TORCHES, HERMES, DOG B: APOLLO PLAYING KITHARA BETWEEN ARTEMIS, LETO, POSEIDON, PANTHER DEER
+Datierung: ca. 550–500 v. Chr.
+Gattung: Gefäß
+Gefäßform: Bauchamphora [Kerameikos: https://kerameikos.org/id/belly_amphora]
+Herkunftsort: 
+Inventar-Nr.: 68.46
+Künstler/Werkstatt: Manner of LYSIPPIDES P by BOTHMER
+Material: Ton
+Name/Bezeichnung: Apollon auf antiker Bauchamphora (Manner of LYSIPPIDES P)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Boston (MA), Museum of Fine Arts
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Apollon
+SKOS-URI: https://hector.bcdh.uni-bonn.de/apollo

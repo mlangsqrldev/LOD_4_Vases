@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 530
+Beschreibung: Body: YOUTH WITH CLOAK, PHIALE AND LAUREL (APOLLO ?) AT ALTAR, POURING LIBATION
+Datierung: ca. 450–400 v. Chr.
+Gattung: Gefäß
+Gefäßform: Oinochoe [Kerameikos: https://kerameikos.org/id/oinochoe]
+Herkunftsort: GREECE, EUBOEA, ERETRIA
+Inventar-Nr.: E516
+Künstler/Werkstatt: Manner of ALEXANDRE GROUP by LEZZI-HAFTER S-POTTER+ by LEZZI-HAFTER
+Material: Ton
+Name/Bezeichnung: Apollon auf antiker Oinochoe (Manner of ALEXANDRE GROUP)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: London, British Museum
+Ware: Attisch Rotfigurig [Kerameikos: https://kerameikos.org/id/red_figure]
+Hauptmotiv: Apollon
+SKOS-URI: https://hector.bcdh.uni-bonn.de/apollo

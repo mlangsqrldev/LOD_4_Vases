@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 401
+Beschreibung: A: HERAKLES AND ALKYONEUS, HYPNOS B: CATTLE OF ALKYONEUS, PALM TREES AND ROCKS I: HERAKLES SEATED WITH PHIALE
+Datierung: ca. 500–450 v. Chr.
+Gattung: Gefäß
+Gefäßform: Kylix [Kerameikos: https://kerameikos.org/id/kylix]
+Herkunftsort: 
+Inventar-Nr.: 
+Künstler/Werkstatt: ALKYONEUS P by ANDREAE
+Material: Ton
+Name/Bezeichnung: Herakles auf antiker Kylix (ALKYONEUS P)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Geneva, private, Boehringer
+Ware: Attisch Rotfigurig [Kerameikos: https://kerameikos.org/id/red_figure]
+Hauptmotiv: Herakles
+SKOS-URI: https://hector.bcdh.uni-bonn.de/heracles

@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 376
+Beschreibung: Body: DISCOVERY OF ERICHTHONIOS, ATHENA, AGLAUROS, SNAKE IN BOX
+Datierung: ca. 450–400 v. Chr.
+Gattung: Gefäß
+Gefäßform: Lekythos [Kerameikos: https://kerameikos.org/id/lekythos]
+Herkunftsort: 
+Inventar-Nr.: BS404
+Künstler/Werkstatt: PHIALE P by UNKNOWN [Kerameikos: https://kerameikos.org/id/phiale_painter]
+Material: Ton
+Name/Bezeichnung: Athena auf antiker Lekythos (PHIALE P)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Basel, Antikenmuseum und Sammlung Ludwig
+Ware: Attisch Rotfigurig [Kerameikos: https://kerameikos.org/id/red_figure]
+Hauptmotiv: Athena
+SKOS-URI: https://hector.bcdh.uni-bonn.de/athena

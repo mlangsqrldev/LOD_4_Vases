@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 260
+Beschreibung: A: THEATRICAL OR CULT, CHORUS OF YOUTHS IN CHITONISKOI, DANCING AT ALTAR WITH SASHES AND DRAPED MAN ( DIONYSOS ?) B: SATYR AND SATYR BOY, WITH SKYPHOS, VOLUTE KRATER
+Datierung: ca. 500–450 v. Chr.
+Gattung: Gefäß
+Gefäßform: Krater [Kerameikos: https://kerameikos.org/id/krater]
+Herkunftsort: 
+Inventar-Nr.: BS415
+Künstler/Werkstatt: Manner of MYSON by SCHMIDT COLUMN KRATERS, OTHER Ps. OF by BERGE EARLY MANNERIST, UNDETERMINED by BOARDMAN SIREN P by GUY [Kerameikos: https://kerameikos.org/id/myson]
+Material: Ton
+Name/Bezeichnung: Dionysos auf antiker Krater (Manner of MYSON)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Basel, Antikenmuseum und Sammlung Ludwig
+Ware: Attisch Rotfigurig [Kerameikos: https://kerameikos.org/id/red_figure]
+Hauptmotiv: Dionysos
+SKOS-URI: https://hector.bcdh.uni-bonn.de/dionysus

@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 1064
+Beschreibung: A: SACRIFICE, DRAPED YOUTH POURING LIBATION AT ALTAR, YOUTHS WITH SPITS, APOLLO WITH LYRE SEATED, DRAPED YOUTH PLAYING PIPES, WOMAN, SATYR, TRIPODS ON COLUMNS B: SATYR WITH THYRSOS BETWEEN MAENADS WITH TORCHES
+Datierung: ca. 450–400 v. Chr.
+Gattung: Gefäß
+Gefäßform: Krater [Kerameikos: https://kerameikos.org/id/krater]
+Herkunftsort: 
+Inventar-Nr.: 85.120.2
+Künstler/Werkstatt: Manner of KADMOS P by UNKNOWN
+Material: Ton
+Name/Bezeichnung: Apollon auf antiker Krater (Manner of KADMOS P)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: San Antonio (TX), Art Museum
+Ware: Attisch Rotfigurig [Kerameikos: https://kerameikos.org/id/red_figure]
+Hauptmotiv: Apollon
+SKOS-URI: https://hector.bcdh.uni-bonn.de/apollo

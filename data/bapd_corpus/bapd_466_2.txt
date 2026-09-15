@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 466
+Beschreibung: A,B: HERAKLES SEATED WITH PHIALE, ATHENA WITH OINOCHOE, SATYR, TREE Under handle: GOAT
+Datierung: ca. 525–475 v. Chr.
+Gattung: Gefäß
+Gefäßform: Skyphos [Kerameikos: https://kerameikos.org/id/skyphos]
+Herkunftsort: GREECE, BOEOTIA
+Inventar-Nr.: 1902.12-18.3
+Künstler/Werkstatt: THESEUS P by HASPELS
+Material: Ton
+Name/Bezeichnung: Herakles auf antiker Skyphos (THESEUS P)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: London, British Museum
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Herakles
+SKOS-URI: https://hector.bcdh.uni-bonn.de/heracles

@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 233
+Beschreibung: A: RETURN OF HEPHAISTOS (?), DIONYSOS WITH THYRSOS, SATYRS, ONE PLAYING PIPES, ONE WITH LYRE, MAENADS, ONE WITH TORCH AND OINOCHOE, ONE WITH AMPHORA (?) Neck A: AMAZONOMACHY, AMAZONS IN PATTERNED SUITS,.SOME WITH PELTAI, ONE ON HORSEBACK, WARRIORS, DEVICE, SNAKE, YOUTH IN CHLAMYS
+Datierung: ca. 450–400 v. Chr.
+Gattung: Gefäß
+Gefäßform: Krater [Kerameikos: https://kerameikos.org/id/krater]
+Herkunftsort: 
+Inventar-Nr.: STG688
+Künstler/Werkstatt: 
+Material: Ton
+Name/Bezeichnung: Dionysos auf antiker Krater
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Naples, Museo Archeologico Nazionale
+Ware: Attisch Rotfigurig [Kerameikos: https://kerameikos.org/id/red_figure]
+Hauptmotiv: Dionysos
+SKOS-URI: https://hector.bcdh.uni-bonn.de/dionysus

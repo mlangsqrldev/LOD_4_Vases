@@ -1,0 +1,17 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 8
+Beschreibung: A: HERAKLES AND THE HYDRA B: ATHENA AND IOLAOS, CRAB
+Datierung: ca. 550–500 v. Chr.
+Gattung: Gefäß
+Gefäßform: Halsamphora
+Herkunftsort: 
+Inventar-Nr.: F386 Previous Collections: Malmaison, Empress Josephine Publication Record: American Journal of Archaeology: 20 (1916), 445, FIG.8 Archäologischer Anzeiger: 1971, 172, FIGS.17-18 (A,B) Chiesa, G.S. (ed.), Vasi immagini collezionismo, La collezione di vasi Intesa Sanpaolo e i nuovi indirizzi di ricerca sulla ceramica greca e magnogreca, Milano, 7-8 novembre 2007 (Milan, 2008): 121, FIG.2 (DRAWING) Haspels, C.H.E., Attic Black-figured Lekythoi (Paris, 1936): 238.131 Lexicon Iconographicum Mythologiae Classicae: V, PL.54, HERAKLES 2003 (A) AVI Web: HTTPS://WWW.AVI.UNIBAS.CH/DB/SEARCHFORM.HTML?ID=6612 AVI Record Number: 6376 LIMC ID: 20779 LIMC Web: HTTP://ARK.DASCH.SWISS/ARK:/72163/080E-74CA112ED9DC6-9 CAVI Collection: PARIS, LOUVRE F 386. CAVI Lemma: BF NECK AMPHORA. UNATTRIBUTED. DATE UNCLEAR. CAVI Subject: A: HERACLES AND THE HYDRA. B: ATHENA ... CAVI Inscriptions: A AND B: NONSENSE INSCRIPTIONS. CAVI Number: 6376 AVI Bibliography: LUCE (1916), 445, FIG. 8. — SCHAUENBURG (1971A), 171, FIGS. 17-18 (BIBL.: P.
+171 N. 54). CAVI / AVI Data from Henry Immerwahr's Corpus of Attic Vase Inscriptions (CAVI), updated by Rudoph Wachter's Attic Vase Inscriptions (AVI)
+Künstler/Werkstatt: DIOSPHOS P by BEAZLEY
+Material: Ton
+Name/Bezeichnung: Herakles auf antiker Halsamphora (DIOSPHOS P)
+Produktionsgebiet: Attisch
+Standort: Paris, Musée du Louvre
+Ware: Attisch Schwarzfigurig
+Hauptmotiv: Herakles
+SKOS-URI: https://hector.bcdh.uni-bonn.de/heracles

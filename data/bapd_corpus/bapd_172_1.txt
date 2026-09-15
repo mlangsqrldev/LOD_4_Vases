@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 172
+Beschreibung: Body: APOLLO, SEATED, MUSE WITH LYRE
+Datierung: ca. 450–400 v. Chr.
+Gattung: Gefäß
+Gefäßform: Oinochoe [Kerameikos: https://kerameikos.org/id/oinochoe]
+Herkunftsort: ITALY, SICILY, VASSALLAGGI
+Inventar-Nr.: T65
+Künstler/Werkstatt: SHUVALOV P by MARTELLI
+Material: Ton
+Name/Bezeichnung: Apollon auf antiker Oinochoe (SHUVALOV P)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Agrigento, Museo Archeologico Regionale
+Ware: Attisch Rotfigurig [Kerameikos: https://kerameikos.org/id/red_figure]
+Hauptmotiv: Apollon
+SKOS-URI: https://hector.bcdh.uni-bonn.de/apollo

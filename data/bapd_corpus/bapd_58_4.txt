@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 58
+Beschreibung: A: ATHENA BETWEEN COLUMNS SURMOUNTED BY COCKS, DEVICE, SQUARE (?) B: ATHLETES, MAN AND YOUTH BOXING, YOUTH WITH JAVELINS (ACONTIST) JUDGE (DRAPED MAN WITH STAFF)
+Datierung: ca. 500–450 v. Chr.
+Gattung: Gefäß
+Gefäßform: Amphora [Kerameikos: https://kerameikos.org/id/amphora]
+Herkunftsort: 
+Inventar-Nr.: 2004.6.8.4
+Künstler/Werkstatt: Near EUCHARIDES P by UNKNOWN
+Material: Ton
+Name/Bezeichnung: Athena auf antiker Amphora (Near EUCHARIDES P)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Sarasota (FL), private
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Athena
+SKOS-URI: https://hector.bcdh.uni-bonn.de/athena

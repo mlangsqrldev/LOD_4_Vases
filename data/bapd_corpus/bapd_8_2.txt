@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 8
+Beschreibung: A: HERAKLES AND THE HYDRA B: ATHENA AND IOLAOS, CRAB
+Datierung: ca. 550–500 v. Chr.
+Gattung: Gefäß
+Gefäßform: Halsamphora [Kerameikos: https://kerameikos.org/id/neck_amphora]
+Herkunftsort: 
+Inventar-Nr.: F386
+Künstler/Werkstatt: DIOSPHOS P by BEAZLEY
+Material: Ton
+Name/Bezeichnung: Herakles auf antiker Halsamphora (DIOSPHOS P)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Paris, Musée du Louvre
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Herakles
+SKOS-URI: https://hector.bcdh.uni-bonn.de/heracles

@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 209
+Beschreibung: A: DIONYSOS (BEARDLESS) WITH THYRSOS AND KANTHAROS, MAENAD WITH THYRSOS AND TORCH, SATYRS, ONE PLAYING PIPES, ONE WITH WINESKIN
+Datierung: ca. 400–300 v. Chr.
+Gattung: Gefäß
+Gefäßform: Krater [Kerameikos: https://kerameikos.org/id/krater]
+Herkunftsort: 
+Inventar-Nr.: 
+Künstler/Werkstatt: POTHOS P by UNKNOWN
+Material: Ton
+Name/Bezeichnung: Dionysos auf antiker Krater (POTHOS P)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: London, market, Sotheby's
+Ware: Attisch Rotfigurig [Kerameikos: https://kerameikos.org/id/red_figure]
+Hauptmotiv: Dionysos
+SKOS-URI: https://hector.bcdh.uni-bonn.de/dionysus

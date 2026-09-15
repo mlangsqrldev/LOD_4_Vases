@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 527
+Beschreibung: Body: HERAKLES AND ATHENA
+Datierung: ca. 450–400 v. Chr.
+Gattung: Gefäß
+Gefäßform: Chous [Kerameikos: https://kerameikos.org/id/chous]
+Herkunftsort: 
+Inventar-Nr.: 94703
+Künstler/Werkstatt: Workshop of SHUVALOV P by LEZZI-HAFTER S-POTTER+ by LEZZI-HAFTER
+Material: Ton
+Name/Bezeichnung: Herakles auf antiker Chous (Workshop of SHUVALOV P)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Florence, Museo Archeologico Etrusco
+Ware: Attisch Rotfigurig [Kerameikos: https://kerameikos.org/id/red_figure]
+Hauptmotiv: Herakles
+SKOS-URI: https://hector.bcdh.uni-bonn.de/heracles

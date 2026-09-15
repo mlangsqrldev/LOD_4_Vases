@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 271
+Beschreibung: Body: DIONYSOS, WOMEN OR GODDESSES, HERMES, DRAPED MAN (HADES ?) Shoulder: DIONYSOS, MOUNTING CHARIOT, WITH SATYRS AND MAENADS
+Datierung: ca. 525–475 v. Chr.
+Gattung: Gefäß
+Gefäßform: Hydria [Kerameikos: https://kerameikos.org/id/hydria]
+Herkunftsort: ITALY, ETRURIA (?)
+Inventar-Nr.: 3866
+Künstler/Werkstatt: Manner of PRIAM P by BOCCI
+Material: Ton
+Name/Bezeichnung: Dionysos auf antiker Hydria (Manner of PRIAM P)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Florence, Museo Archeologico Etrusco
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Dionysos
+SKOS-URI: https://hector.bcdh.uni-bonn.de/dionysus

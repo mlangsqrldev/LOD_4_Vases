@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 425
+Beschreibung: A,B: AMAZONOMACHY, HERAKLES AND WARRIORS FIGHTING AMAZONS, SOME IN NEBRIDES, SHIELD DEVICE, TRIPOD
+Datierung: ca. 575–525 v. Chr.
+Gattung: Gefäß
+Gefäßform: Kylix [Kerameikos: https://kerameikos.org/id/kylix]
+Herkunftsort: ITALY, ETRURIA, VULCI
+Inventar-Nr.: 1961.61
+Künstler/Werkstatt: 
+Material: Ton
+Name/Bezeichnung: Herakles auf antiker Kylix
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Hamburg, Museum für Kunst und Gewerbe
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Herakles
+SKOS-URI: https://hector.bcdh.uni-bonn.de/heracles

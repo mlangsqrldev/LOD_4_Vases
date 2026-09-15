@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 148
+Beschreibung: A: WOMAN WITH PHIALE, APOLLO (?) WITH LYRE B: DRAPED YOUTHS AT ALTAR
+Datierung: ca. 475–425 v. Chr.
+Gattung: Gefäß
+Gefäßform: Pelike [Kerameikos: https://kerameikos.org/id/pelike]
+Herkunftsort: 
+Inventar-Nr.: 
+Künstler/Werkstatt: 
+Material: Ton
+Name/Bezeichnung: Apollon auf antiker Pelike
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: London, market, Christie's
+Ware: Attisch Rotfigurig [Kerameikos: https://kerameikos.org/id/red_figure]
+Hauptmotiv: Apollon
+SKOS-URI: https://hector.bcdh.uni-bonn.de/apollo

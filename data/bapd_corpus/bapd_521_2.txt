@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 521
+Beschreibung: Body: HERAKLES (BEARDLESS) WITH BOW BETWEEN IOLAOS AND NIKE WITH WREATH
+Datierung: ca. 450–400 v. Chr.
+Gattung: Gefäß
+Gefäßform: Oinochoe [Kerameikos: https://kerameikos.org/id/oinochoe]
+Herkunftsort: ITALY, SPINA
+Inventar-Nr.: 5060
+Künstler/Werkstatt: SHUVALOV P by LEZZI-HAFTER
+Material: Ton
+Name/Bezeichnung: Herakles auf antiker Oinochoe (SHUVALOV P)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Ferrara, Museo Nazionale di Spina
+Ware: Attisch Rotfigurig [Kerameikos: https://kerameikos.org/id/red_figure]
+Hauptmotiv: Herakles
+SKOS-URI: https://hector.bcdh.uni-bonn.de/heracles

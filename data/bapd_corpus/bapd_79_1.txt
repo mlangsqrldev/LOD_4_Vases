@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 79
+Beschreibung: Body: DIONYSOS WITH KANTHAROS AND IVY, WOMAN (AMPHITRITE ?), POSEIDON Shoulder: FIGHT, WARRIORS, FIGHTING OVER FALLEN WARRIOR (SHIELD DEVICE, COCK)
+Datierung: ca. 575–525 v. Chr.
+Gattung: Gefäß
+Gefäßform: Hydria [Kerameikos: https://kerameikos.org/id/hydria]
+Herkunftsort: 
+Inventar-Nr.: 86.AE.113
+Künstler/Werkstatt: Circle of LYDOS by BOTHMER Compare LYDOS by CAHN Manner of LYDOS by UNKNOWN [Kerameikos: https://kerameikos.org/id/lydos]
+Material: Ton
+Name/Bezeichnung: Dionysos auf antiker Hydria (Circle of LYDOS)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Malibu (CA), The J. Paul Getty Museum
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Dionysos
+SKOS-URI: https://hector.bcdh.uni-bonn.de/dionysus

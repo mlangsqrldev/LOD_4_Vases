@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 219
+Beschreibung: A: HERAKLES AND MONSTER, WOMAN (HESIONE ?) B: HORSEMAN BETWEEN YOUTHS Under handle: DOLPHINS Under handle: DRAPED FIGURE
+Datierung: ca. 575–525 v. Chr.
+Gattung: Gefäß
+Gefäßform: Kylix [Kerameikos: https://kerameikos.org/id/kylix]
+Herkunftsort: ITALY, TARANTO
+Inventar-Nr.: 52155
+Künstler/Werkstatt: LYDOS by DRAGO [Kerameikos: https://kerameikos.org/id/lydos]
+Material: Ton
+Name/Bezeichnung: Herakles auf antiker Kylix (LYDOS)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Taranto, Museo Archeologico Nazionale
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Herakles
+SKOS-URI: https://hector.bcdh.uni-bonn.de/heracles

@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 1140
+Beschreibung: Body: FUNERARY, DRAPED YOUTHS AT STELE WITH FILLETS, ONE WITH EIDOLON
+Datierung: ca. 475–425 v. Chr.
+Gattung: Gefäß
+Gefäßform: Lekythos [Kerameikos: https://kerameikos.org/id/lekythos]
+Herkunftsort: 
+Inventar-Nr.: 1989.281.72
+Künstler/Werkstatt: ACHILLES P by BOTHMER [Kerameikos: https://kerameikos.org/id/achilles_painter]
+Material: Ton
+Name/Bezeichnung: Apollon auf antiker Lekythos (ACHILLES P)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: New York (N.Y.), Metropolitan Museum
+Ware: Attisch Rotfigurig [Kerameikos: https://kerameikos.org/id/red_figure]
+Hauptmotiv: Apollon
+SKOS-URI: https://hector.bcdh.uni-bonn.de/apollo

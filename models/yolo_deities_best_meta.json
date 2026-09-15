@@ -1,0 +1,28 @@
+{
+  "model_type": "YOLOv8-ObjectDetection",
+  "base_model": "yolov8n.pt",
+  "classes": [
+    "Athena",
+    "Dionysos",
+    "Herakles",
+    "Apollon"
+  ],
+  "skos_uris": {
+    "Athena": "https://hector.bcdh.uni-bonn.de/athena",
+    "Dionysos": "https://hector.bcdh.uni-bonn.de/dionysos",
+    "Herakles": "https://hector.bcdh.uni-bonn.de/herakles",
+    "Apollon": "https://hector.bcdh.uni-bonn.de/apollo"
+  },
+  "epochs": 30,
+  "batch_size": 16,
+  "imgsz": 640,
+  "device": "NVIDIA GeForce RTX 4080 Laptop GPU",
+  "trained_at": "2026-09-04T15:27:08.746762",
+  "metrics": {
+    "mAP50": 0.2258651734881321,
+    "mAP50_95": 0.13577282116654552,
+    "precision": 0.23211793644247647,
+    "recall": 0.45783800593285073
+  },
+  "weights_path": "models/yolo_deities_best.pt"
+}

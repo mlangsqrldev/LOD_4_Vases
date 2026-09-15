@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 100
+Beschreibung: Body: BIRTH OF ATHENA, ZEUS SEATED BETWEEN EILEITHYIAI, HEPHAISTOS AND GOD IN NEBRIS AND CHITONISKOS (HERMES ?) Shoulder: THE CALYDONIAN BOAR (?), HUNTSMEN, WARRIORS AND HORSEMEN, BOAR, DOG, BODY OF MAN
+Datierung: ca. 575–525 v. Chr.
+Gattung: Gefäß
+Gefäßform: Hydria [Kerameikos: https://kerameikos.org/id/hydria]
+Herkunftsort: 
+Inventar-Nr.: 65
+Künstler/Werkstatt: 
+Material: Ton
+Name/Bezeichnung: Athena auf antiker Hydria
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Rome, Musei Capitolini
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Athena
+SKOS-URI: https://hector.bcdh.uni-bonn.de/athena

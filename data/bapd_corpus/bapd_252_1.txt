@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 252
+Beschreibung: A,B: SATYRS AND MAENADS (ONE IN NEBRIS) DANCING, NONSENSE INSCRIPTIONS
+Datierung: ca. 575–525 v. Chr.
+Gattung: Gefäß
+Gefäßform: Bauchamphora [Kerameikos: https://kerameikos.org/id/belly_amphora]
+Herkunftsort: 
+Inventar-Nr.: BS424
+Künstler/Werkstatt: Near LYDOS by UNKNOWN LYDOS by UNKNOWN [Kerameikos: https://kerameikos.org/id/lydos]
+Material: Ton
+Name/Bezeichnung: Dionysos auf antiker Bauchamphora (Near LYDOS)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Basel, Antikenmuseum und Sammlung Ludwig
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Dionysos
+SKOS-URI: https://hector.bcdh.uni-bonn.de/dionysus

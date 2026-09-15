@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 461
+Beschreibung: Body: HERAKLES AND THE HYDRA, ATHENA, IOLAOS, CRAB, FIRE
+Datierung: ca. 525–475 v. Chr.
+Gattung: Gefäß
+Gefäßform: Lekythos [Kerameikos: https://kerameikos.org/id/lekythos]
+Herkunftsort: GREECE, EUBOEA, ERETRIA
+Inventar-Nr.: CA598
+Künstler/Werkstatt: DIOSPHOS P by BEAZLEY DIOSPHOS P by HASPELS
+Material: Ton
+Name/Bezeichnung: Herakles auf antiker Lekythos (DIOSPHOS P)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Paris, Musée du Louvre
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Herakles
+SKOS-URI: https://hector.bcdh.uni-bonn.de/heracles

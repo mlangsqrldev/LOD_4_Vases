@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 194
+Beschreibung: A: GIGANTOMACHY, ATHENA (NAMED) IN CHARIOT TURNING B: FIGHT, WARRIORS, ONE IN NEBRIS, FIGHTING OVER FALLEN YOUTH, BETWEEN WOMEN (ACHILLES AND MEMNON FIGHTING OVER ANTILOCHOS, BETWEEN EOS AND THETIS ?), SHIELD DEVICE, DISCS
+Datierung: ca. 550–500 v. Chr.
+Gattung: Gefäß
+Gefäßform: Bauchamphora [Kerameikos: https://kerameikos.org/id/belly_amphora]
+Herkunftsort: 
+Inventar-Nr.: PERMANENT LOAN
+Künstler/Werkstatt: PRIAM P by BOTHMER
+Material: Ton
+Name/Bezeichnung: Athena auf antiker Bauchamphora (PRIAM P)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Frankfurt, Museum für Vor- und Frühgeschichte
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Athena
+SKOS-URI: https://hector.bcdh.uni-bonn.de/athena

@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 1158
+Beschreibung: A: APOLLO PLAYING KITHARA WITH HERMES, LETO, ARTEMIS AND POSEIDON, DEER B: HERAKLES AND ATHENA, IOLAOS, HERMES, DIONYSOS, PANTHER, SHIELD DEVICE IVY WREATH
+Datierung: ca. 550–500 v. Chr.
+Gattung: Gefäß
+Gefäßform: Halsamphora [Kerameikos: https://kerameikos.org/id/neck_amphora]
+Herkunftsort: ITALY, ETRURIA, VULCI
+Inventar-Nr.: J145
+Künstler/Werkstatt: ANTIMENES P by KUNZE-GÖTTE [Kerameikos: https://kerameikos.org/id/antimenes_painter]
+Material: Ton
+Name/Bezeichnung: Apollon auf antiker Halsamphora (ANTIMENES P)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Munich, Antikensammlungen
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Apollon
+SKOS-URI: https://hector.bcdh.uni-bonn.de/apollo

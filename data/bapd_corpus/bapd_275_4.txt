@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 275
+Beschreibung: A: ANODOS, YOUTH WITH SCEPTRE (IACCHOS OR APOLLO ?) AND NIKE IN CAVE, DIONYSOS SEATED, SATYR AND MAENADS, ONE WITH THYRSOS AND TRAY WITH GRAPES B: DRAPED YOUTHS
+Datierung: ca. 425–375 v. Chr.
+Gattung: Gefäß
+Gefäßform: Krater [Kerameikos: https://kerameikos.org/id/krater]
+Herkunftsort: 
+Inventar-Nr.: 1917.7-21.1
+Künstler/Werkstatt: Compare OINOMAOS P by RODRIGUEZ-PEREZ Compare OINOMAOS P by SANCHEZ
+Material: Ton
+Name/Bezeichnung: Apollon auf antiker Krater (Compare OINOMAOS P)
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: London, British Museum
+Ware: Attisch Rotfigurig [Kerameikos: https://kerameikos.org/id/red_figure]
+Hauptmotiv: Apollon
+SKOS-URI: https://hector.bcdh.uni-bonn.de/apollo

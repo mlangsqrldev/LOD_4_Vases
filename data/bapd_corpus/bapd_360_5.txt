@@ -1,0 +1,16 @@
+Abbildungsnachweis: Beazley Archive Pottery Database (BAPD) / CARC Oxford
+Beazley-Nummer: BAPD 360
+Beschreibung: A: ILIOUPERSIS, PRIAM, FALLEN OVER ALTAR, NEOPTOLEMOS WITH ASTYANAX, HECUBA, WARRIORS, DRAPED MAN WITH SPEAR, WOMAN B: GIGANTOMACHY, ZEUS AND HERAKLES IN CHARIOT, ATHENA, GIANTS C: AMAZONOMACHY, HERAKLES AND AMAZON BETWEEN WOMEN AND DRAPED MEN WITH SPEARS I: GORGONEION Lid: WOMAN, YOUTHS, HORSEMAN
+Datierung: ca. 575–525 v. Chr.
+Gattung: Gefäß
+Gefäßform: Pyxis [Kerameikos: https://kerameikos.org/id/pyxis]
+Herkunftsort: GREECE, BOEOTIA, TANAGRA
+Inventar-Nr.: F3988
+Künstler/Werkstatt: 
+Material: Ton
+Name/Bezeichnung: Herakles auf antiker Pyxis
+Produktionsgebiet: Attisch [Kerameikos: https://kerameikos.org/id/athens]
+Standort: Berlin, Antikensammlung
+Ware: Attisch Schwarzfigurig [Kerameikos: https://kerameikos.org/id/black_figure]
+Hauptmotiv: Herakles
+SKOS-URI: https://hector.bcdh.uni-bonn.de/heracles
