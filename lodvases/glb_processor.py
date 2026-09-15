@@ -571,7 +571,7 @@ class GLBProcessor:
             radii = np.where(
                 heights < 6,
                 1.0 + 1.5 * (6 - heights)/6,
-                2.0 + 10.0 * np.sqrt((heights - 6)/8)
+                2.0 + 10.0 * np.sqrt(np.maximum(0.0, (heights - 6) / 8))
             )
         else: # Psykter
             heights = np.linspace(0, 28, 40)
