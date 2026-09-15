@@ -57,14 +57,25 @@
   * **VLM Multimodal Fine-Tuning (`dataset_train.jsonl`)** im LLaVA-Konversationsformat.
   * **Transparente RGBA-Freisteller (`cutouts/*.png`)**.
 
-### 4. 🧠 Kalibrierte Vision-KI (Domain-Debiased CLIP & Classifier)
+### 4. 📚 Lokaler SKOS-Thesaurus-Editor & RDF-Turtle-Synchronisation
+* **Lokaler BCDH HECTOR RDF Graph**: Direktes Parsen und Verwalten von `heritage_assets.ttl` mit über 3.600 SKOS-Konzepten und >23.000 RDF-Tripeln via RDFLib.
+* **Integrierter SKOS-Editor**: Begriffe in Echtzeit erstellen, anpassen, kategorisieren (`prefLabel@de`, `prefLabel@en`, `altLabel`, `broader`, `category`, `definition`, `uri`) und in `.ttl` speichern.
+* **Echtzeit-Synchronisation (Live-Listener)**: Im SKOS-Editor angelegte oder geänderte Begriffe stehen sofort und ohne Neustart in allen Auswahllisten und im *Motiv prüfen*-Fenster zur Verfügung.
+* **Multi-Screen Workflow**: Sowohl der SKOS-Editor als auch die Motiv-Prüfung lassen sich per Klick in eigenständige Toplevel-Fenster auskoppeln (z.B. für Mehrbildschirm-Arbeitsplätze).
+
+### 5. 🔍 Vertikale Motiv-Verifikation & Interaktiver Zoom
+* **Vertikal gestapelte Figurenleiste**: Extrahierte Figuren und Bildausschnitte werden untereinander in einer scrollbaren Kartenansicht gerendert.
+* **Interaktive Zoom-Steuerung**: Jede Motivkarte bietet stufenloses Zoomen (`➕`, `➖`, `100%`) sowie eine hochauflösende Detailansicht (`🔍`) mit bis zu 800% Vergrößerung und Bildverschiebung (Pan).
+* **Effiziente Validierung (Human-in-the-Loop)**: Integrierter Suchfilter für SKOS-Konzepte, 1-Klick-Übernahme von KI-Vorschlägen und Batch-Aktionen (*Alle KI-Vorschläge anwenden*, *Alle verifizieren*).
+
+### 6. 🧠 Kalibrierte Vision-KI (Domain-Debiased CLIP & Classifier)
 * **Gefäßformen**: *Amphora, Kylix, Lekythos, Krater, Hydria, Psykter, Stamnos, Pelike, Skyphos, Kantharos, Oinochoe, Pyxis, Dinos, Aryballos*, u.v.m.
 * **Waren & Stilphasen**: *Attisch Rotfigurig, Attisch Schwarzfigurig, Attisch Weißgrundig, Korinthisch, Geometrisch, Unteritalisch/Apulisch, Bucchero*, etc.
 * **Ikonographie**: *Herakles & Nemeischer Löwe, Dionysos & Satyrn, Apollon mit Kithara, Athena Promachos, Delphinreiter, Komasten, Amazonomachie*, etc.
 
-### 5. 🔗 Linked Open Data (LOD) & Wissensgraphen
+### 7. 🔗 Linked Open Data (LOD) & Wissensgraphen
 * **Kerameikos.org Integration**: Vollständige Auflösung von Formen, Maltechniken, Produktionsorten und Künstlern/Töpfern zu kanonischen URIs inkl. Alignment mit **Getty AAT**, **Wikidata**, **GND** und dem **British Museum**.
-* **BCDH HECTOR Thesaurus**: Semantische Verknüpfung über die Skosmos REST API der Universität Bonn.
+* **BCDH HECTOR Thesaurus**: Semantische Verknüpfung über lokale RDF-Turtle-Dateien und die Skosmos REST API der Universität Bonn.
 * **BAPD Client & Korpus-Builder**: Automatisierte Ernte von Metadaten und Bildquellen aus dem *Beazley Archive (CARC Oxford)*.
 * **Standard-Konforme Exporte**:
   * **JSON-LD** (`@context`, `@id`, `skos:Concept`, `schema:3DModel`, W3C Web Annotation).
@@ -149,7 +160,7 @@ Starten Sie die native Desktop-App mit modernem Dark-Mode UI:
 python gui.py
 ```
 
-### Die vier Hauptarbeitsbereiche:
+### Die Hauptarbeitsbereiche:
 1. **🏺 3D-Studio & Schnittzeichnung**:
    - Laden Sie `.glb` / `.gltf` Vasenmodelle.
    - Betrachten Sie das Modell interaktiv im WebGL-Studio (PBR, Ton, Drahtgitter).
@@ -158,10 +169,17 @@ python gui.py
 2. **🎯 Gottheiten & Figurendetektion (YOLOv8)**:
    - Bild laden und Figuren automatisch detektieren lassen.
    - Konfidenz-Schwellenwert einstellen, Bounding Boxes einblenden und SKOS-Verknüpfungen inspizieren.
-3. **✨ SAM & Active Learning Studio**:
+3. **✨ SAM & Active Learning Studio (mit vertikaler Motiv-Prüfung)**:
    - Klicken Sie auf Figuren/Ornamente, um pixelgenaue Masken mit SAM zu erstellen.
+   - **Vertikal gestapelte Figurenansicht**: Alle erkannten Figuren und Ornamente werden untereinander als interaktive Karten dargestellt.
+   - **Zoom & Detailansicht**: Jede Karte bietet Stufenzoom (`➕`, `➖`, `100%`) sowie ein modales Vollbild-Zoomfenster (`🔍`) bis 800% mit Pan-Funktion.
+   - **Multi-Screen Auskopplung**: Das *Motiv prüfen*-Panel kann mit einem Klick auf `🪟 In separatem Fenster öffnen` auf einen Zweitbildschirm gelegt werden.
    - Labels aus dem HECTOR-Thesaurus zuweisen und Trainingsdatensätze (COCO, VLM LLaVA) exportieren.
-4. **📊 LOD & Kerameikos Katalog-Explorer**:
+4. **📚 BCDH SKOS-Thesaurus-Editor**:
+   - Durchsuchen, Anlegen und Bearbeiten von Begriffen im lokalen Turtle-Graphen (`heritage_assets.ttl`).
+   - Alle neu hinzugefügten Termini werden in Echtzeit ohne Neustart in die Dropdown-Menüs der Motiv-Prüfung synchronisiert.
+   - Kann ebenfalls als separates Fenster (`🪟 Auf 2. Bildschirm öffnen`) für paralleles Arbeiten geöffnet werden.
+5. **📊 LOD & Kerameikos Katalog-Explorer**:
    - Gesamtkataloge durchsuchen, Formen und Techniken klassifizieren und Wissensgraphen exportieren.
 
 ---
@@ -323,9 +341,12 @@ LODVases/
 │   ├── lod_catalog.jsonld
 │   ├── lod_catalog.ttl
 │   └── lod_catalog.csv
-├── data/                       # Trainingskorpora & Datensätze (BAPD / YOLO)
+├── data/                       # Trainingskorpora & Vokabulare
+│   └── vocabularies/           # Lokale RDF SKOS-Thesauri
+│       └── heritage_assets.ttl # BCDH HECTOR RDF Graph (>3.600 Konzepte)
 └── tests/                      # Test-Suite
-    └── test_lodvases.py        # Umfassende Unit- & Integrationstests
+    ├── test_lodvases.py        # Umfassende Unit- & Integrationstests
+    └── test_skos_editor.py     # SKOS Graph & Synchronisationstests
 ```
 
 ---

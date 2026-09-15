@@ -4,6 +4,7 @@ Interacts with the Skosmos REST API (https://vocabs.bcdh.uni-bonn.de/rest/v1/)
 and provides an offline/fallback knowledge base for ancient Greek vase concepts.
 """
 
+import os
 import json
 import urllib.request
 import urllib.parse
@@ -662,13 +663,44 @@ CURATED_HECTOR_CONCEPTS: Dict[str, Dict[str, Any]] = {
 
 class SKOSClient:
     """
-    Client for querying and caching SKOS concepts from the BCDH Skosmos API.
+    Client for querying, editing, caching, and synchronizing SKOS concepts from both
+    local RDF Turtle (.ttl) vocabularies and the BCDH Skosmos REST API.
     """
-    def __init__(self, vocab: str = DEFAULT_VOCAB, use_live_api: bool = True):
+    def __init__(self, vocab: str = DEFAULT_VOCAB, use_live_api: bool = True, ttl_path: Optional[str] = None):
         self.vocab = vocab
         self.use_live_api = use_live_api
         self.cache: Dict[str, SKOSConcept] = {}
+        self.concepts_by_uri: Dict[str, SKOSConcept] = {}
+        self.listeners: List[Any] = []
+        
+        # Initialize RDFLib Graph
+        import rdflib
+        self.rdflib = rdflib
+        self.graph = rdflib.Graph()
+        
+        # Determine local TTL path
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        default_ttl = os.path.join(base_dir, "data", "vocabularies", "heritage_assets.ttl")
+        self.ttl_file_path = ttl_path if (ttl_path and os.path.exists(ttl_path)) else (default_ttl if os.path.exists(default_ttl) else None)
+        
+        # 1. Load curated concepts as baseline
         self._load_curated_concepts()
+        
+        # 2. If local TTL exists, load and parse full graph
+        if self.ttl_file_path and os.path.exists(self.ttl_file_path):
+            self.load_local_ttl(self.ttl_file_path)
+
+    def register_on_change_listener(self, callback: Any):
+        """Registers a callback function to be called when concepts are added, updated, or loaded."""
+        if callback not in self.listeners:
+            self.listeners.append(callback)
+
+    def _notify_listeners(self):
+        for cb in self.listeners:
+            try:
+                cb()
+            except Exception as e:
+                print(f"Error notifying SKOS change listener: {e}")
 
     def _load_curated_concepts(self):
         for key, data in CURATED_HECTOR_CONCEPTS.items():
@@ -684,8 +716,194 @@ class SKOSClient:
             )
             self.cache[key.lower()] = concept
             self.cache[data["uri"]] = concept
+            self.concepts_by_uri[data["uri"]] = concept
             for alt in data.get("alt_labels", []):
                 self.cache[alt.lower()] = concept
+
+    def load_local_ttl(self, ttl_path: str) -> int:
+        """
+        Parses an RDF Turtle (.ttl) SKOS file and indexes all concepts into memory.
+        """
+        if not os.path.exists(ttl_path):
+            raise FileNotFoundError(f"TTL file not found at: {ttl_path}")
+
+        import rdflib
+        from rdflib.namespace import SKOS, RDF, RDFS
+
+        new_graph = rdflib.Graph()
+        new_graph.parse(ttl_path, format="turtle")
+        self.graph = new_graph
+        self.ttl_file_path = os.path.abspath(ttl_path)
+
+        loaded_count = 0
+        for subj in self.graph.subjects(RDF.type, SKOS.Concept):
+            uri_str = str(subj)
+            pref_labels = []
+            pref_label_de = ""
+            pref_label_en = ""
+            alt_labels = []
+            definition = ""
+            broader_uri = ""
+            broader_label = ""
+            category = "Kulturgut"
+
+            for p, o in self.graph.predicate_objects(subj):
+                p_str = str(p)
+                o_str = str(o)
+                if p == SKOS.prefLabel or p_str.endswith("prefLabel"):
+                    lang = getattr(o, "language", "") or ""
+                    if lang == "de" or not pref_label_de:
+                        pref_label_de = o_str
+                    if lang == "en":
+                        pref_label_en = o_str
+                    pref_labels.append(o_str)
+                elif p == SKOS.altLabel or p_str.endswith("altLabel"):
+                    alt_labels.append(o_str)
+                elif p == SKOS.definition or p_str.endswith("definition") or p == RDFS.comment:
+                    definition = o_str
+                elif p == SKOS.broader or p_str.endswith("broader"):
+                    broader_uri = o_str
+
+            primary_label = pref_label_de or (pref_labels[0] if pref_labels else uri_str.split("/")[-1])
+            
+            # Categorize concept heuristically if not specified
+            if "maler" in primary_label.lower() or "painter" in (pref_label_en or "").lower() or "gruppe" in primary_label.lower():
+                category = "Maler / Werkstatt"
+            elif any(s in primary_label.lower() for s in ["amphora", "kylix", "krater", "lekythos", "hydria", "schale", "becher", "kantharos", "psykter", "oinochoe", "pelike", "pyxis", "dinos", "aryballos", "gefäß"]):
+                category = "Gefäßform"
+            elif any(s in primary_label.lower() for s in ["athena", "dionys", "herakl", "apoll", "zeus", "hermes", "aphrodite", "poseidon", "artemis", "hephaist", "ares", "achill", "hektor", "theseus", "satyr", "silen", "mänad", "eros", "amazone", "kentaur"]):
+                category = "Mythologie / Figur"
+            elif any(s in primary_label.lower() for s in ["palmette", "mäander", "ornament", "lotos", "ranke", "zahnleiste", "zungenmuster"]):
+                category = "Ornament"
+            elif any(s in primary_label.lower() for s in ["rotfigurig", "schwarzfigurig", "weißgrundig", "bucchero", "firnis", "ton"]):
+                category = "Technik / Ware"
+
+            concept = SKOSConcept(
+                uri=uri_str,
+                pref_label=primary_label,
+                vocab=self.vocab,
+                alt_labels=alt_labels,
+                broader_uri=broader_uri or None,
+                broader_label=broader_label or None,
+                definition=definition or None,
+                category=category
+            )
+
+            self.concepts_by_uri[uri_str] = concept
+            self.cache[uri_str] = concept
+            self.cache[primary_label.lower()] = concept
+            if pref_label_en:
+                self.cache[pref_label_en.lower()] = concept
+            for alt in alt_labels:
+                self.cache[alt.lower()] = concept
+            loaded_count += 1
+
+        print(f"SKOS Client: Successfully loaded {loaded_count} concepts from {self.ttl_file_path}")
+        self._notify_listeners()
+        return loaded_count
+
+    def add_or_update_concept(
+        self,
+        pref_label_de: str,
+        pref_label_en: str = "",
+        alt_labels: Optional[List[str]] = None,
+        broader_uri: str = "",
+        definition: str = "",
+        category: str = "Ikonographie",
+        custom_uri: str = ""
+    ) -> SKOSConcept:
+        """
+        Adds a new SKOS concept or updates an existing one in both the in-memory graph and cache.
+        """
+        import rdflib
+        from rdflib.namespace import SKOS, RDF
+
+        pref_label_de = pref_label_de.strip()
+        if not pref_label_de:
+            raise ValueError("pref_label_de is required.")
+
+        alt_labels = [a.strip() for a in (alt_labels or []) if a.strip()]
+
+        # Generate canonical URI if not provided
+        if custom_uri and custom_uri.strip():
+            uri_str = custom_uri.strip()
+        else:
+            import hashlib
+            slug = hashlib.md5(pref_label_de.encode("utf-8")).hexdigest()[:8]
+            uri_str = f"http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_{slug}"
+
+        subj = rdflib.URIRef(uri_str)
+        scheme = rdflib.URIRef("http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/scheme")
+
+        # Remove existing triples for this subject in graph
+        self.graph.remove((subj, None, None))
+
+        # Add triples
+        self.graph.add((subj, RDF.type, SKOS.Concept))
+        self.graph.add((subj, SKOS.inScheme, scheme))
+        self.graph.add((subj, SKOS.prefLabel, rdflib.Literal(pref_label_de, lang="de")))
+        if pref_label_en.strip():
+            self.graph.add((subj, SKOS.prefLabel, rdflib.Literal(pref_label_en.strip(), lang="en")))
+
+        for alt in alt_labels:
+            self.graph.add((subj, SKOS.altLabel, rdflib.Literal(alt, lang="de")))
+
+        if broader_uri.strip():
+            self.graph.add((subj, SKOS.broader, rdflib.URIRef(broader_uri.strip())))
+
+        if definition.strip():
+            self.graph.add((subj, SKOS.definition, rdflib.Literal(definition.strip(), lang="de")))
+
+        # Create/update concept object
+        concept = SKOSConcept(
+            uri=uri_str,
+            pref_label=pref_label_de,
+            vocab=self.vocab,
+            alt_labels=alt_labels,
+            broader_uri=broader_uri.strip() or None,
+            definition=definition.strip() or None,
+            category=category.strip() or "Ikonographie"
+        )
+
+        self.concepts_by_uri[uri_str] = concept
+        self.cache[uri_str] = concept
+        self.cache[pref_label_de.lower()] = concept
+        if pref_label_en.strip():
+            self.cache[pref_label_en.strip().lower()] = concept
+        for alt in alt_labels:
+            self.cache[alt.lower()] = concept
+
+        self._notify_listeners()
+        return concept
+
+    def delete_concept(self, uri: str) -> bool:
+        """Deletes a concept from graph and cache."""
+        import rdflib
+        subj = rdflib.URIRef(uri)
+        self.graph.remove((subj, None, None))
+        
+        concept = self.concepts_by_uri.pop(uri, None)
+        self.cache.pop(uri, None)
+        if concept:
+            self.cache.pop(concept.pref_label.lower(), None)
+            for alt in concept.alt_labels:
+                self.cache.pop(alt.lower(), None)
+        
+        self._notify_listeners()
+        return True
+
+    def save_to_ttl(self, save_path: Optional[str] = None) -> str:
+        """Serializes current RDF graph to a Turtle (.ttl) file."""
+        target_path = save_path or self.ttl_file_path
+        if not target_path:
+            base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+            target_path = os.path.join(base_dir, "data", "vocabularies", "heritage_assets.ttl")
+
+        os.makedirs(os.path.dirname(target_path), exist_ok=True)
+        self.graph.serialize(destination=target_path, format="turtle")
+        self.ttl_file_path = os.path.abspath(target_path)
+        print(f"SKOS Client: Saved graph with {len(self.graph)} triples to {self.ttl_file_path}")
+        return self.ttl_file_path
 
     def search_live(self, query: str, lang: str = "de") -> List[SKOSConcept]:
         """
@@ -716,13 +934,12 @@ class SKOSClient:
                     self.cache[pref_label.lower()] = c
                 return results
         except Exception as e:
-            # Fallback smoothly to cached concepts
             return []
 
     def get_concept_by_label(self, label: str) -> Optional[SKOSConcept]:
         """
-        Resolves a term (e.g. "Lekythos", "Psykter", "Attisch Rotfigurig") to a SKOS concept.
-        Checks cache, curated thesaurus, and queries the live Skosmos API if not cached.
+        Resolves a term to a SKOS concept.
+        Checks cache, local TTL concepts, curated thesaurus, and live API.
         """
         if not label:
             return None
@@ -730,26 +947,77 @@ class SKOSClient:
         clean_label = label.strip()
         lower_label = clean_label.lower()
 
-        # 1. Exact match in cache / curated list
+        # 1. Exact match in cache
         if lower_label in self.cache:
             return self.cache[lower_label]
 
-        # 2. Fuzzy / partial match in curated list
+        # 2. Exact match in concepts_by_uri
+        if clean_label in self.concepts_by_uri:
+            return self.concepts_by_uri[clean_label]
+
+        # 3. Fuzzy / substring match in concepts
+        for c in self.concepts_by_uri.values():
+            if c.pref_label.lower() == lower_label:
+                return c
+            for alt in c.alt_labels:
+                if alt.lower() == lower_label:
+                    return c
+
         for key, concept in self.cache.items():
             if not key.startswith("http") and (key in lower_label or lower_label in key):
                 return concept
 
-        # 3. Live search query
+        # 4. Live search query
         live_res = self.search_live(clean_label)
         if live_res:
             return live_res[0]
 
-        # 4. Fallback: Generic Concept with simulated URI if not found
+        # 5. Fallback: Generic Concept
         return SKOSConcept(
             uri=f"http://vocabs.bcdh.uni-bonn.de/hector_heritage_assets/concept_custom_{urllib.parse.quote(lower_label)}",
             pref_label=clean_label,
-            category="Erkannter Begriff"
+            category="Benutzerdefinierter Begriff"
         )
+
+    def search_concepts(self, query: str = "", category: Optional[str] = None, limit: int = 200) -> List[SKOSConcept]:
+        """Searches loaded concepts by label, altLabel, definition, or URI."""
+        q = (query or "").strip().lower()
+        results = []
+
+        all_concepts = list(self.concepts_by_uri.values())
+        if not all_concepts:
+            all_concepts = self.get_all_concepts_list()
+
+        for c in all_concepts:
+            if category and category != "Alle Kategorien" and (c.category or "") != category:
+                continue
+
+            if not q:
+                results.append(c)
+            else:
+                if (q in c.pref_label.lower() or
+                    any(q in alt.lower() for alt in c.alt_labels) or
+                    (c.definition and q in c.definition.lower()) or
+                    (q in c.uri.lower())):
+                    results.append(c)
+
+            if len(results) >= limit:
+                break
+
+        return results
+
+    def get_all_labels_for_selection(self) -> List[str]:
+        """Returns a deduplicated, sorted list of all concept labels for UI dropdowns/autocomplete."""
+        labels = set()
+        for c in self.concepts_by_uri.values():
+            if c.pref_label:
+                labels.add(c.pref_label)
+        for key in CURATED_HECTOR_CONCEPTS.keys():
+            labels.add(key)
+        for c in self.cache.values():
+            if c.pref_label and not c.pref_label.startswith("http"):
+                labels.add(c.pref_label)
+        return sorted(list(labels))
 
     def resolve_prediction(self, shape_name: str, ware_name: str) -> Dict[str, Optional[SKOSConcept]]:
         """
@@ -764,8 +1032,10 @@ class SKOSClient:
 
     def get_all_concepts_list(self) -> List[SKOSConcept]:
         """
-        Returns list of all unique curated concepts.
+        Returns list of all unique concepts.
         """
+        if self.concepts_by_uri:
+            return list(self.concepts_by_uri.values())
         unique = {}
         for c in self.cache.values():
             if c.uri not in unique:
@@ -775,3 +1045,4 @@ class SKOSClient:
 
 # Global singleton instance
 skos_client = SKOSClient()
+

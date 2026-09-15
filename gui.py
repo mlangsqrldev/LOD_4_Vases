@@ -69,6 +69,728 @@ THEME = {
 }
 
 
+class ZoomableMotifPreviewDialog(ctk.CTkToplevel):
+    def __init__(self, master, motif_data: Dict[str, Any]):
+        super().__init__(master)
+        self.title(f"🔍 Detailansicht — {motif_data.get('label', 'Figur')}")
+        self.geometry("850x700")
+        self.minsize(500, 400)
+        self.motif_data = motif_data
+        self.zoom = 1.0
+        self.pan_x = 0
+        self.pan_y = 0
+        self._pan_start = None
+
+        header = ctk.CTkFrame(self, fg_color=THEME["bg_card"], height=48, corner_radius=0)
+        header.pack(fill="x", padx=0, pady=(0, 4))
+        lbl_title = ctk.CTkLabel(
+            header,
+            text=f"✨ {motif_data.get('label', 'Motiv')} | Bounding Box: {motif_data.get('bbox', [])}",
+            font=ctk.CTkFont(size=13, weight="bold"),
+            text_color=THEME["text_accent"]
+        )
+        lbl_title.pack(side="left", padx=14, pady=8)
+
+        btn_zoom_in = ctk.CTkButton(header, text="➕ Zoom +", width=80, fg_color=THEME["secondary_btn"], hover_color=THEME["secondary_btn_hover"], text_color=THEME["text_primary"], command=lambda: self._step_zoom(1.25))
+        btn_zoom_in.pack(side="right", padx=4, pady=8)
+        btn_zoom_out = ctk.CTkButton(header, text="➖ Zoom -", width=80, fg_color=THEME["secondary_btn"], hover_color=THEME["secondary_btn_hover"], text_color=THEME["text_primary"], command=lambda: self._step_zoom(0.80))
+        btn_zoom_out.pack(side="right", padx=4, pady=8)
+        btn_zoom_reset = ctk.CTkButton(header, text="🔄 100%", width=70, fg_color=THEME["secondary_btn"], hover_color=THEME["secondary_btn_hover"], text_color=THEME["text_primary"], command=self._reset_zoom)
+        btn_zoom_reset.pack(side="right", padx=4, pady=8)
+
+        self.canvas = tk.Canvas(self, bg="#0f172a", highlightthickness=0)
+        self.canvas.pack(fill="both", expand=True, padx=10, pady=6)
+
+        self.canvas.bind("<MouseWheel>", self._on_mousewheel)
+        self.canvas.bind("<Button-4>", self._on_mousewheel)
+        self.canvas.bind("<Button-5>", self._on_mousewheel)
+        self.canvas.bind("<ButtonPress-1>", self._on_pan_start)
+        self.canvas.bind("<B1-Motion>", self._on_pan_drag)
+        self.canvas.bind("<Configure>", lambda e: self._redraw())
+        self.after(60, self._redraw)
+
+    def _step_zoom(self, factor):
+        self.zoom = max(0.2, min(8.0, self.zoom * factor))
+        self._redraw()
+
+    def _reset_zoom(self):
+        self.zoom = 1.0
+        self.pan_x = 0
+        self.pan_y = 0
+        self._redraw()
+
+    def _on_mousewheel(self, event):
+        delta = getattr(event, "delta", 0)
+        factor = 1.15 if delta > 0 or getattr(event, "num", 0) == 4 else 0.85
+        self._step_zoom(factor)
+
+    def _on_pan_start(self, event):
+        self._pan_start = (event.x, event.y)
+
+    def _on_pan_drag(self, event):
+        if self._pan_start:
+            dx = event.x - self._pan_start[0]
+            dy = event.y - self._pan_start[1]
+            self.pan_x += dx
+            self.pan_y += dy
+            self._pan_start = (event.x, event.y)
+            self._redraw()
+
+    def _redraw(self):
+        cutout = self.motif_data.get("cutout")
+        if cutout is None:
+            return
+        cw = max(100, self.canvas.winfo_width())
+        ch = max(100, self.canvas.winfo_height())
+        iw, ih = cutout.size
+
+        base_scale = min(cw / max(1, iw), ch / max(1, ih)) * 0.90
+        scale = base_scale * self.zoom
+        disp_w = max(1, int(iw * scale))
+        disp_h = max(1, int(ih * scale))
+
+        resized = cutout.resize((disp_w, disp_h), Image.Resampling.LANCZOS)
+        self._tk_img = ImageTk.PhotoImage(resized)
+
+        self.canvas.delete("all")
+        cx = cw // 2 + self.pan_x
+        cy = ch // 2 + self.pan_y
+        self.canvas.create_image(cx, cy, image=self._tk_img, anchor="center")
+
+
+class MotifCard(ctk.CTkFrame):
+    """
+    Vertically stacked, zoomable individual motif card for the human-in-the-loop verification pipeline.
+    """
+    def __init__(self, master, motif_data: Dict[str, Any], index: int, app: Any):
+        super().__init__(master, fg_color=THEME["bg_card_inner"], corner_radius=10, border_width=1, border_color=THEME["border_subtle"])
+        self.motif_data = motif_data
+        self.index = index
+        self.app = app
+        self.zoom = 1.0
+        self._displayed_tk_img = None
+        self._setup_ui()
+
+    def _setup_ui(self):
+        # Header Row
+        header = ctk.CTkFrame(self, fg_color="transparent")
+        header.pack(fill="x", padx=10, pady=(8, 4))
+
+        m_id = self.motif_data.get("id", self.index)
+        m_label = self.motif_data.get("label", f"Motiv #{m_id + 1}")
+        area_pct = self.motif_data.get("area_pct", 0.0)
+        bw, bh = self.motif_data.get("bbox", (0, 0, 0, 0))[2], self.motif_data.get("bbox", (0, 0, 0, 0))[3]
+
+        lbl_id = ctk.CTkLabel(
+            header,
+            text=f"🏷️ #{m_id+1}: {m_label}",
+            font=ctk.CTkFont(size=12, weight="bold"),
+            text_color=THEME["text_accent"]
+        )
+        lbl_id.pack(side="left")
+
+        lbl_dims = ctk.CTkLabel(
+            header,
+            text=f"📐 {bw}×{bh} px ({area_pct:.1f}% Fläche)",
+            font=ctk.CTkFont(size=11),
+            text_color=THEME["text_secondary"]
+        )
+        lbl_dims.pack(side="left", padx=10)
+
+        btn_del = ctk.CTkButton(
+            header, text="🗑️", width=28, height=24,
+            fg_color="#ef4444", hover_color="#dc2626", text_color="#ffffff",
+            command=self._on_delete
+        )
+        btn_del.pack(side="right")
+
+        # Content Split Frame
+        content_frame = ctk.CTkFrame(self, fg_color="transparent")
+        content_frame.pack(fill="x", padx=10, pady=(0, 8))
+        content_frame.grid_columnconfigure(0, weight=0)
+        content_frame.grid_columnconfigure(1, weight=1)
+
+        # Left Column: Image Canvas & Zoom Controls
+        img_col = ctk.CTkFrame(content_frame, fg_color=THEME["bg_card"], corner_radius=8, border_width=1, border_color=THEME["border_subtle"])
+        img_col.grid(row=0, column=0, padx=(0, 8), pady=4, sticky="ns")
+
+        self.img_label = ctk.CTkLabel(img_col, text="", width=150, height=150, corner_radius=6)
+        self.img_label.pack(padx=6, pady=6)
+        self.img_label.bind("<Button-1>", lambda e: self._open_modal_preview())
+
+        # Zoom bar
+        zoom_bar = ctk.CTkFrame(img_col, fg_color="transparent")
+        zoom_bar.pack(fill="x", padx=4, pady=(0, 6))
+
+        ctk.CTkButton(zoom_bar, text="➕", width=28, height=22, font=ctk.CTkFont(size=10), fg_color=THEME["secondary_btn"], hover_color=THEME["secondary_btn_hover"], text_color=THEME["text_primary"], command=lambda: self._step_zoom(1.25)).pack(side="left", padx=1)
+        ctk.CTkButton(zoom_bar, text="➖", width=28, height=22, font=ctk.CTkFont(size=10), fg_color=THEME["secondary_btn"], hover_color=THEME["secondary_btn_hover"], text_color=THEME["text_primary"], command=lambda: self._step_zoom(0.80)).pack(side="left", padx=1)
+        ctk.CTkButton(zoom_bar, text="100%", width=40, height=22, font=ctk.CTkFont(size=10), fg_color=THEME["secondary_btn"], hover_color=THEME["secondary_btn_hover"], text_color=THEME["text_primary"], command=self._reset_zoom).pack(side="left", padx=1)
+        ctk.CTkButton(zoom_bar, text="🔍", width=28, height=22, font=ctk.CTkFont(size=10), fg_color=THEME["primary"], hover_color=THEME["primary_hover"], text_color="#ffffff", command=self._open_modal_preview).pack(side="right", padx=1)
+
+        # Right Column: AI Suggestion, SKOS Verification & Actions
+        right_col = ctk.CTkFrame(content_frame, fg_color="transparent")
+        right_col.grid(row=0, column=1, padx=(4, 0), pady=2, sticky="nsew")
+        right_col.grid_columnconfigure(0, weight=1)
+
+        ai_label, ai_conf, ai_skos = self._predict_ai_motif()
+
+        # AI Proposal Badge
+        ai_card = ctk.CTkFrame(right_col, fg_color=THEME["bg_card"], corner_radius=6, border_width=1, border_color=THEME["border_subtle"])
+        ai_card.pack(fill="x", pady=(0, 6))
+
+        skos_local = ai_skos.local_id if ai_skos else "N/A"
+        lbl_ai = ctk.CTkLabel(
+            ai_card,
+            text=f"✨ KI-Vorschlag: {ai_label} ({ai_conf*100:.1f}% Konfidenz)\n🏛️ SKOS: {ai_skos.pref_label if ai_skos else ai_label} | ID: {skos_local}",
+            font=ctk.CTkFont(size=11),
+            justify="left",
+            text_color=THEME["text_primary"]
+        )
+        lbl_ai.pack(side="left", padx=8, pady=6)
+
+        btn_accept_ai = ctk.CTkButton(
+            ai_card, text="✅ Übernehmen", width=95, height=26,
+            fg_color="#7c3aed", hover_color="#6d28d9", text_color="#ffffff",
+            font=ctk.CTkFont(size=10, weight="bold"),
+            command=lambda: self._set_label(ai_label)
+        )
+        btn_accept_ai.pack(side="right", padx=6, pady=6)
+
+        # SKOS Concept Selector with Filter Entry
+        sel_frame = ctk.CTkFrame(right_col, fg_color="transparent")
+        sel_frame.pack(fill="x", pady=(0, 6))
+
+        ctk.CTkLabel(sel_frame, text="Verifiziertes SKOS-Label:", font=ctk.CTkFont(size=11, weight="bold"), text_color=THEME["text_primary"]).pack(anchor="w")
+
+        # Fast filter input
+        self.entry_filter = ctk.CTkEntry(sel_frame, placeholder_text="🔍 Filter im SKOS-Thesaurus (z.B. Delphin, Dionysos)...", height=28, font=ctk.CTkFont(size=11))
+        self.entry_filter.pack(fill="x", pady=(2, 3))
+        self.entry_filter.bind("<KeyRelease>", self._on_filter_labels)
+
+        # Dropdown
+        self.all_skos_labels = skos_client.get_all_labels_for_selection()
+        initial_val = ai_label if ai_label in self.all_skos_labels else (self.all_skos_labels[0] if self.all_skos_labels else "Unbekannt")
+        self.combo_label = ctk.CTkComboBox(sel_frame, values=self.all_skos_labels[:150], height=28, font=ctk.CTkFont(size=11))
+        self.combo_label.set(initial_val)
+        self.combo_label.pack(fill="x")
+
+        # Action Buttons Row
+        btn_row = ctk.CTkFrame(right_col, fg_color="transparent")
+        btn_row.pack(fill="x", pady=(4, 0))
+
+        btn_save = ctk.CTkButton(
+            btn_row, text="💾 Verifizieren & Speichern",
+            fg_color="#10b981", hover_color="#059669", text_color="#ffffff",
+            font=ctk.CTkFont(size=11, weight="bold"), height=28,
+            command=self._on_save
+        )
+        btn_save.pack(side="left", fill="x", expand=True, padx=(0, 4))
+
+        btn_skos_edit = ctk.CTkButton(
+            btn_row, text="🌳 SKOS-Editor",
+            fg_color=THEME["secondary_btn"], hover_color=THEME["secondary_btn_hover"], text_color=THEME["text_primary"],
+            font=ctk.CTkFont(size=11), height=28, width=120,
+            command=self._open_in_skos_editor
+        )
+        btn_skos_edit.pack(side="right", padx=(4, 0))
+
+        self._update_image_display()
+
+    def _predict_ai_motif(self) -> Tuple[str, float, Optional[Any]]:
+        cutout = self.motif_data.get("cutout")
+        if cutout is None:
+            return "Unbekannt", 0.0, None
+        try:
+            bg_img = Image.new("RGB", cutout.size, (0, 0, 0))
+            bg_img.paste(cutout, mask=cutout.split()[3])
+            pred = classifier.predict_scene(bg_img)
+            label = pred["predicted_scene"]
+            conf = pred["scene_confidence"]
+            skos = skos_client.get_concept_by_label(label)
+            return label, conf, skos
+        except Exception:
+            return "Motiv", 0.5, None
+
+    def _step_zoom(self, factor):
+        self.zoom = max(0.5, min(4.0, self.zoom * factor))
+        self._update_image_display()
+
+    def _reset_zoom(self):
+        self.zoom = 1.0
+        self._update_image_display()
+
+    def _update_image_display(self):
+        cutout = self.motif_data.get("cutout")
+        if cutout is None:
+            self.img_label.configure(image=None, text="Kein Bild")
+            return
+        try:
+            iw, ih = cutout.size
+            base_scale = min(140 / max(1, iw), 140 / max(1, ih))
+            scale = base_scale * self.zoom
+            disp_w = max(1, int(iw * scale))
+            disp_h = max(1, int(ih * scale))
+
+            resized = cutout.resize((disp_w, disp_h), Image.Resampling.LANCZOS)
+            ctk_img = ctk.CTkImage(light_image=resized, dark_image=resized, size=(disp_w, disp_h))
+            self.img_label.configure(image=ctk_img, text="")
+            self.img_label._displayed_image_ref = ctk_img
+        except Exception as e:
+            print(f"Error displaying motif card image: {e}")
+
+    def _open_modal_preview(self):
+        ZoomableMotifPreviewDialog(self.winfo_toplevel(), self.motif_data)
+
+    def _set_label(self, label: str):
+        self.combo_label.set(label)
+
+    def _on_filter_labels(self, event):
+        q = self.entry_filter.get().strip().lower()
+        if not q:
+            filtered = self.all_skos_labels[:150]
+        else:
+            filtered = [l for l in self.all_skos_labels if q in l.lower()][:150]
+        if filtered:
+            self.combo_label.configure(values=filtered)
+            self.combo_label.set(filtered[0])
+
+    def refresh_skos_dropdown(self):
+        self.all_skos_labels = skos_client.get_all_labels_for_selection()
+        cur = self.combo_label.get()
+        self.combo_label.configure(values=self.all_skos_labels[:150])
+        if cur in self.all_skos_labels:
+            self.combo_label.set(cur)
+
+    def _on_save(self):
+        v_label = self.combo_label.get().strip()
+        skos = skos_client.get_concept_by_label(v_label)
+        entry = {
+            "image_path": self.app.sam_current_path,
+            "img_w": self.app.sam_current_pil.width if self.app.sam_current_pil else 500,
+            "img_h": self.app.sam_current_pil.height if self.app.sam_current_pil else 500,
+            "bbox": self.motif_data.get("bbox", (0, 0, 0, 0)),
+            "polygon": self.motif_data.get("polygon", []),
+            "area": self.motif_data.get("area", 0),
+            "cutout": self.motif_data.get("cutout"),
+            "label": v_label,
+            "skos_uri": skos.uri if skos else "",
+            "confidence": 1.0,
+            "category": skos.category if skos else "Ikonographie"
+        }
+        self.app.training_dataset.append(entry)
+        self.app.show_toast(f"Figur #{self.index+1} als '{v_label}' gespeichert (Pool: {len(self.app.training_dataset)})", "success")
+
+    def _open_in_skos_editor(self):
+        v_label = self.combo_label.get().strip()
+        self.app.open_skos_editor_with_term(v_label)
+
+    def _on_delete(self):
+        if 0 <= self.index < len(self.app.sam_detected_motifs):
+            self.app.sam_detected_motifs.pop(self.index)
+            self.app._render_all_motif_cards()
+            if self.app.sam_current_pil is not None:
+                overlay = sam_segmenter.draw_segmentation_overlay(self.app.sam_current_pil, self.app.sam_detected_motifs)
+                self.app.sam_overlay_pil = overlay
+                self.app._redraw_sam_canvas()
+            self.app.show_toast("Motiv aus der Liste entfernt.", "info")
+
+
+class SKOSEditorFrame(ctk.CTkFrame):
+    """
+    Complete SKOS Vocabulary & Thesaurus Editor with RDFLib Graph binding.
+    """
+    def __init__(self, master, app: Any, is_popup: bool = False):
+        super().__init__(master, fg_color="transparent")
+        self.app = app
+        self.is_popup = is_popup
+        self.current_concept_uri = None
+        self._setup_ui()
+        self._refresh_concepts_table()
+
+    def _setup_ui(self):
+        self.grid_rowconfigure(1, weight=1)
+        self.grid_columnconfigure(0, weight=1)
+
+        # Top Control Toolbar
+        top_bar = ctk.CTkFrame(self, height=50, fg_color=THEME["bg_card"], corner_radius=8, border_width=1, border_color=THEME["border_subtle"])
+        top_bar.grid(row=0, column=0, sticky="ew", padx=6, pady=(6, 4))
+
+        ttl_name = os.path.basename(skos_client.ttl_file_path or "heritage_assets.ttl")
+        self.lbl_vocab_info = ctk.CTkLabel(
+            top_bar,
+            text=f"🌳 SKOS-Thesaurus: {ttl_name} ({len(skos_client.concepts_by_uri)} Begriffe)",
+            font=ctk.CTkFont(size=13, weight="bold"),
+            text_color=THEME["text_accent"]
+        )
+        self.lbl_vocab_info.pack(side="left", padx=12, pady=8)
+
+        if not self.is_popup:
+            btn_popout = ctk.CTkButton(
+                top_bar, text="🪟 In separatem Fenster (Multi-Screen)",
+                font=ctk.CTkFont(size=11, weight="bold"),
+                fg_color=THEME["primary"], hover_color=THEME["primary_hover"], text_color="#ffffff",
+                command=self.app._open_multi_screen_skos_window
+            )
+            btn_popout.pack(side="right", padx=6, pady=8)
+
+        btn_save_ttl = ctk.CTkButton(
+            top_bar, text="💾 In TTL sichern", width=120,
+            font=ctk.CTkFont(size=11, weight="bold"),
+            fg_color="#10b981", hover_color="#059669", text_color="#ffffff",
+            command=self._save_to_ttl_file
+        )
+        btn_save_ttl.pack(side="right", padx=4, pady=8)
+
+        btn_load_ttl = ctk.CTkButton(
+            top_bar, text="📂 TTL laden", width=105,
+            font=ctk.CTkFont(size=11),
+            fg_color=THEME["secondary_btn"], hover_color=THEME["secondary_btn_hover"], text_color=THEME["text_primary"],
+            command=self._load_ttl_file
+        )
+        btn_load_ttl.pack(side="right", padx=4, pady=8)
+
+        btn_fetch_gh = ctk.CTkButton(
+            top_bar, text="🌐 GitHub Sync", width=105,
+            font=ctk.CTkFont(size=11),
+            fg_color=THEME["secondary_btn"], hover_color=THEME["secondary_btn_hover"], text_color=THEME["text_primary"],
+            command=self._sync_from_github
+        )
+        btn_fetch_gh.pack(side="right", padx=4, pady=8)
+
+        # Main Split Body
+        main_split = ctk.CTkFrame(self, fg_color="transparent")
+        main_split.grid(row=1, column=0, sticky="nsew", padx=4, pady=4)
+        main_split.grid_rowconfigure(0, weight=1)
+        main_split.grid_columnconfigure(0, weight=5)
+        main_split.grid_columnconfigure(1, weight=6)
+
+        # Left Column: Search & Table
+        left_box = ctk.CTkFrame(main_split, fg_color=THEME["bg_card"], corner_radius=8, border_width=1, border_color=THEME["border_subtle"])
+        left_box.grid(row=0, column=0, sticky="nsew", padx=(2, 4), pady=2)
+        left_box.grid_rowconfigure(2, weight=1)
+        left_box.grid_columnconfigure(0, weight=1)
+
+        search_bar = ctk.CTkFrame(left_box, fg_color="transparent")
+        search_bar.grid(row=0, column=0, sticky="ew", padx=8, pady=(8, 4))
+        search_bar.grid_columnconfigure(0, weight=1)
+
+        self.entry_search = ctk.CTkEntry(search_bar, placeholder_text="🔍 Suche nach Begriff, Maler, Gottheit oder URI...", font=ctk.CTkFont(size=11))
+        self.entry_search.grid(row=0, column=0, sticky="ew", padx=(0, 4))
+        self.entry_search.bind("<KeyRelease>", self._on_search_change)
+
+        self.combo_cat_filter = ctk.CTkComboBox(
+            search_bar,
+            values=["Alle Kategorien", "Mythologie / Figur", "Gefäßform", "Maler / Werkstatt", "Ornament", "Technik / Ware", "Kulturgut"],
+            width=140, font=ctk.CTkFont(size=11), command=lambda v: self._refresh_concepts_table()
+        )
+        self.combo_cat_filter.set("Alle Kategorien")
+        self.combo_cat_filter.grid(row=0, column=1)
+
+        tbl_container = ctk.CTkFrame(left_box, fg_color="transparent")
+        tbl_container.grid(row=2, column=0, sticky="nsew", padx=8, pady=(4, 8))
+        tbl_container.grid_rowconfigure(0, weight=1)
+        tbl_container.grid_columnconfigure(0, weight=1)
+
+        scroll_y = ttk.Scrollbar(tbl_container, orient="vertical")
+        scroll_y.grid(row=0, column=1, sticky="ns")
+
+        self.tree_concepts = ttk.Treeview(
+            tbl_container,
+            columns=("DE", "EN", "Kategorie", "URI"),
+            show="headings",
+            yscrollcommand=scroll_y.set
+        )
+        scroll_y.config(command=self.tree_concepts.yview)
+
+        self.tree_concepts.heading("DE", text="Deutsches Label (prefLabel)")
+        self.tree_concepts.heading("EN", text="English Label")
+        self.tree_concepts.heading("Kategorie", text="Kategorie")
+        self.tree_concepts.heading("URI", text="SKOS URI")
+
+        self.tree_concepts.column("DE", width=160)
+        self.tree_concepts.column("EN", width=130)
+        self.tree_concepts.column("Kategorie", width=110)
+        self.tree_concepts.column("URI", width=180)
+
+        self.tree_concepts.grid(row=0, column=0, sticky="nsew")
+        self.tree_concepts.bind("<<TreeviewSelect>>", self._on_select_concept_from_table)
+
+        # Right Column: Concept Edit Mask
+        right_box = ctk.CTkFrame(main_split, fg_color=THEME["bg_card"], corner_radius=8, border_width=1, border_color=THEME["border_subtle"])
+        right_box.grid(row=0, column=1, sticky="nsew", padx=(4, 2), pady=2)
+        right_box.grid_rowconfigure(6, weight=1)
+        right_box.grid_columnconfigure(0, weight=1)
+
+        lbl_mask_title = ctk.CTkLabel(
+            right_box, text="✏️ Begriff bearbeiten & einpflegen",
+            font=ctk.CTkFont(size=13, weight="bold"), text_color=THEME["text_accent"]
+        )
+        lbl_mask_title.grid(row=0, column=0, sticky="w", padx=12, pady=(10, 6))
+
+        form = ctk.CTkFrame(right_box, fg_color="transparent")
+        form.grid(row=1, column=0, sticky="nsew", padx=12, pady=4)
+        form.grid_columnconfigure(1, weight=1)
+
+        ctk.CTkLabel(form, text="Label (DE) *:", font=ctk.CTkFont(size=11, weight="bold")).grid(row=0, column=0, sticky="w", pady=3)
+        self.ent_label_de = ctk.CTkEntry(form, placeholder_text="z. B. Delphinreiter mit Lanze", font=ctk.CTkFont(size=11))
+        self.ent_label_de.grid(row=0, column=1, sticky="ew", padx=(6, 0), pady=3)
+
+        ctk.CTkLabel(form, text="Label (EN):", font=ctk.CTkFont(size=11)).grid(row=1, column=0, sticky="w", pady=3)
+        self.ent_label_en = ctk.CTkEntry(form, placeholder_text="z. B. Dolphin Rider with Spear", font=ctk.CTkFont(size=11))
+        self.ent_label_en.grid(row=1, column=1, sticky="ew", padx=(6, 0), pady=3)
+
+        ctk.CTkLabel(form, text="Synonyme (altLabel):", font=ctk.CTkFont(size=11)).grid(row=2, column=0, sticky="w", pady=3)
+        self.ent_alt_labels = ctk.CTkEntry(form, placeholder_text="Kommagetrennt, z. B. Krieger auf Delphin, Delphinkrieger", font=ctk.CTkFont(size=11))
+        self.ent_alt_labels.grid(row=2, column=1, sticky="ew", padx=(6, 0), pady=3)
+
+        ctk.CTkLabel(form, text="Kategorie:", font=ctk.CTkFont(size=11)).grid(row=3, column=0, sticky="w", pady=3)
+        self.combo_category = ctk.CTkComboBox(
+            form, values=["Mythologie / Figur", "Gefäßform", "Maler / Werkstatt", "Ornament", "Technik / Ware", "Kulturgut"],
+            font=ctk.CTkFont(size=11)
+        )
+        self.combo_category.set("Mythologie / Figur")
+        self.combo_category.grid(row=3, column=1, sticky="ew", padx=(6, 0), pady=3)
+
+        ctk.CTkLabel(form, text="Oberbegriff (broader):", font=ctk.CTkFont(size=11)).grid(row=4, column=0, sticky="w", pady=3)
+        self.ent_broader = ctk.CTkEntry(form, placeholder_text="URI oder Label des Oberbegriffs", font=ctk.CTkFont(size=11))
+        self.ent_broader.grid(row=4, column=1, sticky="ew", padx=(6, 0), pady=3)
+
+        ctk.CTkLabel(form, text="Definition / Notiz:", font=ctk.CTkFont(size=11)).grid(row=5, column=0, sticky="nw", pady=3)
+        self.txt_definition = ctk.CTkTextbox(form, height=90, font=ctk.CTkFont(size=11))
+        self.txt_definition.grid(row=5, column=1, sticky="ew", padx=(6, 0), pady=3)
+
+        ctk.CTkLabel(form, text="Kanonische URI:", font=ctk.CTkFont(size=11)).grid(row=6, column=0, sticky="w", pady=3)
+        self.ent_uri = ctk.CTkEntry(form, placeholder_text="Wird automatisch generiert (oder manuell anpassen)", font=ctk.CTkFont(size=11))
+        self.ent_uri.grid(row=6, column=1, sticky="ew", padx=(6, 0), pady=3)
+
+        mask_btn_bar = ctk.CTkFrame(right_box, fg_color="transparent")
+        mask_btn_bar.grid(row=2, column=0, sticky="ew", padx=12, pady=(10, 12))
+
+        btn_new = ctk.CTkButton(
+            mask_btn_bar, text="➕ Neuer Begriff", width=110, height=32,
+            font=ctk.CTkFont(size=11), fg_color=THEME["secondary_btn"], hover_color=THEME["secondary_btn_hover"], text_color=THEME["text_primary"],
+            command=self._clear_form
+        )
+        btn_new.pack(side="left", padx=(0, 6))
+
+        btn_save_concept = ctk.CTkButton(
+            mask_btn_bar, text="💾 Begriff speichern & einpflegen", height=32,
+            font=ctk.CTkFont(size=11, weight="bold"), fg_color="#10b981", hover_color="#059669", text_color="#ffffff",
+            command=self._save_concept_from_form
+        )
+        btn_save_concept.pack(side="left", fill="x", expand=True, padx=4)
+
+        btn_del_concept = ctk.CTkButton(
+            mask_btn_bar, text="🗑️ Löschen", width=85, height=32,
+            font=ctk.CTkFont(size=11), fg_color="#ef4444", hover_color="#dc2626", text_color="#ffffff",
+            command=self._delete_concept_from_form
+        )
+        btn_del_concept.pack(side="right", padx=(6, 0))
+
+    def _on_search_change(self, event=None):
+        self._refresh_concepts_table()
+
+    def _refresh_concepts_table(self):
+        query = self.entry_search.get().strip()
+        cat = self.combo_cat_filter.get()
+        results = skos_client.search_concepts(query=query, category=cat, limit=300)
+
+        for item in self.tree_concepts.get_children():
+            self.tree_concepts.delete(item)
+
+        for c in results:
+            self.tree_concepts.insert("", "end", values=(
+                c.pref_label,
+                "",
+                c.category or "Kulturgut",
+                c.uri
+            ))
+
+        ttl_name = os.path.basename(skos_client.ttl_file_path or "heritage_assets.ttl")
+        self.lbl_vocab_info.configure(text=f"🌳 SKOS-Thesaurus: {ttl_name} ({len(skos_client.concepts_by_uri)} Begriffe)")
+
+    def _on_select_concept_from_table(self, event):
+        selected = self.tree_concepts.selection()
+        if not selected:
+            return
+        vals = self.tree_concepts.item(selected[0], "values")
+        if not vals:
+            return
+        uri = vals[3]
+        concept = skos_client.get_concept_by_label(uri) or skos_client.get_concept_by_label(vals[0])
+        if concept:
+            self.load_concept_into_form(concept)
+
+    def load_concept_into_form(self, concept: Any):
+        self.current_concept_uri = concept.uri
+        self.ent_label_de.delete(0, "end")
+        self.ent_label_de.insert(0, concept.pref_label or "")
+
+        self.ent_label_en.delete(0, "end")
+        self.ent_alt_labels.delete(0, "end")
+        self.ent_alt_labels.insert(0, ", ".join(concept.alt_labels))
+
+        self.combo_category.set(concept.category or "Mythologie / Figur")
+
+        self.ent_broader.delete(0, "end")
+        self.ent_broader.insert(0, concept.broader_uri or concept.broader_label or "")
+
+        self.txt_definition.delete("1.0", "end")
+        self.txt_definition.insert("1.0", concept.definition or "")
+
+        self.ent_uri.delete(0, "end")
+        self.ent_uri.insert(0, concept.uri or "")
+
+    def _clear_form(self):
+        self.current_concept_uri = None
+        self.ent_label_de.delete(0, "end")
+        self.ent_label_en.delete(0, "end")
+        self.ent_alt_labels.delete(0, "end")
+        self.combo_category.set("Mythologie / Figur")
+        self.ent_broader.delete(0, "end")
+        self.txt_definition.delete("1.0", "end")
+        self.ent_uri.delete(0, "end")
+
+    def _save_concept_from_form(self):
+        de_label = self.ent_label_de.get().strip()
+        if not de_label:
+            self.app.show_toast("Bitte gib mindestens ein deutsches Label ein.", "warning")
+            return
+        en_label = self.ent_label_en.get().strip()
+        alt_str = self.ent_alt_labels.get().strip()
+        alts = [a.strip() for a in alt_str.split(",") if a.strip()]
+        cat = self.combo_category.get()
+        broader = self.ent_broader.get().strip()
+        definition = self.txt_definition.get("1.0", "end").strip()
+        uri = self.ent_uri.get().strip()
+
+        concept = skos_client.add_or_update_concept(
+            pref_label_de=de_label,
+            pref_label_en=en_label,
+            alt_labels=alts,
+            broader_uri=broader,
+            definition=definition,
+            category=cat,
+            custom_uri=uri
+        )
+        self.current_concept_uri = concept.uri
+        self.ent_uri.delete(0, "end")
+        self.ent_uri.insert(0, concept.uri)
+
+        self._refresh_concepts_table()
+        self.app.show_toast(f"Begriff '{de_label}' erfolgreich im SKOS-Thesaurus gespeichert!", "success")
+
+    def _delete_concept_from_form(self):
+        uri = self.ent_uri.get().strip() or self.current_concept_uri
+        if not uri:
+            self.app.show_toast("Kein Begriff zum Löschen ausgewählt.", "warning")
+            return
+        skos_client.delete_concept(uri)
+        self._clear_form()
+        self._refresh_concepts_table()
+        self.app.show_toast("Begriff aus dem SKOS-Thesaurus gelöscht.", "info")
+
+    def _save_to_ttl_file(self):
+        save_path = filedialog.asksaveasfilename(
+            title="SKOS-Thesaurus in Turtle (.ttl) Datei speichern",
+            defaultextension=".ttl",
+            filetypes=[("RDF Turtle (.ttl)", "*.ttl")],
+            initialfile=os.path.basename(skos_client.ttl_file_path or "heritage_assets.ttl")
+        )
+        if save_path:
+            saved = skos_client.save_to_ttl(save_path)
+            self._refresh_concepts_table()
+            self.app.show_toast(f"Vokabular in '{os.path.basename(saved)}' gesichert!", "success")
+
+    def _load_ttl_file(self):
+        open_path = filedialog.askopenfilename(
+            title="Lokale SKOS Turtle (.ttl) Datei laden",
+            filetypes=[("RDF Turtle (.ttl)", "*.ttl"), ("All files", "*.*")]
+        )
+        if open_path:
+            count = skos_client.load_local_ttl(open_path)
+            self._refresh_concepts_table()
+            self.app.show_toast(f"Erfolgreich {count} Begriffe aus '{os.path.basename(open_path)}' geladen!", "success")
+
+    def _sync_from_github(self):
+        def _task():
+            import urllib.request
+            url = "https://raw.githubusercontent.com/bcdhbonn/hector-editor-skos/main/vocabularies/heritage_assets/heritage_assets.ttl"
+            base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+            dest = os.path.join(base_dir, "data", "vocabularies", "heritage_assets.ttl")
+            os.makedirs(os.path.dirname(dest), exist_ok=True)
+            try:
+                urllib.request.urlretrieve(url, dest)
+                count = skos_client.load_local_ttl(dest)
+                def _done():
+                    self._refresh_concepts_table()
+                    self.app.show_toast(f"GitHub Sync: {count} Begriffe aktualisiert!", "success")
+                self.after(0, _done)
+            except Exception as e:
+                def _err():
+                    self.app.show_toast(f"Fehler beim GitHub Sync: {e}", "error")
+                self.after(0, _err)
+        threading.Thread(target=_task, daemon=True).start()
+
+
+class SKOSEditorWindow(ctk.CTkToplevel):
+    """Floating multi-screen window for the SKOS Editor."""
+    def __init__(self, master, app: Any):
+        super().__init__(master)
+        self.title("🌳 HECTOR SKOS-Editor (BCDH Bonn) — Multi-Screen")
+        self.geometry("1180x780")
+        self.minsize(800, 550)
+        self.editor = SKOSEditorFrame(self, app=app, is_popup=True)
+        self.editor.pack(fill="both", expand=True, padx=10, pady=10)
+
+
+class MotifVerificationWindow(ctk.CTkToplevel):
+    """Floating multi-screen window for the full Motif Verification Studio."""
+    def __init__(self, master, app: Any):
+        super().__init__(master)
+        self.title("🏷️ Motiv-Prüfungs-Studio (BCDH Bonn) — Multi-Screen")
+        self.geometry("1180x880")
+        self.minsize(700, 500)
+        self.app = app
+        
+        top_bar = ctk.CTkFrame(self, height=48, fg_color=THEME["bg_card"], corner_radius=8, border_width=1, border_color=THEME["border_subtle"])
+        top_bar.pack(fill="x", padx=10, pady=(10, 4))
+        self.lbl_count = ctk.CTkLabel(
+            top_bar,
+            text=f"✨ Motiv-Prüfung ({len(app.sam_detected_motifs)} Figuren erkannt)",
+            font=ctk.CTkFont(size=13, weight="bold"),
+            text_color=THEME["text_accent"]
+        )
+        self.lbl_count.pack(side="left", padx=12, pady=8)
+
+        btn_skos = ctk.CTkButton(
+            top_bar, text="🌳 SKOS-Editor öffnen",
+            font=ctk.CTkFont(size=11, weight="bold"),
+            fg_color=THEME["secondary_btn"], hover_color=THEME["secondary_btn_hover"], text_color=THEME["text_primary"],
+            command=app._open_multi_screen_skos_window
+        )
+        btn_skos.pack(side="right", padx=6, pady=8)
+
+        self.scroll_frame = ctk.CTkScrollableFrame(self, fg_color="transparent")
+        self.scroll_frame.pack(fill="both", expand=True, padx=10, pady=6)
+        self._cards: List[MotifCard] = []
+        self._populate()
+
+    def _populate(self):
+        for w in self.scroll_frame.winfo_children():
+            w.destroy()
+        self._cards.clear()
+        for idx, m in enumerate(self.app.sam_detected_motifs):
+            card = MotifCard(self.scroll_frame, m, idx, self.app)
+            card.pack(fill="x", pady=6, padx=4)
+            self._cards.append(card)
+        self.lbl_count.configure(text=f"✨ Motiv-Prüfung ({len(self.app.sam_detected_motifs)} Figuren erkannt)")
+
+    def refresh_dropdowns(self):
+        for c in self._cards:
+            c.refresh_skos_dropdown()
+
+
 class LODVasesApp(ctk.CTk):
     def __init__(self):
         super().__init__()
@@ -123,9 +845,12 @@ class LODVasesApp(ctk.CTk):
         self._is_rendering_frame = False
         self.sam_image_paths = []
         self.sam_current_idx = 0
-        self._toast_job = None
         self.current_view_name = "3d"
         sam_segmenter.set_backend("meta_sam")
+        self._motif_cards = []
+        self._motif_window_toplevel = None
+        self._skos_window_toplevel = None
+        skos_client.register_on_change_listener(self._on_skos_vocab_changed)
 
         # Setup GUI Grid
         self.grid_rowconfigure(0, weight=1)
@@ -1566,87 +2291,91 @@ class LODVasesApp(ctk.CTk):
         )
         self.lbl_sam_status.grid(row=4, column=0, padx=10, pady=2, sticky="w")
 
-        # Right Column: Motif Inspector & Active Learning
-        col_right = ctk.CTkFrame(frame, fg_color=("#ffffff", "#1e293b"), corner_radius=8)
+        # Right Column: Multi-Motif Inspector (Stacked Cards & Active Learning)
+        col_right = ctk.CTkFrame(frame, fg_color=THEME["bg_card"], corner_radius=8, border_width=1, border_color=THEME["border_subtle"])
         col_right.grid(row=1, column=1, sticky="nsew", padx=5, pady=5)
         col_right.grid_rowconfigure(2, weight=1)
         col_right.grid_columnconfigure(0, weight=1)
 
-        ctk.CTkLabel(col_right, text="🏷️ Motiv-Prüfung & Human-in-the-Loop Verifikation", font=ctk.CTkFont(size=13, weight="bold"), text_color=("#0284c7", "#38bdf8")).grid(row=0, column=0, padx=10, pady=6, sticky="w")
+        # Header Bar with Controls
+        header_right = ctk.CTkFrame(col_right, fg_color="transparent")
+        header_right.grid(row=0, column=0, sticky="ew", padx=10, pady=(8, 4))
 
-        self.combo_motifs = ctk.CTkComboBox(col_right, values=["Keine Motive erkannt"], command=self._on_select_motif, width=300)
-        self.combo_motifs.grid(row=1, column=0, padx=10, pady=4, sticky="ew")
-
-        # Cutout preview, Tongrund-Strukturmaske & AI suggestion card
-        insp_sub = ctk.CTkFrame(col_right, fg_color=("#f1f5f9", "#0f172a"), corner_radius=8)
-        insp_sub.grid(row=2, column=0, padx=10, pady=5, sticky="nsew")
-        insp_sub.grid_columnconfigure(0, weight=1)
-        insp_sub.grid_columnconfigure(1, weight=1)
-
-        # Left Card: Freigestellte Figur (Cutout)
-        card_cutout = ctk.CTkFrame(insp_sub, fg_color="transparent")
-        card_cutout.grid(row=0, column=0, padx=5, pady=5, sticky="nsew")
-        ctk.CTkLabel(card_cutout, text="✨ Freigestellte Figur", font=ctk.CTkFont(size=11, weight="bold"), text_color=("#7c3aed", "#c084fc")).pack(anchor="w", padx=2, pady=(0, 2))
-        self.canvas_cutout = ctk.CTkLabel(card_cutout, text="Kein Motiv", fg_color=("#e2e8f0", "#1e1b4b"), text_color=("#0f172a", "#f8fafc"), corner_radius=8, width=150, height=150)
-        self.canvas_cutout.pack(padx=2, pady=2, fill="both", expand=True)
-        ctk.CTkButton(
-            card_cutout, text="🎭 Auf Leinwand", height=24, font=ctk.CTkFont(size=10, weight="bold"),
-            fg_color=("#7c3aed", "#6d28d9"), hover_color=("#5b21b6", "#4c1d95"), text_color="#ffffff",
-            command=lambda: (self.seg_view_mode.set("🎭 Figuren"), self._on_change_sam_view_mode("🎭 Figuren"))
-        ).pack(padx=2, pady=(3, 0), fill="x")
-
-        # Right Card: Figuren-Strukturmaske
-        card_struct = ctk.CTkFrame(insp_sub, fg_color="transparent")
-        card_struct.grid(row=0, column=1, padx=5, pady=5, sticky="nsew")
-        ctk.CTkLabel(card_struct, text="🛡️ Figuren-Maske", font=ctk.CTkFont(size=11, weight="bold"), text_color=("#0284c7", "#38bdf8")).pack(anchor="w", padx=2, pady=(0, 2))
-        self.canvas_struct_mask = ctk.CTkLabel(card_struct, text="Figuren-Maske", fg_color=("#e2e8f0", "#1e1b4b"), text_color=("#0f172a", "#f8fafc"), corner_radius=8, width=150, height=150)
-        self.canvas_struct_mask.pack(padx=2, pady=2, fill="both", expand=True)
-        ctk.CTkButton(
-            card_struct, text="🛡️ Maske zeigen", height=24, font=ctk.CTkFont(size=10, weight="bold"),
-            fg_color=("#0284c7", "#0369a1"), hover_color=("#075985", "#0c4a6e"), text_color="#ffffff",
-            command=lambda: (self.seg_view_mode.set("🛡️ Figuren-Maske"), self._on_change_sam_view_mode("🛡️ Figuren-Maske"))
-        ).pack(padx=2, pady=(3, 0), fill="x")
-
-        self.lbl_ai_suggestion = ctk.CTkLabel(
-            insp_sub, text="KI-Vorschlag: -\nKonfidenz: -\nSKOS: -",
-            font=ctk.CTkFont(size=12), justify="left", text_color=("#0f172a", "#f8fafc")
+        self.lbl_motifs_title = ctk.CTkLabel(
+            header_right,
+            text="🏷️ Motiv-Prüfung (0 Figuren)",
+            font=ctk.CTkFont(size=13, weight="bold"),
+            text_color=THEME["text_accent"]
         )
-        self.lbl_ai_suggestion.grid(row=1, column=0, columnspan=2, padx=10, pady=(5, 4), sticky="w")
+        self.lbl_motifs_title.pack(side="left")
 
-        btn_skos_jump = ctk.CTkButton(
-            insp_sub, text="🌳 Im HECTOR SKOS-Explorer nachschlagen", height=26,
-            font=ctk.CTkFont(size=11), fg_color=THEME["secondary_btn"], hover_color=THEME["secondary_btn_hover"],
-            text_color=THEME["text_primary"], command=self._jump_to_skos_thesaurus
+        # Multi-Screen Button & SKOS Button
+        btn_popout_motifs = ctk.CTkButton(
+            header_right, text="🪟 Multi-Screen",
+            font=ctk.CTkFont(size=10, weight="bold"), width=95, height=26,
+            fg_color=THEME["primary"], hover_color=THEME["primary_hover"], text_color="#ffffff",
+            command=self._open_multi_screen_motif_window
         )
-        btn_skos_jump.grid(row=2, column=0, columnspan=2, padx=10, pady=(0, 8), sticky="ew")
+        btn_popout_motifs.pack(side="right", padx=(4, 0))
 
-        # Verification Selector & Save
-        verify_frame = ctk.CTkFrame(col_right, fg_color="transparent")
-        verify_frame.grid(row=3, column=0, padx=10, pady=5, sticky="ew")
-
-        ctk.CTkLabel(verify_frame, text="Verifiziertes Label:", text_color=("#0f172a", "#f8fafc")).pack(side="left", padx=5)
-        self.combo_verify = ctk.CTkComboBox(verify_frame, values=list(SCENE_CLASSES.keys()), width=200)
-        self.combo_verify.pack(side="left", padx=5, fill="x", expand=True)
-
-        btn_save_train = ctk.CTkButton(
-            col_right, text="💾 Als Trainings-Annotation speichern",
-            fg_color="#10b981", hover_color="#059669", text_color="#ffffff", font=ctk.CTkFont(size=12, weight="bold"),
-            command=self._save_training_entry
+        btn_open_skos = ctk.CTkButton(
+            header_right, text="🌳 SKOS-Editor",
+            font=ctk.CTkFont(size=10, weight="bold"), width=95, height=26,
+            fg_color=THEME["secondary_btn"], hover_color=THEME["secondary_btn_hover"], text_color=THEME["text_primary"],
+            command=self._open_multi_screen_skos_window
         )
-        btn_save_train.grid(row=4, column=0, padx=10, pady=5, sticky="ew")
+        btn_open_skos.pack(side="right", padx=(4, 0))
 
-        # Dataset Export Toolbar
-        dl_frame = ctk.CTkFrame(col_right, fg_color="transparent")
-        dl_frame.grid(row=5, column=0, padx=10, pady=8, sticky="ew")
+        # Quick Batch Actions Bar
+        batch_act_bar = ctk.CTkFrame(col_right, fg_color="transparent")
+        batch_act_bar.grid(row=1, column=0, sticky="ew", padx=10, pady=(0, 4))
 
-        self.btn_export_zip = ctk.CTkButton(dl_frame, text="📦 ZIP-Paket", width=100, fg_color=("#e2e8f0", "#334155"), hover_color=("#cbd5e1", "#475569"), text_color=("#0f172a", "#f8fafc"), command=self._export_train_zip)
-        self.btn_export_zip.pack(side="left", padx=3)
+        btn_apply_all_ai = ctk.CTkButton(
+            batch_act_bar, text="✨ Alle KI-Vorschläge anwenden",
+            height=26, font=ctk.CTkFont(size=10, weight="bold"),
+            fg_color="#7c3aed", hover_color="#6d28d9", text_color="#ffffff",
+            command=self._apply_all_ai_suggestions
+        )
+        btn_apply_all_ai.pack(side="left", fill="x", expand=True, padx=(0, 3))
 
-        self.btn_export_coco = ctk.CTkButton(dl_frame, text="📄 COCO JSON", width=110, fg_color=("#e2e8f0", "#334155"), hover_color=("#cbd5e1", "#475569"), text_color=("#0f172a", "#f8fafc"), command=self._export_train_coco)
-        self.btn_export_coco.pack(side="left", padx=3)
+        btn_save_all_m = ctk.CTkButton(
+            batch_act_bar, text="💾 Alle verifizieren & speichern",
+            height=26, font=ctk.CTkFont(size=10, weight="bold"),
+            fg_color="#10b981", hover_color="#059669", text_color="#ffffff",
+            command=self._save_all_verified_motifs
+        )
+        btn_save_all_m.pack(side="right", fill="x", expand=True, padx=(3, 0))
 
-        self.btn_clear_pool = ctk.CTkButton(dl_frame, text="🗑️ Pool leeren", width=100, fg_color="#e11d48", hover_color="#be123c", text_color="#ffffff", command=self._clear_train_pool)
-        self.btn_clear_pool.pack(side="right", padx=3)
+        # Scrollable Container with Stacked Motif Cards (untereinander & zoombar)
+        self.scroll_motifs = ctk.CTkScrollableFrame(col_right, fg_color="transparent")
+        self.scroll_motifs.grid(row=2, column=0, sticky="nsew", padx=6, pady=4)
+
+        self.lbl_empty_motifs = ctk.CTkLabel(
+            self.scroll_motifs,
+            text="💡 Keine Motive geladen.\nNutze den Zauberstab (Klick auf Figur), Box-Auswahl\noder '🚀 Alle Figuren automatisch', um Figuren zu extrahieren!",
+            font=ctk.CTkFont(size=12),
+            text_color=THEME["text_muted"],
+            justify="center"
+        )
+        self.lbl_empty_motifs.pack(pady=40)
+
+        # Dataset Export Toolbar at Bottom
+        dl_frame = ctk.CTkFrame(col_right, fg_color=THEME["bg_card_inner"], corner_radius=6, border_width=1, border_color=THEME["border_subtle"])
+        dl_frame.grid(row=3, column=0, padx=10, pady=(4, 8), sticky="ew")
+
+        self.lbl_pool_counter = ctk.CTkLabel(
+            dl_frame, text="📦 Pool: 0", font=ctk.CTkFont(size=11, weight="bold"), text_color=THEME["text_accent"]
+        )
+        self.lbl_pool_counter.pack(side="left", padx=8, pady=4)
+
+        self.btn_export_zip = ctk.CTkButton(dl_frame, text="📦 ZIP-Export", width=95, height=26, font=ctk.CTkFont(size=10), fg_color=THEME["secondary_btn"], hover_color=THEME["secondary_btn_hover"], text_color=THEME["text_primary"], command=self._export_train_zip)
+        self.btn_export_zip.pack(side="left", padx=2, pady=4)
+
+        self.btn_export_coco = ctk.CTkButton(dl_frame, text="📄 COCO JSON", width=95, height=26, font=ctk.CTkFont(size=10), fg_color=THEME["secondary_btn"], hover_color=THEME["secondary_btn_hover"], text_color=THEME["text_primary"], command=self._export_train_coco)
+        self.btn_export_coco.pack(side="left", padx=2, pady=4)
+
+        self.btn_clear_pool = ctk.CTkButton(dl_frame, text="🗑️ Leeren", width=75, height=26, font=ctk.CTkFont(size=10), fg_color="#ef4444", hover_color="#dc2626", text_color="#ffffff", command=self._clear_train_pool)
+        self.btn_clear_pool.pack(side="right", padx=6, pady=4)
 
         return frame
 
@@ -2066,8 +2795,7 @@ class LODVasesApp(ctk.CTk):
 
                             def _apply():
                                 self._redraw_sam_canvas()
-                                self._update_motif_combobox_list(select_idx=motif["id"])
-                                self._on_select_motif(f"Motiv #{motif['id']+1} ({motif['area_pct']}% Fläche)")
+                                self._render_all_motif_cards()
                                 self.lbl_sam_status.configure(text=f"✨ Box #{motif['id']+1} erfolgreich segmentiert!")
                             self.after(0, _apply)
                     threading.Thread(target=_task, daemon=True).start()
@@ -2090,7 +2818,6 @@ class LODVasesApp(ctk.CTk):
 
         # Mode: 🪄 Zauberstab (Magic Wand click segmentation)
         if curr_mode == "🪄 Zauberstab":
-            # Check if clicked on an already existing motif: if so, select it
             existing_idx = None
             if self.sam_detected_motifs:
                 for m in self.sam_detected_motifs:
@@ -2100,12 +2827,8 @@ class LODVasesApp(ctk.CTk):
                             break
 
             if existing_idx is not None:
-                opt_str = f"Motiv #{existing_idx+1} ({self.sam_detected_motifs[existing_idx]['area_pct']}% Fläche)"
-                self.combo_motifs.set(opt_str)
-                self._on_select_motif(opt_str)
                 return
 
-            # Otherwise, run FastSAM point segmentation at exact (px, py)
             self.lbl_sam_status.configure(text=f"🪄 Zauberstab: Analysiere Figur an Position ({px}, {py}) mit Stil-Maskierung...")
             style_val = self.combo_sam_style.get() if hasattr(self, "combo_sam_style") else "Auto (AI)"
             style_str = "auto" if "Auto" in style_val else style_val
@@ -2132,8 +2855,7 @@ class LODVasesApp(ctk.CTk):
                         self.sam_struct_mask_pil = None
                         self._update_struct_mask_preview()
                         self._redraw_sam_canvas()
-                        self._update_motif_combobox_list(select_idx=motif["id"])
-                        self._on_select_motif(f"Motiv #{motif['id']+1} ({motif['area_pct']}% Fläche)")
+                        self._render_all_motif_cards()
                         self.lbl_sam_status.configure(text=f"✨ Figur #{motif['id']+1} per Zauberstab erfolgreich segmentiert!")
                     self.after(0, _apply)
                 else:
@@ -2306,6 +3028,7 @@ class LODVasesApp(ctk.CTk):
                 self.combo_sam_style.set("Auto (AI)")
 
         self._reset_sam_zoom()
+        self._render_all_motif_cards()
         self._update_struct_mask_preview()
         self._redraw_sam_canvas()
 
@@ -2338,113 +3061,137 @@ class LODVasesApp(ctk.CTk):
                     self.sam_struct_mask_pil = None
                     self._update_struct_mask_preview()
                     self._redraw_sam_canvas()
-                    self._update_motif_combobox_list(select_idx=0)
-                    first_choice = f"{motifs[0].get('label', 'Motiv #1')} ({motifs[0].get('area_pct', 0)}% Fläche)"
-                    self._on_select_motif(first_choice)
-                    self.lbl_sam_status.configure(text=f"✨ {len(motifs)} Figuren & Sub-Komponenten erfolgreich strukturiert!")
+                    self._render_all_motif_cards()
+                    self.lbl_sam_status.configure(text=f"✨ {len(motifs)} Figuren & Sub-Komponenten erfolgreich extrahiert!")
 
                 self.after(0, _apply_on_main)
             else:
                 def _fail():
-                    self.lbl_sam_status.configure(text="⚠️ Keine eindeutigen Figuren erkannt. Nutzen Sie den Zauberstab oder die Box-Auswahl.")
+                    self._render_all_motif_cards()
+                    self.lbl_sam_status.configure(text="⚠️ Keine Figuren erkannt. Nutzen Sie den Zauberstab oder die Box-Auswahl.")
                 self.after(0, _fail)
 
         threading.Thread(target=_task, daemon=True).start()
 
-    def _on_select_motif(self, choice: str):
-        if not self.sam_detected_motifs or not choice:
+    def _render_all_motif_cards(self):
+        """Renders stacked, zoomable motif cards for all detected figures."""
+        if not hasattr(self, "scroll_motifs"):
             return
-        options = [
-            f"{m.get('label') or ('Motiv #' + str(m.get('id', 0) + 1))} ({m.get('area_pct', 0)}% Fläche)"
-            for m in self.sam_detected_motifs
-        ]
-        if choice in options:
-            idx = options.index(choice)
-        elif "#" in choice:
-            try:
-                idx = int(choice.split("#")[1].split(" ")[0].split("(")[0]) - 1
-            except Exception:
-                idx = 0
+
+        for w in self.scroll_motifs.winfo_children():
+            w.destroy()
+        self._motif_cards.clear()
+
+        count = len(self.sam_detected_motifs)
+        if hasattr(self, "lbl_motifs_title"):
+            self.lbl_motifs_title.configure(text=f"🏷️ Motiv-Prüfung ({count} Figuren)")
+
+        if count == 0:
+            lbl_empty = ctk.CTkLabel(
+                self.scroll_motifs,
+                text="💡 Keine Motive geladen.\nNutze den Zauberstab (Klick auf Figur), Box-Auswahl\noder '🚀 Alle Figuren automatisch', um Figuren zu extrahieren!",
+                font=ctk.CTkFont(size=12),
+                text_color=THEME["text_muted"],
+                justify="center"
+            )
+            lbl_empty.pack(pady=40)
         else:
-            idx = 0
+            for idx, m in enumerate(self.sam_detected_motifs):
+                card = MotifCard(self.scroll_motifs, m, idx, self)
+                card.pack(fill="x", pady=6, padx=4)
+                self._motif_cards.append(card)
 
-        if idx < 0 or idx >= len(self.sam_detected_motifs):
-            idx = 0
-        m = self.sam_detected_motifs[idx]
+        # Update floating popup window if open
+        if getattr(self, "_motif_window_toplevel", None) and self._motif_window_toplevel.winfo_exists():
+            try:
+                self._motif_window_toplevel._populate()
+            except Exception:
+                pass
 
-        # Highlight active motif in gold on main overlay
-        if self.sam_current_pil is not None:
-            overlay = sam_segmenter.draw_segmentation_overlay(self.sam_current_pil, self.sam_detected_motifs, selected_id=m["id"])
-            self.sam_overlay_pil = overlay
-            self._redraw_sam_canvas()
+    def _apply_all_ai_suggestions(self):
+        """Applies AI predicted labels on all motif cards with 1 click."""
+        if not self._motif_cards:
+            self.show_toast("Keine Motive zum Übernehmen vorhanden.", "warning")
+            return
+        for card in self._motif_cards:
+            ai_lbl, _, _ = card._predict_ai_motif()
+            card._set_label(ai_lbl)
+        if getattr(self, "_motif_window_toplevel", None) and self._motif_window_toplevel.winfo_exists():
+            for card in self._motif_window_toplevel._cards:
+                ai_lbl, _, _ = card._predict_ai_motif()
+                card._set_label(ai_lbl)
+        self.show_toast("Alle KI-Vorschläge auf die Figuren angewendet!", "success")
 
-        cutout = m["cutout"]
-        self._display_image_on_label(cutout, self.canvas_cutout, (160, 160))
-        self._update_struct_mask_preview()
-
-        # Predict AI label
-        bg_img = Image.new("RGB", cutout.size, (0, 0, 0))
-        bg_img.paste(cutout, mask=cutout.split()[3])
-        pred = classifier.predict_scene(bg_img)
-
-        label = pred["predicted_scene"]
-        conf = pred["scene_confidence"]
-        skos = skos_client.get_concept_by_label(label)
-
-        self.lbl_ai_suggestion.configure(
-            text=f"✨ KI-Vorschlag: {label}\n🎯 Konfidenz: {conf*100:.1f}%\n🏛️ SKOS: {skos.pref_label if skos else label}\n🔗 {skos.uri if skos else 'N/A'}"
-        )
-        self.combo_verify.set(label)
-
-    def _jump_to_skos_thesaurus(self, term: Optional[str] = None):
-        """Cross-link: Jump directly to HECTOR SKOS Explorer with a pre-filled term."""
-        if not term:
-            term = self.combo_verify.get().strip() if hasattr(self, "combo_verify") else ""
-        if not term and hasattr(self, "lbl_ai_suggestion"):
-            text = self.lbl_ai_suggestion.cget("text")
-            if "KI-Vorschlag:" in text:
-                term = text.split("KI-Vorschlag:")[1].split("\n")[0].strip()
-        if term and term != "-":
-            self.select_view("skos")
-            if hasattr(self, "entry_skos"):
-                self.entry_skos.delete(0, "end")
-                self.entry_skos.insert(0, term)
-                self._search_skos()
-                self.show_toast(f"HECTOR Thesaurus geöffnet: '{term}'", "info")
-
-    def _save_training_entry(self):
-        if not self.sam_detected_motifs:
+    def _save_all_verified_motifs(self):
+        """Saves all currently configured motifs to the training pool."""
+        if not self._motif_cards:
             self.show_toast("Keine Motive zum Speichern vorhanden.", "warning")
             return
-        choice = self.combo_motifs.get()
-        if not choice or "#" not in choice:
-            self.show_toast("Bitte wähle zuerst ein bestimmtes Motiv aus.", "warning")
-            return
-        try:
-            idx = int(choice.split("#")[1].split(" ")[0]) - 1
-            if idx < 0 or idx >= len(self.sam_detected_motifs):
-                return
-            m = self.sam_detected_motifs[idx]
-        except Exception:
-            return
-        v_label = self.combo_verify.get()
-        skos = skos_client.get_concept_by_label(v_label)
+        for card in self._motif_cards:
+            card._on_save()
+        self.lbl_pool_counter.configure(text=f"📦 Pool: {len(self.training_dataset)}")
+        self.show_toast(f"{len(self._motif_cards)} Figuren im Trainings-Pool gespeichert!", "success")
 
-        entry = {
-            "image_path": self.sam_current_path,
-            "img_w": self.sam_current_pil.width,
-            "img_h": self.sam_current_pil.height,
-            "bbox": m["bbox"],
-            "polygon": m["polygon"],
-            "area": m["area"],
-            "cutout": m["cutout"],
-            "label": v_label,
-            "skos_uri": skos.uri if skos else "",
-            "confidence": 1.0,
-            "category": skos.category if skos else "Ikonographie"
-        }
-        self.training_dataset.append(entry)
-        self.show_toast(f"Motiv '{v_label}' zum Pool hinzugefügt (Gesamt: {len(self.training_dataset)})", "success")
+    def _on_skos_vocab_changed(self):
+        """Called automatically whenever the SKOS vocabulary is updated or saved."""
+        def _update():
+            for card in getattr(self, "_motif_cards", []):
+                try:
+                    card.refresh_skos_dropdown()
+                except Exception:
+                    pass
+            if getattr(self, "_motif_window_toplevel", None) and self._motif_window_toplevel.winfo_exists():
+                try:
+                    self._motif_window_toplevel.refresh_dropdowns()
+                except Exception:
+                    pass
+            if hasattr(self, "combo_verify"):
+                try:
+                    labels = skos_client.get_all_labels_for_selection()
+                    self.combo_verify.configure(values=labels[:150])
+                except Exception:
+                    pass
+        self.after(0, _update)
+
+    def _open_multi_screen_motif_window(self):
+        """Opens floating multi-screen window for Motif Verification."""
+        if self._motif_window_toplevel is None or not self._motif_window_toplevel.winfo_exists():
+            self._motif_window_toplevel = MotifVerificationWindow(self, app=self)
+        else:
+            self._motif_window_toplevel.lift()
+            self._motif_window_toplevel.focus_force()
+
+    def _open_multi_screen_skos_window(self):
+        """Opens floating multi-screen window for the SKOS Editor."""
+        if self._skos_window_toplevel is None or not self._skos_window_toplevel.winfo_exists():
+            self._skos_window_toplevel = SKOSEditorWindow(self, app=self)
+        else:
+            self._skos_window_toplevel.lift()
+            self._skos_window_toplevel.focus_force()
+
+    def open_skos_editor_with_term(self, term: str):
+        """Cross-link: Jumps to or opens SKOS Editor with a given term pre-filled."""
+        self.select_view("skos")
+        if hasattr(self, "skos_editor_frame"):
+            c = skos_client.get_concept_by_label(term)
+            if c:
+                self.skos_editor_frame.load_concept_into_form(c)
+                self.skos_editor_frame.entry_search.delete(0, "end")
+                self.skos_editor_frame.entry_search.insert(0, term)
+                self.skos_editor_frame._refresh_concepts_table()
+            else:
+                self.skos_editor_frame._clear_form()
+                self.skos_editor_frame.ent_label_de.insert(0, term)
+        self.show_toast(f"SKOS-Editor geöffnet für: '{term}'", "info")
+
+    def _on_select_motif(self, choice: str):
+        pass
+
+    def _jump_to_skos_thesaurus(self, term: Optional[str] = None):
+        self.open_skos_editor_with_term(term or "Delphinreiter")
+
+    def _save_training_entry(self):
+        self._save_all_verified_motifs()
 
     def _export_train_zip(self):
         if not self.training_dataset:
@@ -2469,6 +3216,10 @@ class LODVasesApp(ctk.CTk):
             self.show_toast(f"COCO JSON exportiert: {os.path.basename(save_path)}", "success")
 
     def _clear_train_pool(self):
+        self.training_dataset = []
+        if hasattr(self, "lbl_pool_counter"):
+            self.lbl_pool_counter.configure(text="📦 Pool: 0")
+        self.show_toast("Der Trainings-Pool wurde zurückgesetzt.", "info")
         self.training_dataset = []
         self.show_toast("Der Trainings-Pool wurde zurückgesetzt.", "info")
 
@@ -2834,54 +3585,20 @@ class LODVasesApp(ctk.CTk):
             self.show_toast(f"Gesamtkatalog exportiert: {os.path.basename(save_path)}", "success")
 
     # ---------------------------------------------------------
-    # VIEW 5: HECTOR SKOS-Explorer
+    # VIEW 5: HECTOR SKOS-Editor & Thesaurus
     # ---------------------------------------------------------
     def _build_skos_view(self, parent) -> ctk.CTkFrame:
         frame = ctk.CTkFrame(parent, fg_color="transparent")
-        frame.grid_rowconfigure(2, weight=1)
+        frame.grid_rowconfigure(0, weight=1)
         frame.grid_columnconfigure(0, weight=1)
 
-        # Header Bar
-        top_bar = ctk.CTkFrame(frame, height=50, fg_color=("#ffffff", "#1e293b"), corner_radius=8)
-        top_bar.grid(row=0, column=0, sticky="ew", padx=5, pady=5)
-
-        lbl = ctk.CTkLabel(top_bar, text="🌳 BCDH HECTOR SKOS Vokabular-Explorer & Thesaurus-Suche", font=ctk.CTkFont(size=14, weight="bold"), text_color=("#0f172a", "#f8fafc"))
-        lbl.pack(side="left", padx=15, pady=8)
-
-        # Search Bar
-        search_frame = ctk.CTkFrame(frame, fg_color=("#ffffff", "#1e293b"), corner_radius=8)
-        search_frame.grid(row=1, column=0, sticky="ew", padx=5, pady=5)
-
-        self.entry_skos = ctk.CTkEntry(search_frame, placeholder_text="Thesaurus durchsuchen (z.B. Delphinreiter, Lekythos, Herakles)...", width=400)
-        self.entry_skos.pack(side="left", padx=10, pady=10, fill="x", expand=True)
-
-        btn_search = ctk.CTkButton(search_frame, text="🔍 Suchen", command=self._search_skos, width=100, fg_color="#0284c7", hover_color="#0369a1", text_color="#ffffff")
-        btn_search.pack(side="right", padx=10, pady=10)
-
-        # Results Box
-        self.lbl_skos_details = ctk.CTkLabel(
-            frame, text="Geben Sie einen Suchbegriff ein...", font=ctk.CTkFont(size=13),
-            justify="left", fg_color=("#ffffff", "#1e293b"), text_color=("#0f172a", "#f8fafc"), corner_radius=8, padx=20, pady=20
-        )
-        self.lbl_skos_details.grid(row=2, column=0, sticky="nsew", padx=5, pady=5)
+        self.skos_editor_frame = SKOSEditorFrame(frame, app=self, is_popup=False)
+        self.skos_editor_frame.grid(row=0, column=0, sticky="nsew")
 
         return frame
 
     def _search_skos(self):
-        q = self.entry_skos.get().strip()
-        if not q:
-            return
-        c = skos_client.get_concept_by_label(q)
-        if c:
-            text = (
-                f"🏛️ Konzept: {c.pref_label}\n\n"
-                f"🔗 HECTOR SKOS URI:\n{c.uri}\n\n"
-                f"📖 Kategorie:\n{c.category}\n\n"
-                f"📝 Definition / Beschreibung:\n{c.definition or 'Keine Definition hinterlegt'}"
-            )
-            self.lbl_skos_details.configure(text=text)
-        else:
-            self.lbl_skos_details.configure(text=f"Kein Treffer für '{q}' im HECTOR Thesaurus gefunden.")
+        pass
 
 
 if __name__ == "__main__":
